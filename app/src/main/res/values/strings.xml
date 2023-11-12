@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">IniDesakuBeta</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_onboarding_1">Ini Desaku 1</string>
+    <string name="title_onboarding_2">Ini Desaku 2</string>
+    <string name="title_onboarding_3">Ini Desaku 3</string>
+    <string name="description_onboarding_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu dapibus sem, at viverra massa. Nam vitae quam vel ipsum sodales faucibus quis nec mauris</string>
+    <string name="description_onboarding_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu dapibus sem, at viverra massa. Nam vitae quam vel ipsum sodales faucibus quis nec mauris</string>
+    <string name="description_onboarding_3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu dapibus sem, at viverra massa. Nam vitae quam vel ipsum sodales faucibus quis nec mauris</string>
+    <string name="testing">asdfasdf</string>
+    <string name="email">Email</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="ingat_saya">Ingat Saya</string>
+    <string name="lupa_kata_sandi">Lupa kata sandi?</string>
+    <string name="masuk">Masuk</string>
+    <string name="atau">Atau</string>
+    <string name="pendaftaran_akun">Pendaftaran Akun</string>
+    <string name="username">Username</string>
+    <string name="sudah_mempunya_akun">Sudah mempunya akun?</string>
+    <string name="selanjutnya">Selanjutnya</string>
+    <string name="pilih_wilayah_anda">Pilih Wilayah Anda</string>
+    <string name="province">Provinsi</string>
+    <string name="kota_kecamatan">Kota/Kecamatan</string>
+    <string name="kecamatan">Kecamatan</string>
+    <string name="desa">Desa</string>
+    <string name="done">Selesai</string>
+    <string name="back">Kembali</string>
+    <string name="input_number_telphone">Masuk dengan nomor telepon</string>
+</resources>

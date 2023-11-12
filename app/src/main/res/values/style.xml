@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.IniDesakuBeta.TextBold.Headline6" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Headline5" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Subtitle2" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.TextBold.Subtitle2" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Subtitle1" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.TextBold.Subtitle1" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.Text.Caption" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">?attr/colorPrimaryVariant</item>
+    </style>
+</resources>
