@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.FragmentLoginBinding
 
@@ -30,7 +31,8 @@ class LoginFragment : Fragment() {
 
     private fun buttonCLick() {
         binding.btnLogin.setOnClickListener {
-            Toast.makeText(requireContext(), "Belom bisa bang!", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(requireContext(), "Belom bisa bang!", Toast.LENGTH_SHORT).show()
+            findNavController().navigate(R.id.action_loginFragment_to_homeActivity)
         }
     }
 

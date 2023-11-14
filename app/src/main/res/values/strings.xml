@@ -27,4 +27,23 @@
     <string name="done">Selesai</string>
     <string name="back">Kembali</string>
     <string name="input_number_telphone">Masuk dengan nomor telepon</string>
+    <string name="confirm_password">Konfirmasi kata sandi</string>
+    <string name="profile_desa">Profile Desa</string>
+    <string name="geospasial">Geospasial</string>
+    <string name="beranda">Beranda</string>
+    <string name="profile">Profile</string>
+    <string name="ppob">PPOB</string>
+    <string name="saldo_anda">Saldo anda</string>
+    <string name="saldo">Rp. 120.000</string>
+    <string name="history">Riwayat</string>
+    <string name="top_up">Top Up</string>
+    <string name="pulsa">Pulsa</string>
+    <string name="pulsa_prabayar">Pulsa Prabayar</string>
+    <string name="pulsa_pascabayar">Pulsa Pascabayar</string>
+    <string name="listrik_air">Listrik dan Air</string>
+    <string name="tagihan_pln">Tagihan PLN</string>
+    <string name="token_pln">Token PLN</string>
+    <string name="lainnya">Lainnya</string>
+    <string name="bpjs">BPJS</string>
+    <string name="pdam">PDAM</string>
 </resources>

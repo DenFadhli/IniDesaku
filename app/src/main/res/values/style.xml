@@ -35,4 +35,14 @@
         <item name="android:textSize">12dp</item>
         <item name="android:textColor">?attr/colorPrimaryVariant</item>
     </style>
+
+    <style name="Theme.IniDesakuBeta.Text.CaptionButton" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">10dp</item>
+        <item name="android:textColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="customImageView8Percent" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8%</item>
+    </style>
 </resources>

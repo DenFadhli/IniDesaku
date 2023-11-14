@@ -34,7 +34,11 @@
         android:id="@+id/loginFragment"
         android:name="com.citiasia.inidesakubeta.ui.sign.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.citiasia.inidesakubeta.ui.sign.signUp.SignUpFragment"
@@ -49,4 +53,9 @@
         android:name="com.citiasia.inidesakubeta.ui.pilihWIlayah.PilihWilayahFragment"
         android:label="fragment_pilih_wilayah"
         tools:layout="@layout/fragment_pilih_wilayah" />
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.citiasia.inidesakubeta.ui.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
 </navigation>

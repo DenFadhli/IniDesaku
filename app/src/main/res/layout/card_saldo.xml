@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_saldo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="24dp"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvBpjs"
+            style="@style/Theme.IniDesakuBeta.TextBold.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="54dp"
+            android:text="@string/bpjs"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPbjsKesehatan"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pulsa_prabayar"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="4dp"
+            app:icon="@drawable/ppob_icon"
+            app:iconGravity="top"
+            app:iconPadding="4dp"
+            app:layout_constraintEnd_toStartOf="@id/btnBpjsKerja"
+            app:layout_constraintStart_toStartOf="@id/tvBpjs"
+            app:layout_constraintTop_toBottomOf="@id/tvBpjs" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBpjsKerja"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:text="@string/pulsa_pascabayar"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="4dp"
+            app:icon="@drawable/ppob_icon"
+            app:iconGravity="top"
+            app:iconPadding="4dp"
+            app:layout_constraintStart_toEndOf="@id/btnPbjsKesehatan"
+            app:layout_constraintTop_toTopOf="@id/btnPbjsKesehatan" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

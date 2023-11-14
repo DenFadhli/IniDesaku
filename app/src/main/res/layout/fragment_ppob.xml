@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".ui.ppob.PpobFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgIllustration"
+        android:layout_width="0dp"
+        android:layout_height="148dp"
+        android:layout_margin="24dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/customImageView8Percent"
+        android:background="@color/white" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="@id/imgIllustration"
+        app:layout_constraintStart_toStartOf="@id/imgIllustration"
+        app:layout_constraintTop_toBottomOf="@id/imgIllustration">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/tvSaldoString"
+                style="@style/Theme.IniDesakuBeta.Text.Caption"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:text="@string/saldo_anda"
+                app:layout_constraintBottom_toTopOf="@id/tvSaldo"
+                app:layout_constraintEnd_toStartOf="@id/btnHistory"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSaldo"
+                style="@style/Theme.IniDesakuBeta.TextBold.Subtitle2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:text="@string/saldo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btnHistory"
+                app:layout_constraintStart_toStartOf="@id/tvSaldoString"
+                app:layout_constraintTop_toBottomOf="@id/tvSaldoString" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHistory"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:padding="0dp"
+                android:text="@string/history"
+                android:textAllCaps="false"
+                android:textSize="10sp"
+                app:cornerRadius="4dp"
+                app:icon="@drawable/ppob_icon"
+                app:iconGravity="top"
+                app:iconPadding="4dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvSaldo"
+                app:layout_constraintEnd_toStartOf="@id/btnTopUp"
+                app:layout_constraintTop_toTopOf="@id/btnTopUp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTopUp"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                android:text="@string/top_up"
+                android:textAllCaps="false"
+                android:textSize="10sp"
+                app:cornerRadius="4dp"
+                app:icon="@drawable/ppob_icon"
+                app:iconGravity="top"
+                app:iconPadding="4dp"
+                app:layout_constraintBottom_toBottomOf="@id/tvSaldo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutMenu"
+        android:layout_width="0dp"
+        android:layout_height="512dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/layout_rounded_top_white_bg"
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgIllustration">
+
+        <TextView
+            android:id="@+id/tvPulsa"
+            style="@style/Theme.IniDesakuBeta.TextBold.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="54dp"
+            android:text="@string/pulsa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPulsaPra"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingVertical="0dp"
+            android:text="@string/pulsa_prabayar"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="4dp"
+            app:icon="@drawable/ppob_icon"
+            app:iconGravity="top"
+            app:iconPadding="4dp"
+            app:layout_constraintEnd_toStartOf="@id/btnPulsaPasca"
+            app:layout_constraintStart_toStartOf="@id/tvPulsa"
+            app:layout_constraintTop_toBottomOf="@id/tvPulsa" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPulsaPasca"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="0dp"
+            android:text="@string/pulsa_pascabayar"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="4dp"
+            app:icon="@drawable/ppob_icon"
+            app:iconGravity="top"
+            app:iconPadding="4dp"
+            app:layout_constraintEnd_toStartOf="@id/btnPaket"
+            app:layout_constraintStart_toEndOf="@id/btnPulsaPra"
+            app:layout_constraintTop_toTopOf="@id/btnPulsaPra" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPaket"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="0dp"
+            android:text="Paket Data"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="4dp"
+            app:icon="@drawable/ppob_icon"
+            app:iconGravity="top"
+            app:iconPadding="4dp"
+            app:layout_constraintEnd_toStartOf="@id/btnTelkom"
+            app:layout_constraintStart_toEndOf="@id/btnPulsaPasca"
+            app:layout_constraintTop_toTopOf="@id/btnPulsaPasca" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTelkom"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="0dp"
+            android:text="Telkom"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="4dp"
+            app:icon="@drawable/ppob_icon"
+            app:iconGravity="top"
+            app:iconPadding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnPaket"
+            app:layout_constraintTop_toTopOf="@id/btnPaket" />
+
+        <TextView
+            android:id="@+id/tvListrikAir"
+            style="@style/Theme.IniDesakuBeta.TextBold.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/listrik_air"
+            app:layout_constraintStart_toStartOf="@id/btnPulsaPra"
+            app:layout_constraintTop_toBottomOf="@id/btnPulsaPra" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPln"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingVertical="0dp"
+            android:text="@string/tagihan_pln"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="4dp"
+            app:icon="@drawable/ppob_icon"
+            app:iconGravity="top"
+            app:iconPadding="4dp"
+            app:layout_constraintEnd_toStartOf="@id/btnTokenPln"
+            app:layout_constraintStart_toStartOf="@id/tvListrikAir"
+            app:layout_constraintTop_toBottomOf="@id/tvListrikAir" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTokenPln"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="0dp"
+            android:text="@string/token_pln"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="4dp"
+            app:icon="@drawable/ppob_icon"
+            app:iconGravity="top"
+            app:iconPadding="4dp"
+            app:layout_constraintEnd_toStartOf="@id/btnPdam"
+            app:layout_constraintStart_toEndOf="@id/btnPln"
+            app:layout_constraintTop_toTopOf="@id/btnPln" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPdam"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="0dp"
+            android:text="@string/pdam"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="4dp"
+            app:icon="@drawable/ppob_icon"
+            app:iconGravity="top"
+            app:iconPadding="4dp"
+            app:layout_constraintEnd_toEndOf="@id/btnPaket"
+            app:layout_constraintStart_toEndOf="@id/btnTokenPln"
+            app:layout_constraintTop_toTopOf="@id/btnTokenPln" />
+
+        <TextView
+            android:id="@+id/tvBpjs"
+            style="@style/Theme.IniDesakuBeta.TextBold.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/bpjs"
+            app:layout_constraintStart_toStartOf="@id/btnPln"
+            app:layout_constraintTop_toBottomOf="@id/btnPln" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPbjsKesehatan"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingVertical="0dp"
+            android:text="@string/pulsa_prabayar"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="4dp"
+            app:icon="@drawable/ppob_icon"
+            app:iconGravity="top"
+            app:iconPadding="4dp"
+            app:layout_constraintEnd_toStartOf="@id/btnBpjsKerja"
+            app:layout_constraintStart_toStartOf="@id/tvBpjs"
+            app:layout_constraintTop_toBottomOf="@id/tvBpjs" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBpjsKerja"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="0dp"
+            android:text="@string/pulsa_pascabayar"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="4dp"
+            app:icon="@drawable/ppob_icon"
+            app:iconGravity="top"
+            app:iconPadding="4dp"
+            app:layout_constraintEnd_toEndOf="@id/btnTokenPln"
+            app:layout_constraintStart_toEndOf="@id/btnPbjsKesehatan"
+            app:layout_constraintTop_toTopOf="@id/btnPbjsKesehatan" />
+
+        <TextView
+            android:id="@+id/tvLainnya"
+            style="@style/Theme.IniDesakuBeta.TextBold.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/lainnya"
+            app:layout_constraintStart_toStartOf="@id/btnPbjsKesehatan"
+            app:layout_constraintTop_toBottomOf="@id/btnPbjsKesehatan" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnIndihome"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingVertical="0dp"
+            android:text="@string/pulsa_prabayar"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="4dp"
+            app:icon="@drawable/ppob_icon"
+            app:iconGravity="top"
+            app:iconPadding="4dp"
+            app:layout_constraintEnd_toStartOf="@id/btnMultiFinance"
+            app:layout_constraintStart_toStartOf="@id/tvLainnya"
+            app:layout_constraintTop_toBottomOf="@id/tvLainnya" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMultiFinance"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="0dp"
+            android:text="@string/pulsa_pascabayar"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="4dp"
+            app:icon="@drawable/ppob_icon"
+            app:iconGravity="top"
+            app:iconPadding="4dp"
+            app:layout_constraintEnd_toEndOf="@id/btnTokenPln"
+            app:layout_constraintStart_toEndOf="@id/btnIndihome"
+            app:layout_constraintTop_toTopOf="@id/btnIndihome" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
