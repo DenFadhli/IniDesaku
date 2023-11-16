@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ppob.pulsa.PulsaActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_anchor="@+id/appBarLayout"
+            app:layout_anchorGravity="center"
+            app:title="@string/pulsa"
+            app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:navigationIcon="@drawable/baseline_arrow_back_24"
+            app:navigationIconTint="@color/black"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <TextView
+        android:id="@+id/tvNoHp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/nomor_hp"
+        style="@style/Theme.IniDesakuBeta.Text.Caption"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutNomor"
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvNoHp"
+        app:layout_constraintStart_toStartOf="@id/tvNoHp"
+        app:layout_constraintEnd_toEndOf="@id/tvNoHp"
+        android:layout_marginTop="8dp"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/lucide_contact"
+        app:endIconContentDescription="@string/contact"
+        android:hint=""
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textNumberPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:tabIndicatorFullWidth="true"
+        app:layout_constraintTop_toBottomOf="@id/layoutNomor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/transparent"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout"
+        app:layout_constraintStart_toStartOf="@id/tab_layout"
+        app:layout_constraintEnd_toEndOf="@id/tab_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

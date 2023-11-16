@@ -46,4 +46,10 @@
     <string name="lainnya">Lainnya</string>
     <string name="bpjs">BPJS</string>
     <string name="pdam">PDAM</string>
+    <string name="nomor_hp">Nomor HP</string>
+    <string name="contact">contact</string>
+    <string name="tab_pulsa_1">Prabayar</string>
+    <string name="tab_pulsa_2">Pascabayar</string>
+    <string name="tab_pulsa_3">Paket Data</string>
+    <string name="pilih_jumlah_pulsa">Pilih jumlah pulsa</string>
 </resources>
