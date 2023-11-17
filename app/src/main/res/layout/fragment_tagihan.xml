@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".ui.ppob.listrikAir.tagihan.TagihanFragment">
+
+    <TextView
+        android:id="@+id/tvPelanggan"
+        style="@style/Theme.IniDesakuBeta.Text.Headline5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/id_pelanggan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        style="@style/Theme.IniDesakuBeta.TextBold.Subtitle1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:maxLines="2"
+        android:text="@string/description_onboarding_1"
+        app:layout_constraintEnd_toEndOf="@id/tvPelanggan"
+        app:layout_constraintStart_toStartOf="@id/tvPelanggan"
+        app:layout_constraintTop_toBottomOf="@id/tvPelanggan" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutId"
+        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription"
+        app:layout_constraintStart_toStartOf="@id/tvDescription"
+        app:layout_constraintEnd_toEndOf="@id/tvDescription"
+        android:layout_marginTop="24dp"
+        android:hint="@string/id_pelanggan"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/selanjutnya"
+        android:textAllCaps="false"
+        app:cornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="@id/layoutId"
+        app:layout_constraintStart_toStartOf="@id/layoutId"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

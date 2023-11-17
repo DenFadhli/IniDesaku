@@ -14,45 +14,74 @@
         android:padding="12dp">
 
         <TextView
-            android:id="@+id/tvBpjs"
-            style="@style/Theme.IniDesakuBeta.TextBold.Subtitle1"
-            android:layout_width="wrap_content"
+            android:id="@+id/tvTotalPembayaran"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="54dp"
-            android:text="@string/bpjs"
+            android:text="@string/rincian_pembelian"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPbjsKesehatan"
-            style="@style/Widget.Material3.Button.IconButton"
+        <TextView
+            android:id="@+id/tvJumlahIuran"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/pulsa_prabayar"
-            android:textAllCaps="false"
-            android:textSize="12sp"
-            app:cornerRadius="4dp"
-            app:icon="@drawable/ppob_icon"
-            app:iconGravity="top"
-            app:iconPadding="4dp"
-            app:layout_constraintEnd_toStartOf="@id/btnBpjsKerja"
-            app:layout_constraintStart_toStartOf="@id/tvBpjs"
-            app:layout_constraintTop_toBottomOf="@id/tvBpjs" />
+            android:layout_marginTop="16dp"
+            android:text="@string/id_pelanggan"
+            app:layout_constraintEnd_toStartOf="@id/tvJumlahIuranValue"
+            app:layout_constraintStart_toStartOf="@id/tvTotalPembayaran"
+            app:layout_constraintTop_toBottomOf="@id/tvTotalPembayaran" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnBpjsKerja"
-            style="@style/Widget.Material3.Button.IconButton"
-            android:layout_width="94dp"
+        <TextView
+            android:id="@+id/tvJumlahIuranValue"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pulsa_pascabayar"
-            android:textAllCaps="false"
-            android:textSize="12sp"
-            app:cornerRadius="4dp"
-            app:icon="@drawable/ppob_icon"
-            app:iconGravity="top"
-            app:iconPadding="4dp"
-            app:layout_constraintStart_toEndOf="@id/btnPbjsKesehatan"
-            app:layout_constraintTop_toTopOf="@id/btnPbjsKesehatan" />
+            android:text="@string/dummy_id_pelanggan"
+            app:layout_constraintEnd_toEndOf="@id/tvTotalPembayaran"
+            app:layout_constraintTop_toTopOf="@id/tvJumlahIuran" />
+
+        <TextView
+            android:id="@+id/tvBiayaAdmin"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/name"
+            app:layout_constraintEnd_toStartOf="@id/tvBiayaAdminValue"
+            app:layout_constraintStart_toStartOf="@id/tvJumlahIuran"
+            app:layout_constraintTop_toBottomOf="@id/tvJumlahIuran" />
+
+        <TextView
+            android:id="@+id/tvBiayaAdminValue"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_nama"
+            app:layout_constraintEnd_toEndOf="@id/tvJumlahIuranValue"
+            app:layout_constraintTop_toTopOf="@id/tvBiayaAdmin" />
+
+        <TextView
+            android:id="@+id/tvTotal"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/total_lembar_tagihan"
+            app:layout_constraintEnd_toStartOf="@id/tvTotalValue"
+            app:layout_constraintStart_toStartOf="@id/tvBiayaAdmin"
+            app:layout_constraintTop_toBottomOf="@id/tvBiayaAdmin" />
+
+        <TextView
+            android:id="@+id/tvTotalValue"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_total_lembar"
+            app:layout_constraintEnd_toEndOf="@id/tvBiayaAdminValue"
+            app:layout_constraintTop_toTopOf="@id/tvTotal" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

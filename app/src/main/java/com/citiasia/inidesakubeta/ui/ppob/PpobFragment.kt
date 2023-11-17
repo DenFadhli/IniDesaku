@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.FragmentPpobBinding
+import com.citiasia.inidesakubeta.ui.ppob.listrikAir.ListrikAirActivity
 import com.citiasia.inidesakubeta.ui.ppob.pulsa.PulsaActivity
 
 class PpobFragment : Fragment() {
@@ -33,10 +34,34 @@ class PpobFragment : Fragment() {
     private fun iconClick() {
         with(binding) {
             btnPulsaPra.setOnClickListener {
-                val intent = Intent(requireActivity(), PulsaActivity::class.java)
-                startActivity(intent)
+                toPulsaActivity()
+            }
+            btnPulsaPasca.setOnClickListener {
+                toPulsaActivity()
+            }
+            btnPaket.setOnClickListener {
+                toPulsaActivity()
+            }
+            btnTelkom.setOnClickListener {
+                toPulsaActivity()
+            }
+
+            btnPln.setOnClickListener {
+                toListrikAirActivity()
             }
         }
     }
+
+
+    private fun toPulsaActivity() {
+        val intent = Intent(requireActivity(), PulsaActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun toListrikAirActivity() {
+        val intent = Intent(requireActivity(), ListrikAirActivity::class.java)
+        startActivity(intent)
+    }
+
 
 }

@@ -9,8 +9,11 @@ import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.FragmentPrabayarBinding
+import com.citiasia.inidesakubeta.model.DataPulsaUser
 import com.citiasia.inidesakubeta.model.PriceListDummy
+import com.citiasia.inidesakubeta.model.PulsaDataInput
 import com.citiasia.inidesakubeta.ui.adapter.PulsaListAdapter
+import com.citiasia.inidesakubeta.ui.ppob.pulsa.pulsaDialog.BottomSheetPulsa
 import com.citiasia.inidesakubeta.utils.PulsaPreference
 
 class PrabayarFragment : Fragment() {
@@ -20,6 +23,7 @@ class PrabayarFragment : Fragment() {
 
     private var priceList = mutableListOf<PriceListDummy>()
     private lateinit var prefNumber: PulsaPreference
+    private val dialog = BottomSheetPulsa()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,6 +40,11 @@ class PrabayarFragment : Fragment() {
         prefNumber = PulsaPreference(requireContext())
         prepareDataList()
         setUpAdapter()
+//        setUpParamDialog()
+
+    }
+
+    private fun setUpParamDialog() {
 
     }
 
@@ -49,9 +58,33 @@ class PrabayarFragment : Fragment() {
         adapter.setOnItemClickCallback(object : PulsaListAdapter.OnItemClickCallback{
             override fun onItemClicked(data: PriceListDummy) {
                 val dataInputNumber = prefNumber.getData()
-                Toast.makeText(requireContext(), "${data.nominal} ${dataInputNumber.number}", Toast.LENGTH_SHORT).show()
+
+                var dataParam = DataPulsaUser(
+                    PriceListDummy(
+                        data.nominal,
+                        data.tambahanHari,
+                        data.harga
+                    ), PulsaDataInput(
+                        dataInputNumber.number,
+                        dataInputNumber.provider
+                        )
+                )
+
+                if(dataInputNumber.number.equals("")) {
+                    Toast.makeText(requireContext(), "Masukan nomor yang benar!", Toast.LENGTH_SHORT).show()
+                } else {
+                    showDialog(dataParam)
+                }
+
             }
         })
+    }
+
+    private fun showDialog(dataParam: DataPulsaUser) {
+        val bundle = Bundle()
+        bundle.putParcelable(BottomSheetPulsa.TAG ,dataParam)
+        dialog.arguments = bundle
+        dialog.show(parentFragmentManager, BottomSheetPulsa.TAG)
     }
 
     private fun prepareDataList() {

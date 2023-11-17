@@ -26,6 +26,7 @@ class PulsaActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         pref = PulsaPreference(this)
+        pref.removeData()
         setTabAdapter()
         onClick()
     }
@@ -47,6 +48,11 @@ class PulsaActivity : AppCompatActivity() {
             }
 
         })
+
+        binding.topAppBar.setNavigationOnClickListener {
+            onBackPressed()
+        }
+
     }
 
     private fun setTabAdapter() {
@@ -59,6 +65,9 @@ class PulsaActivity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+    }
 
 
     companion object{
