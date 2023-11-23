@@ -36,8 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:hint="@string/email"
-        app:layout_constraintEnd_toEndOf="@id/textCaptionLogin"
         app:boxCornerRadiusBottomEnd="8dp"
+        app:layout_constraintEnd_toEndOf="@id/textCaptionLogin"
         app:layout_constraintStart_toStartOf="@id/textCaptionLogin"
         app:layout_constraintTop_toBottomOf="@id/textCaptionLogin"
         app:startIconDrawable="@drawable/email_icon">
@@ -46,6 +46,7 @@
             android:id="@+id/textLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -64,6 +65,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textPassword"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
@@ -79,9 +81,9 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textRemember"
+        style="@style/Theme.IniDesakuBeta.Text.Medium.12sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style=""
         android:text="@string/ingat_saya"
         app:layout_constraintBottom_toBottomOf="@id/checkBoxRemember"
         app:layout_constraintStart_toEndOf="@id/checkBoxRemember"
@@ -89,9 +91,8 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnForgotPassword"
-        style="@style/Theme.IniDesakuBeta.ButtonText.TextCaption"
+        style="@style/Theme.IniDesakuBeta.ButtonText.Medium12.500"
         android:layout_width="wrap_content"
-        android:textStyle=""
         android:layout_height="wrap_content"
         android:text="@string/lupa_kata_sandi"
         android:textAlignment="textEnd"
@@ -101,6 +102,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
+        style="@style/Theme.IniDesakuBeta.Button."
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/masuk"
@@ -131,6 +133,7 @@
 
         <TextView
             android:id="@+id/tvOr"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular12.400"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -175,6 +178,7 @@
 
         <TextView
             android:id="@+id/tvPhoneButton"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular14.600"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -209,6 +213,7 @@
 
         <TextView
             android:id="@+id/tvGoogleButton"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular14.600"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -221,11 +226,11 @@
         android:id="@+id/layoutDaftar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:gravity="center_horizontal"
-        app:layout_constraintTop_toBottomOf="@id/btnLoginPhone"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/btnGoogleLogin"
         app:layout_constraintStart_toStartOf="@id/btnLoginPhone"
-        app:layout_constraintEnd_toEndOf="@id/btnGoogleLogin">
+        app:layout_constraintTop_toBottomOf="@id/btnLoginPhone">
 
 
         <TextView
@@ -238,14 +243,13 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnDaftar"
-            style="@style/Widget.Material3.Button.IconButton"
+            style="@style/Theme.IniDesakuBeta.IconButtonText.Bold16.700"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingStart="0dp"
             android:layout_marginStart="8dp"
+            android:paddingStart="0dp"
             android:text="@string/daftar"
             android:textAlignment="center" />
-
 
     </LinearLayout>
 
@@ -255,9 +259,9 @@
         style="@style/Widget.Material3.Button.TextButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
         android:text="@string/masuk_sebagai_tamu"
         android:textAllCaps="false"
-        android:fontFamily="@font/nunito_regular"
         android:textSize="14sp"
         app:iconPadding="0dp"
         app:layout_constraintEnd_toEndOf="@id/layoutDaftar"

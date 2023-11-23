@@ -11,7 +11,7 @@
     <string name="testing">asdfasdf</string>
     <string name="email">Email</string>
     <string name="kata_sandi">Kata Sandi</string>
-    <string name="ingat_saya">Ingat Saya</string>
+    <string name="ingat_saya">Ingat saya</string>
     <string name="lupa_kata_sandi">Lupa kata sandi?</string>
     <string name="masuk">Masuk</string>
     <string name="atau">Atau</string>
@@ -92,7 +92,7 @@
     <string name="title_of_content">Title of content</string>
     <string name="popular_now">Popular now</string>
     <string name="daftar">Daftar</string>
-    <string name="masuk_sebagai_tamu">Masuk Sebagai Tamu</string>
+    <string name="masuk_sebagai_tamu">Masuk sebagai tamu</string>
     <string name="selamat_datang_login">Selamat datang, silahkan isi data di bawah untuk dapat login ke akun anda</string>
     <string name="google">Google</string>
     <string name="belum_mempunyai_akun">Belum mempunyai akun?</string>
