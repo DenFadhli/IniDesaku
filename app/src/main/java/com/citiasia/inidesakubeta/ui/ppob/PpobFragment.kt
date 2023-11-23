@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.FragmentPpobBinding
+import com.citiasia.inidesakubeta.ui.ppob.bpjs.BpjsActivity
 import com.citiasia.inidesakubeta.ui.ppob.listrikAir.ListrikAirActivity
 import com.citiasia.inidesakubeta.ui.ppob.pulsa.PulsaActivity
 
@@ -49,7 +50,16 @@ class PpobFragment : Fragment() {
             btnPln.setOnClickListener {
                 toListrikAirActivity()
             }
+
+            btnPbjsKesehatan.setOnClickListener {
+                toBpjsActivity()
+            }
         }
+    }
+
+    private fun toBpjsActivity() {
+        val intent = Intent(requireActivity(), BpjsActivity::class.java)
+        startActivity(intent)
     }
 
 

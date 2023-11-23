@@ -10,6 +10,7 @@
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
         app:liftOnScroll="true">
 
         <com.google.android.material.appbar.MaterialToolbar
@@ -18,6 +19,7 @@
             android:layout_height="?attr/actionBarSize"
             app:layout_anchor="@+id/appBarLayout"
             app:layout_anchorGravity="center"
+            app:titleTextColor="?attr/colorOnPrimary"
             app:title="@string/app_name"
             app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
             app:navigationIcon="@drawable/ppob_icon"

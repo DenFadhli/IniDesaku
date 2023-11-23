@@ -1,50 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="24dp"
     tools:context=".ui.sign.login.LoginFragment">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ilsLogin"
-        android:layout_marginTop="24dp"
         android:layout_width="0dp"
         android:layout_height="180dp"
-        android:src="@drawable/image_sample"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/login_vector"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textCaptionLogin"
-        style="@style/TextAppearance.MaterialComponents.Subtitle2"
-        android:layout_marginTop="12dp"
+        style="@style/Theme.IniDesakuBeta.Text.Subtitle1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/ilsLogin"
-        app:layout_constraintStart_toStartOf="@id/ilsLogin"
+        android:layout_marginTop="12dp"
+        android:text="@string/selamat_datang_login"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@id/ilsLogin"
-        android:text="@string/description_onboarding_1"
-        android:textAlignment="center"/>
+        app:layout_constraintStart_toStartOf="@id/ilsLogin"
+        app:layout_constraintTop_toBottomOf="@id/ilsLogin" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutLogin"
         style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/textCaptionLogin"
-        app:layout_constraintStart_toStartOf="@id/textCaptionLogin"
-        app:layout_constraintEnd_toEndOf="@id/textCaptionLogin"
         android:layout_marginTop="16dp"
         android:hint="@string/email"
-        >
+        app:layout_constraintEnd_toEndOf="@id/textCaptionLogin"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:layout_constraintStart_toStartOf="@id/textCaptionLogin"
+        app:layout_constraintTop_toBottomOf="@id/textCaptionLogin"
+        app:startIconDrawable="@drawable/email_icon">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"/>
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -52,18 +54,19 @@
         style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/layoutLogin"
-        app:layout_constraintStart_toStartOf="@id/layoutLogin"
-        app:layout_constraintEnd_toEndOf="@id/layoutLogin"
-        app:endIconMode="password_toggle"
         android:layout_marginTop="16dp"
         android:hint="@string/kata_sandi"
-        >
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="@id/layoutLogin"
+        app:layout_constraintStart_toStartOf="@id/layoutLogin"
+        app:layout_constraintTop_toBottomOf="@id/layoutLogin"
+        app:startIconDrawable="@drawable/key_icon">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.checkbox.MaterialCheckBox
@@ -71,111 +74,110 @@
         style="@style/Widget.Material3.CompoundButton.CheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/layoutPassword"
         app:layout_constraintStart_toStartOf="@id/layoutPassword"
-        />
+        app:layout_constraintTop_toBottomOf="@id/layoutPassword" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textRemember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/checkBoxRemember"
-        app:layout_constraintStart_toEndOf="@id/checkBoxRemember"
+        style=""
+        android:text="@string/ingat_saya"
         app:layout_constraintBottom_toBottomOf="@id/checkBoxRemember"
-        android:text="@string/ingat_saya"/>
+        app:layout_constraintStart_toEndOf="@id/checkBoxRemember"
+        app:layout_constraintTop_toTopOf="@id/checkBoxRemember" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnForgotPassword"
+        style="@style/Theme.IniDesakuBeta.ButtonText.TextCaption"
         android:layout_width="wrap_content"
+        android:textStyle=""
         android:layout_height="wrap_content"
-        style="@style/Widget.Material3.Button.TextButton"
         android:text="@string/lupa_kata_sandi"
-        app:layout_constraintTop_toTopOf="@id/textRemember"
+        android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="@id/textRemember"
         app:layout_constraintEnd_toEndOf="@id/layoutPassword"
-        android:textAlignment="textEnd"/>
+        app:layout_constraintTop_toTopOf="@id/textRemember" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
-        app:cornerRadius="4dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/masuk"
         android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@id/checkBoxRemember"
+        app:cornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="@id/btnForgotPassword"
         app:layout_constraintStart_toStartOf="@id/checkBoxRemember"
-        app:layout_constraintEnd_toEndOf="@id/btnForgotPassword" />
+        app:layout_constraintTop_toBottomOf="@id/checkBoxRemember" />
 
     <LinearLayout
         android:id="@+id/layoutGrid"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/btnLogin"
-        app:layout_constraintTop_toBottomOf="@id/btnLogin"
-        app:layout_constraintEnd_toEndOf="@id/btnLogin"
-        android:orientation="horizontal"
-        android:gravity="center|center_horizontal"
         android:layout_marginTop="20dp"
-        >
+        android:gravity="center|center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/btnLogin"
+        app:layout_constraintStart_toStartOf="@id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin">
 
         <View
             android:id="@+id/line1"
             android:layout_width="0dp"
+            android:layout_height="1dp"
             android:layout_weight="2"
-            android:visibility="visible"
-            android:layout_height="1.5dp"
-            android:background="@color/black"/>
+            android:background="@color/font200"
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/tvOr"
             android:layout_width="wrap_content"
-            android:layout_weight="1"
-            android:textAlignment="center"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/atau"
-            />
+            android:textAlignment="center" />
 
         <View
             android:id="@+id/line2"
             android:layout_width="0dp"
-            android:layout_weight="2"
-            android:visibility="visible"
             android:layout_height="1.5dp"
-            android:background="@color/black"/>
+            android:layout_weight="2"
+            android:background="@color/font200"
+            android:visibility="visible" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/btnLoginPhone"
         style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
-        android:background="@drawable/layout_rounded_top_white"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/layoutGrid"
-        app:layout_constraintStart_toStartOf="@id/layoutGrid"
-        app:layout_constraintEnd_toEndOf="@id/layoutGrid"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/layout_rounded_top_white"
         android:clickable="true"
         android:gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@id/btnGoogleLogin"
+        app:layout_constraintStart_toStartOf="@id/layoutGrid"
+        app:layout_constraintTop_toBottomOf="@id/layoutGrid">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="6dp"
+            android:layout_marginEnd="12dp"
             android:maxWidth="30dp"
             android:maxHeight="30dp"
-            android:layout_marginEnd="12dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/baseline_phone_24"/>
+            android:src="@drawable/phone_icon" />
 
         <TextView
             android:id="@+id/tvPhoneButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:paddingEnd="30dp"
             android:gravity="center"
             android:text="@string/input_number_telphone" />
 
@@ -184,39 +186,83 @@
     <LinearLayout
         android:id="@+id/btnGoogleLogin"
         style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
-        android:background="@drawable/layout_rounded_top_white"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/btnLoginPhone"
-        app:layout_constraintStart_toStartOf="@id/btnLoginPhone"
-        app:layout_constraintEnd_toEndOf="@id/btnLoginPhone"
-        android:layout_marginTop="16dp"
+        android:layout_height="0dp"
+        android:background="@drawable/layout_rounded_top_white"
         android:clickable="true"
         android:gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/btnLoginPhone"
+        app:layout_constraintEnd_toEndOf="@id/layoutGrid"
+        app:layout_constraintStart_toEndOf="@id/btnLoginPhone"
+        app:layout_constraintTop_toTopOf="@id/btnLoginPhone">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="6dp"
+            android:layout_marginEnd="12dp"
             android:maxWidth="30dp"
             android:maxHeight="30dp"
-            android:layout_marginEnd="12dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/devicon_google"/>
+            android:src="@drawable/devicon_google" />
 
         <TextView
             android:id="@+id/tvGoogleButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:paddingEnd="30dp"
             android:gravity="center"
-            android:text="Lanjutkan dengan Google" />
+            android:text="@string/google" />
 
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/layoutDaftar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/btnLoginPhone"
+        app:layout_constraintStart_toStartOf="@id/btnLoginPhone"
+        app:layout_constraintEnd_toEndOf="@id/btnGoogleLogin">
+
+
+        <TextView
+            android:id="@+id/tvBelumAkun"
+            style="@style/Theme.IniDesakuBeta.TextBold.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/belum_mempunyai_akun"
+            android:textAlignment="textEnd" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDaftar"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="0dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/daftar"
+            android:textAlignment="center" />
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTamu"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/masuk_sebagai_tamu"
+        android:textAllCaps="false"
+        android:fontFamily="@font/nunito_regular"
+        android:textSize="14sp"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="@id/layoutDaftar"
+        app:layout_constraintStart_toStartOf="@id/layoutDaftar"
+        app:layout_constraintTop_toBottomOf="@id/layoutDaftar" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

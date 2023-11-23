@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.ActivityHomeBinding
 import com.citiasia.inidesakubeta.ui.ppob.PpobFragment
+import com.citiasia.inidesakubeta.ui.tvcc.tvccHome.TvccFrontFragment
 
 class HomeActivity : AppCompatActivity() {
 
@@ -29,6 +30,7 @@ class HomeActivity : AppCompatActivity() {
                     binding.topAppBar.setTitle("IniDesaku")
                 }
                 R.id.geo -> {
+                    replaceFragment(TvccFrontFragment())
                     binding.topAppBar.setTitle("Geospacial")
                 }
                 R.id.profileDesa -> {

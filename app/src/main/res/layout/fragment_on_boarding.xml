@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.onBoardingFragment.OnBoardingFragment">
 
-
-
     <LinearLayout
         android:id="@+id/layout_content"
         android:layout_width="match_parent"
@@ -44,28 +42,28 @@
         android:orientation="vertical"
         android:gravity="center"
         android:padding="24dp"
-        android:weightSum="10">
+        android:weightSum="16">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnMasuk"
-            app:cornerRadius="4dp"
+            app:cornerRadius="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="Masuk"
-            android:textAllCaps="true" />
+            android:text="@string/masuk"
+            android:textAllCaps="false" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnDaftar"
             style="?attr/materialButtonOutlinedStyle"
             app:elevation="2dp"
-            app:cornerRadius="4dp"
+            app:cornerRadius="8dp"
             android:outlineProvider="bounds"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="10dp"
-            android:text="Daftar"
-            android:textAllCaps="true" />
+            android:text="@string/daftar"
+            android:textAllCaps="false" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnTamu"
@@ -73,8 +71,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="10dp"
-            android:text="Masuk Sebagai Tamu"
-            android:textAllCaps="true" />
+            android:text="@string/masuk_sebagai_tamu"
+            android:textAllCaps="false" />
 
     </LinearLayout>
 

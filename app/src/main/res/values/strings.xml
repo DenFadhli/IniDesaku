@@ -26,7 +26,7 @@
     <string name="desa">Desa</string>
     <string name="done">Selesai</string>
     <string name="back">Kembali</string>
-    <string name="input_number_telphone">Masuk dengan nomor telepon</string>
+    <string name="input_number_telphone">Nomor telepon</string>
     <string name="confirm_password">Konfirmasi kata sandi</string>
     <string name="profile_desa">Profile Desa</string>
     <string name="geospasial">Geospasial</string>
@@ -77,4 +77,23 @@
     <string name="biaya_admin">Biaya admin</string>
     <string name="dummy_biaya_admin">Rp. 2.000</string>
     <string name="dummy_total">Rp. 120.000</string>
+    <string name="tab_bpjs_1">Kesehatan</string>
+    <string name="tab_bpjs_2">Ketenagakerjaan</string>
+    <string name="pilih_bulan">Pilih bulan</string>
+    <string name="kesehatan">Kesehatan</string>
+    <string name="ketenagakerjaan">Ketenagakerjaan</string>
+    <string name="nomor_va">Nomor va</string>
+    <string name="id_transaksi">Id transaksi</string>
+    <string name="total_peserta">Total peserta</string>
+    <string name="nomor_seri_dummy">32345123345312</string>
+    <string name="cari_tvcc_yang_kamu_mau">Cari TVCC yang kamu mau</string>
+    <string name="kategori">Kategori</string>
+    <string name="rekomendasi_tvcc">Rekomendasi TVCC</string>
+    <string name="title_of_content">Title of content</string>
+    <string name="popular_now">Popular now</string>
+    <string name="daftar">Daftar</string>
+    <string name="masuk_sebagai_tamu">Masuk Sebagai Tamu</string>
+    <string name="selamat_datang_login">Selamat datang, silahkan isi data di bawah untuk dapat login ke akun anda</string>
+    <string name="google">Google</string>
+    <string name="belum_mempunyai_akun">Belum mempunyai akun?</string>
 </resources>

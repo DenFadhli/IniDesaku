@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ppob.bpjs.kesehatan.BpjsKesehatanFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="24dp">
+
+        <TextView
+            android:id="@+id/tvPelanggan"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:text="@string/id_pelanggan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutPembayaran"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/id_pelanggan"
+            app:layout_constraintEnd_toEndOf="@id/tvPelanggan"
+            app:layout_constraintStart_toStartOf="@id/tvPelanggan"
+            app:layout_constraintTop_toBottomOf="@id/tvPelanggan">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textPembayaran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvPilihBulan"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/pilih_bulan"
+            app:layout_constraintEnd_toEndOf="@id/layoutPembayaran"
+            app:layout_constraintStart_toStartOf="@id/layoutPembayaran"
+            app:layout_constraintTop_toBottomOf="@id/layoutPembayaran" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvKesehatanPbjs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvPilihBulan"
+            tools:listitem="@layout/item_list_bulan" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
