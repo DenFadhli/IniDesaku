@@ -24,4 +24,19 @@
         <item>November</item>
         <item>Desember</item>
     </string-array>
+
+    <string-array name="boarding_title">
+        <item>Selamat datang</item>
+        <item>Memajukan ekonomi desa</item>
+        <item>Kegiatan desa</item>
+        <item>Pesona desa</item>
+    </string-array>
+
+    <string-array name="boarding_description">
+        <item>Membangun desa juara di Indonesia?\nAyo bergabung bersama kami!</item>
+        <item>Melalui pemberdayaan masyarakat desa di bidang ekonomi, sosial dan budaya</item>
+        <item>Menginformasikan pelaksanaan kegiatan yang berlangsung di Desa</item>
+        <item>Menginformasikan budaya lokal, wisata desa dan produk unggulan dari desa</item>
+    </string-array>
+
 </resources>

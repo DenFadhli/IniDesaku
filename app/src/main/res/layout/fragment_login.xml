@@ -42,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@id/textCaptionLogin"
         app:startIconDrawable="@drawable/email_icon">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.citiasia.inidesakubeta.ui.customView.CustomInputEditText
             android:id="@+id/textLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,31 +63,23 @@
         app:layout_constraintTop_toBottomOf="@id/layoutLogin"
         app:startIconDrawable="@drawable/key_icon">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.citiasia.inidesakubeta.ui.customView.CustomInputEditText
             android:id="@+id/textPassword"
             style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:maxLines="1"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/checkBoxRemember"
-        style="@style/Widget.Material3.CompoundButton.CheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/layoutPassword"
-        app:layout_constraintTop_toBottomOf="@id/layoutPassword" />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textRemember"
-        style="@style/Theme.IniDesakuBeta.Text.Medium.12sp"
+        style="@style/Theme.IniDesakuBeta.CheckBoxText.Medium12.500"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ingat_saya"
-        app:layout_constraintBottom_toBottomOf="@id/checkBoxRemember"
-        app:layout_constraintStart_toEndOf="@id/checkBoxRemember"
-        app:layout_constraintTop_toTopOf="@id/checkBoxRemember" />
+        app:layout_constraintStart_toStartOf="@id/layoutPassword"
+        app:layout_constraintTop_toBottomOf="@id/layoutPassword" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnForgotPassword"
@@ -96,9 +88,9 @@
         android:layout_height="wrap_content"
         android:text="@string/lupa_kata_sandi"
         android:textAlignment="textEnd"
-        app:layout_constraintBottom_toBottomOf="@id/textRemember"
+        app:layout_constraintBottom_toBottomOf="@id/checkBoxRemember"
         app:layout_constraintEnd_toEndOf="@id/layoutPassword"
-        app:layout_constraintTop_toTopOf="@id/textRemember" />
+        app:layout_constraintTop_toTopOf="@id/checkBoxRemember" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"

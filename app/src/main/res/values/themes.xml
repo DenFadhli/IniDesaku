@@ -3,8 +3,8 @@
     <style name="Base.Theme.IniDesakuBeta" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
          <item name="colorPrimary">@color/primary500</item>
-         <item name="colorPrimaryContainer">@color/primary600</item>
          <item name="colorPrimaryVariant">@color/primary600</item>
+         <item name="colorPrimaryContainer">@color/primary600</item>
          <item name="colorSecondaryContainer">@color/grey</item>
          <item name="colorOnBackground">@color/font500</item>
     </style>

@@ -14,27 +14,34 @@ class OnBoardingFragmentAdapter(
     FragmentStateAdapter(fragmentActivity) {
 
     override fun createFragment(position: Int): Fragment {
+        val dataTitle = context.resources.getStringArray(R.array.boarding_title)
+        val dataDescription = context.resources.getStringArray(R.array.boarding_description)
         return when (position) {
             0 -> OnBoardingContentFragment.newInstance(
-                context.resources.getString(R.string.title_onboarding_1),
-                context.resources.getString(R.string.description_onboarding_1),
-                R.drawable.image_boarding_satu
+                dataTitle[position],
+                dataDescription[position],
+                R.drawable.boarding_satu
             )
             1 -> OnBoardingContentFragment.newInstance(
-                context.resources.getString(R.string.title_onboarding_2),
-                context.resources.getString(R.string.description_onboarding_2),
-                R.drawable.image_boarding_dua
+                dataTitle[position],
+                dataDescription[position],
+                R.drawable.boarding_dua
+            )
+            2 -> OnBoardingContentFragment.newInstance(
+                dataTitle[position],
+                dataDescription[position],
+                R.drawable.boarding_tiga
             )
             else -> OnBoardingContentFragment.newInstance(
-                context.resources.getString(R.string.title_onboarding_3),
-                context.resources.getString(R.string.description_onboarding_3),
-                R.drawable.image_boarding_tiga
+                dataTitle[position],
+                dataDescription[position],
+                R.drawable.boarding_empat
 
             )
         }
     }
 
     override fun getItemCount(): Int {
-        return 3
+        return 4
     }
 }

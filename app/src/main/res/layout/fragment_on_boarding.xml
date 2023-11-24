@@ -47,6 +47,7 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnMasuk"
             app:cornerRadius="8dp"
+            style="@style/Theme.IniDesakuBeta.Button."
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -55,9 +56,10 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnDaftar"
-            style="?attr/materialButtonOutlinedStyle"
+            style="@style/Theme.IniDesakuBeta.OutlineButton."
             app:elevation="2dp"
             app:cornerRadius="8dp"
+            app:strokeColor="?attr/colorPrimary"
             android:outlineProvider="bounds"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -67,7 +69,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnTamu"
-            style="@style/Widget.Material3.Button.TextButton"
+            style="@style/Theme.IniDesakuBeta.TextButton.Regular14.600"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="10dp"

@@ -4,18 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="30dp"
+    android:padding="20dp"
     android:gravity="center"
     tools:context=".ui.onBoardingFragment.content.OnBoardingContentFragment">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/image_onboarding"
-        android:layout_width="230dp"
+        android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:scaleType="centerCrop"
-        tools:src="@tools:sample/backgrounds/scenic"/>
+        tools:src="@tools:sample/backgrounds/scenic" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_onboarding_title"
@@ -27,7 +30,7 @@
         android:layout_marginBottom="20dp"
         android:gravity="center"
         tools:text="INI JUDUL CONTENT"
-        style="@style/Theme.IniDesakuBeta.Text.Headline4" />
+        style="@style/Theme.IniDesakuBeta.TextView.Medium22.500" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_onboarding_description"
@@ -35,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/text_onboarding_title"
         tools:text="Ini isi dari kontent"
-        style="@style/Theme.IniDesakuBeta.Text.Subtitle1"
+        style="@style/Theme.IniDesakuBeta.TextView.Regular16.400"
         android:gravity="center"
         android:layout_marginBottom="12dp"/>
 
