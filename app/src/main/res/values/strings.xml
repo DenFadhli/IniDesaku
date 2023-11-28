@@ -21,9 +21,9 @@
     <string name="selanjutnya">Selanjutnya</string>
     <string name="pilih_wilayah_anda">Pilih Wilayah Anda</string>
     <string name="province">Provinsi</string>
-    <string name="kota_kecamatan">Kota/Kecamatan</string>
+    <string name="kota_kabupaten">Kota / Kabupaten</string>
     <string name="kecamatan">Kecamatan</string>
-    <string name="desa">Desa</string>
+    <string name="desa_kelurahan">Desa / Kelurahan</string>
     <string name="done">Selesai</string>
     <string name="back">Kembali</string>
     <string name="input_number_telphone">Nomor telepon</string>
@@ -96,6 +96,14 @@
     <string name="selamat_datang_login">Selamat datang, silahkan isi data di bawah untuk dapat login ke akun anda</string>
     <string name="google">Google</string>
     <string name="belum_mempunyai_akun">Belum mempunyai akun?</string>
-    <string name="password_wrong">Kata sandi yang anda masukan kurang dari 6 karakter</string>
-    <string name="email_wrong">Email yang anda masukan tidak valid</string>
+    <string name="password_wrong">*Kata sandi kurang dari 6 karakter</string>
+    <string name="password_confirm_wrong">*Kata sandi berbeda dengan sebelumnya</string>
+    <string name="email_wrong">*Email yang anda masukan tidak valid</string>
+    <string name="username_invalid">*Username yang anda masukkan sudah dipakai</string>
+    <string name="description_signup_page">Selamat datang! Silahkan mengisi formulir berikut untuk membuat akun.</string>
+    <string name="otp_wrong">*Kode OTP yang anda masukkan tidak valid</string>
+    <string name="complete_profile_title">Lengkapi Data Diri</string>
+    <string name="complete_profile_desc">Selamat datang! Isi detail informasi dirimu sekarang</string>
+    <string name="complete_profile_referal_code">Kode Referal</string>
+    <string name="pilih_wilayah_desc">Selamat datang! Silakan isi wilayah tempat Anda berada!</string>
 </resources>

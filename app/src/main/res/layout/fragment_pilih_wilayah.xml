@@ -13,6 +13,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/pilih_wilayah_anda"
+        android:fontFamily="@font/nunito_semibold"
+        android:textColor="@color/primary600"
+        android:textSize="24sp"
+        android:textFontWeight="600"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,12 +25,15 @@
         android:id="@+id/tvCaptionWilayahAnda"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/description_onboarding_1"
+        android:layout_marginTop="12dp"
+        android:text="@string/pilih_wilayah_desc"
+        android:fontFamily="@font/nunito_light"
+        android:textColor="@color/signup_description"
+        android:textSize="16sp"
+        android:textFontWeight="400"
         app:layout_constraintEnd_toEndOf="@id/tvTitleWIlayah"
         app:layout_constraintStart_toStartOf="@id/tvTitleWIlayah"
         app:layout_constraintTop_toBottomOf="@id/tvTitleWIlayah"
-
         />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -34,8 +41,12 @@
         style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="35dp"
+        app:boxStrokeWidth="0dp"
         android:hint="@string/province"
+        android:background="@drawable/input_layout"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/baseline_keyboard_arrow_down_24"
         app:layout_constraintEnd_toEndOf="@id/tvCaptionWilayahAnda"
         app:layout_constraintStart_toStartOf="@id/tvCaptionWilayahAnda"
         app:layout_constraintTop_toBottomOf="@id/tvCaptionWilayahAnda">
@@ -45,6 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"
+            android:background="@drawable/input_layout"
             app:simpleItems="@array/provinsi_items" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -54,8 +66,12 @@
         style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="@string/kota_kecamatan"
+        android:layout_marginTop="16dp"
+        app:boxStrokeWidth="0dp"
+        android:hint="@string/kota_kabupaten"
+        android:background="@drawable/input_layout"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/baseline_keyboard_arrow_down_24"
         app:layout_constraintEnd_toEndOf="@id/provinsiLayout"
         app:layout_constraintStart_toStartOf="@id/provinsiLayout"
         app:layout_constraintTop_toBottomOf="@id/provinsiLayout">
@@ -65,6 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"
+            android:background="@drawable/input_layout"
             app:simpleItems="@array/provinsi_items" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -74,8 +91,12 @@
         style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:hint="@string/kecamatan"
+        app:boxStrokeWidth="0dp"
+        android:background="@drawable/input_layout"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/baseline_keyboard_arrow_down_24"
         app:layout_constraintEnd_toEndOf="@id/layoutKota"
         app:layout_constraintStart_toStartOf="@id/layoutKota"
         app:layout_constraintTop_toBottomOf="@id/layoutKota">
@@ -85,6 +106,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"
+            android:background="@drawable/input_layout"
             app:simpleItems="@array/provinsi_items" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -94,8 +116,12 @@
         style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="@string/desa"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/input_layout"
+        android:hint="@string/desa_kelurahan"
+        app:endIconMode="custom"
+        app:boxStrokeWidth="0dp"
+        app:endIconDrawable="@drawable/baseline_keyboard_arrow_down_24"
         app:layout_constraintEnd_toEndOf="@id/layoutKecamatan"
         app:layout_constraintStart_toStartOf="@id/layoutKecamatan"
         app:layout_constraintTop_toBottomOf="@id/layoutKecamatan">
@@ -105,32 +131,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"
+            android:background="@drawable/input_layout"
             app:simpleItems="@array/provinsi_items" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnDone"
+        android:id="@+id/btnNext"
         style="@style/Widget.Material3.Button.Icon"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        app:cornerRadius="4dp"
-        app:icon="@drawable/baseline_arrow_forward_24"
-        app:iconGravity="end"
-        android:text="@string/done"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:cornerRadius="8dp"
+        android:text="@string/selanjutnya"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/nunito_medium"
+        android:textFontWeight="600"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/layoutDesa"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/back"
-        android:textAllCaps="false"
-        app:icon="@drawable/baseline_arrow_back_24"
-        app:cornerRadius="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
