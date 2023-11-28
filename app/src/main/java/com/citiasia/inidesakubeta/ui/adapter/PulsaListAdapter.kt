@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.citiasia.inidesakubeta.databinding.ItemListPulsaBinding
-import com.citiasia.inidesakubeta.model.PriceListDummy
+import com.citiasia.inidesakubeta.data.remote.model.PriceListDummy
 
 class PulsaListAdapter(private val list: List<PriceListDummy>) : RecyclerView.Adapter<PulsaListAdapter.ViewHolder>() {
 

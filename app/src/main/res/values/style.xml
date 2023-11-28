@@ -137,6 +137,13 @@
         <item name="android:fontWeight">600</item>
     </style>
 
+    <style name="Theme.IniDesakuBeta.ChipButton." parent="Widget.Material3.Chip.Suggestion">
+        <item name="android:fontFamily">@font/nunito_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontWeight">600</item>
+
+    </style>
+
 
     <style name="customImageView8Percent" parent="">
         <item name="cornerFamily">rounded</item>

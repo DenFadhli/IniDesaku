@@ -19,14 +19,23 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     buildTypes {
         release {
+            buildConfigField("String", "BASE_URL", "\"https://api-gv.inidesaku.id\"")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://api-gv.inidesaku.id\"")
+        }
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

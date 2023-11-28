@@ -9,9 +9,9 @@ import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.FragmentPrabayarBinding
-import com.citiasia.inidesakubeta.model.DataPulsaUser
-import com.citiasia.inidesakubeta.model.PriceListDummy
-import com.citiasia.inidesakubeta.model.PulsaDataInput
+import com.citiasia.inidesakubeta.data.remote.model.DataPulsaUser
+import com.citiasia.inidesakubeta.data.remote.model.PriceListDummy
+import com.citiasia.inidesakubeta.data.remote.model.PulsaDataInput
 import com.citiasia.inidesakubeta.ui.adapter.PulsaListAdapter
 import com.citiasia.inidesakubeta.ui.ppob.pulsa.pulsaDialog.BottomSheetPulsa
 import com.citiasia.inidesakubeta.utils.PulsaPreference

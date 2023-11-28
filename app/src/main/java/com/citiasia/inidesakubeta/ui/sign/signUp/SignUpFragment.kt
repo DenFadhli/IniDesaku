@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.navigation.fragment.findNavController
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.FragmentSignUpBinding
@@ -27,6 +28,10 @@ class SignUpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner) {
+            findNavController().popBackStack()
+        }
+
         buttonClick()
     }
 
@@ -39,5 +44,7 @@ class SignUpFragment : Fragment() {
             Toast.makeText(requireContext(), "Belom jadi bang!", Toast.LENGTH_SHORT).show()
         }
     }
+
+
 
 }

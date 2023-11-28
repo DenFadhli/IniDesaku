@@ -1,7 +1,7 @@
 package com.citiasia.inidesakubeta.utils
 
 import android.content.Context
-import com.citiasia.inidesakubeta.model.PulsaDataInput
+import com.citiasia.inidesakubeta.data.remote.model.PulsaDataInput
 
 class PulsaPreference(context: Context) {
 

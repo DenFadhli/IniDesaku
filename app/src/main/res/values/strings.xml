@@ -93,7 +93,7 @@
     <string name="popular_now">Popular now</string>
     <string name="daftar">Daftar</string>
     <string name="masuk_sebagai_tamu">Masuk sebagai tamu</string>
-    <string name="selamat_datang_login">Selamat datang, silahkan isi data di bawah untuk dapat login ke akun anda</string>
+    <string name="selamat_datang_login">Selamat datang! Silahkan isi data di bawah untuk dapat masuk ke akun Anda</string>
     <string name="google">Google</string>
     <string name="belum_mempunyai_akun">Belum mempunyai akun?</string>
     <string name="password_wrong">Kata sandi yang anda masukan kurang dari 6 karakter</string>

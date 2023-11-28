@@ -10,7 +10,7 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.core.widget.doOnTextChanged
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.ActivityPulsaBinding
-import com.citiasia.inidesakubeta.model.PulsaDataInput
+import com.citiasia.inidesakubeta.data.remote.model.PulsaDataInput
 import com.citiasia.inidesakubeta.ui.adapter.PulsaTabAdapter
 import com.citiasia.inidesakubeta.utils.PulsaPreference
 import com.google.android.material.tabs.TabLayoutMediator

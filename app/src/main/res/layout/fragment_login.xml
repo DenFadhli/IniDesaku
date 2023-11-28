@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
+    android:padding="20dp"
     tools:context=".ui.sign.login.LoginFragment">
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@id/ilsLogin" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutLogin"
+        android:id="@+id/layoutEmail"
         style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
         app:startIconDrawable="@drawable/email_icon">
 
         <com.citiasia.inidesakubeta.ui.customView.CustomInputEditText
-            android:id="@+id/textLogin"
+            android:id="@+id/textEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
@@ -57,10 +57,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:hint="@string/kata_sandi"
-        app:endIconMode="password_toggle"
-        app:layout_constraintEnd_toEndOf="@id/layoutLogin"
-        app:layout_constraintStart_toStartOf="@id/layoutLogin"
-        app:layout_constraintTop_toBottomOf="@id/layoutLogin"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleDrawable="@drawable/eye_selector_icon"
+        app:layout_constraintEnd_toEndOf="@id/layoutEmail"
+        app:layout_constraintStart_toStartOf="@id/layoutEmail"
+        app:layout_constraintTop_toBottomOf="@id/layoutEmail"
         app:startIconDrawable="@drawable/key_icon">
 
         <com.citiasia.inidesakubeta.ui.customView.CustomInputEditText
@@ -87,6 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lupa_kata_sandi"
+        android:padding="0dp"
         android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="@id/checkBoxRemember"
         app:layout_constraintEnd_toEndOf="@id/layoutPassword"
@@ -99,6 +101,7 @@
         android:layout_height="wrap_content"
         android:text="@string/masuk"
         android:textAllCaps="false"
+        android:enabled="false"
         app:cornerRadius="4dp"
         app:layout_constraintEnd_toEndOf="@id/btnForgotPassword"
         app:layout_constraintStart_toStartOf="@id/checkBoxRemember"
@@ -128,7 +131,8 @@
             style="@style/Theme.IniDesakuBeta.TextView.Regular12.400"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="0"
+            android:paddingHorizontal="4dp"
             android:text="@string/atau"
             android:textAlignment="center" />
 

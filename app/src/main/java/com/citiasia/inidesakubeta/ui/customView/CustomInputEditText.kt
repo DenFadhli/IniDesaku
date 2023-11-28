@@ -44,11 +44,15 @@ class CustomInputEditText: TextInputEditText {
                     0x00000021 -> {
                         if (!Patterns.EMAIL_ADDRESS.matcher(text.toString()).matches()) {
                             textInputLayout.error = context.getString(R.string.email_wrong)
+                        } else {
+                            textInputLayout.isErrorEnabled = false
                         }
                     }
                     0x00000081 -> {
                         if (text.toString().length < 6) {
                             textInputLayout.error = context.getString(R.string.password_wrong)
+                        } else {
+                            textInputLayout.isErrorEnabled = false
                         }
                     }
                 }
@@ -58,7 +62,7 @@ class CustomInputEditText: TextInputEditText {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                textInputLayout.isErrorEnabled = false
+//                textInputLayout.isErrorEnabled = false
                 handler.removeCallbacks(inputFinishChecker)
             }
 
