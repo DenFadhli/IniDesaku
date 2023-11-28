@@ -50,6 +50,9 @@
             android:name=".ui.donasi.detail.DetailDonasiActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.tvcc.TvccActivity"
             android:exported="false" />
         <activity
