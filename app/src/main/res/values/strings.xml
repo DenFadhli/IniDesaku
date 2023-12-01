@@ -151,4 +151,7 @@
     <string name="galeri_budaya">Galeri Budaya</string>
     <string name="potensi_fisik">Potensi Fisik</string>
     <string name="potensi_non_fisik">Potensi Non Fisik</string>
+    <string name="sedang_tayang">Sedang Tayang</string>
+    <string name="populer_sekarang">Populer sekarang</string>
+    <string name="semua">Semua</string>
 </resources>

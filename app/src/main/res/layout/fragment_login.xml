@@ -37,17 +37,24 @@
         android:layout_marginTop="16dp"
         android:hint="@string/email"
         app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxStrokeColor="@color/font200"
+        app:boxStrokeWidth="1dp"
         app:layout_constraintEnd_toEndOf="@id/textCaptionLogin"
         app:layout_constraintStart_toStartOf="@id/textCaptionLogin"
         app:layout_constraintTop_toBottomOf="@id/textCaptionLogin"
-        app:startIconDrawable="@drawable/email_icon">
+        app:startIconDrawable="@drawable/email_icon"
+        app:startIconTint="@color/font400">
 
         <com.citiasia.inidesakubeta.ui.customView.CustomInputEditText
             android:id="@+id/textEmail"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textColor="@color/font400" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -57,12 +64,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:hint="@string/kata_sandi"
-        app:passwordToggleEnabled="true"
-        app:passwordToggleDrawable="@drawable/eye_selector_icon"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxStrokeColor="@color/font200"
+        app:boxStrokeWidth="1dp"
         app:layout_constraintEnd_toEndOf="@id/layoutEmail"
         app:layout_constraintStart_toStartOf="@id/layoutEmail"
         app:layout_constraintTop_toBottomOf="@id/layoutEmail"
-        app:startIconDrawable="@drawable/key_icon">
+        app:passwordToggleDrawable="@drawable/eye_selector_icon"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/key_icon"
+        app:startIconTint="@color/font400">
 
         <com.citiasia.inidesakubeta.ui.customView.CustomInputEditText
             android:id="@+id/textPassword"
@@ -70,7 +84,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
-            android:maxLines="1"/>
+            android:maxLines="1"
+            android:textColor="@color/font400" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.checkbox.MaterialCheckBox
@@ -87,8 +102,8 @@
         style="@style/Theme.IniDesakuBeta.ButtonText.Medium12.500"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/lupa_kata_sandi"
         android:padding="0dp"
+        android:text="@string/lupa_kata_sandi"
         android:textAlignment="textEnd"
         app:layout_constraintBottom_toBottomOf="@id/checkBoxRemember"
         app:layout_constraintEnd_toEndOf="@id/layoutPassword"
@@ -99,9 +114,9 @@
         style="@style/Theme.IniDesakuBeta.Button."
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:enabled="false"
         android:text="@string/masuk"
         android:textAllCaps="false"
-        android:enabled="false"
         app:cornerRadius="4dp"
         app:layout_constraintEnd_toEndOf="@id/btnForgotPassword"
         app:layout_constraintStart_toStartOf="@id/checkBoxRemember"
