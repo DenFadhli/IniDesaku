@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="24dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container_image_preview"
+        android:layout_width="300dp"
+        android:layout_height="550dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/row_button"
+        app:cardCornerRadius="16dp">
+
+        <ImageView
+            android:id="@+id/iv_image_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/backgrounds/scenic"
+            android:contentDescription="@string/image_preview" />
+    </androidx.cardview.widget.CardView>
+
+    <TableLayout
+        android:id="@+id/row_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:paddingHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container_image_preview">
+
+        <TableRow>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUploadCamera"
+                android:background="@drawable/button_border_geotagging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reupload_camera"
+                android:textColor="@color/primary500"
+                android:textSize="14sp"
+                android:textFontWeight="700"
+                android:fontFamily="@font/nunito_regular" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUploadGallery"
+                android:background="@drawable/button_fill_geotagging"
+                android:layout_width="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/apply_upload"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textFontWeight="600"
+                android:fontFamily="@font/nunito_regular" />
+
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,12 +4,14 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#D0D5DD</color>
     <color name="primary200">#C6ECCC</color>
+    <color name="primary400">#65C375</color>
     <color name="primary500">#40A752</color>
     <color name="primary600">#308940</color>
-    <color name="font200">#D7DAE0</color>
+    <color name="font600">#565E73</color>
     <color name="font500">#667085</color>
     <color name="font400">#8A94A6</color>
     <color name="font300">#B3B9C6</color>
+    <color name="font200">#D7DAE0</color>
     <color name="font100">#EDEEF1</color>
     <color name="font50">#F6F7F9</color>
     <color name="disabled_text_button">#CBE0FFFF</color>

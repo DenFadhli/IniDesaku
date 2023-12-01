@@ -104,6 +104,25 @@
     <string name="otp_wrong">*Kode OTP yang anda masukkan tidak valid</string>
     <string name="complete_profile_title">Lengkapi Data Diri</string>
     <string name="complete_profile_desc">Selamat datang! Isi detail informasi dirimu sekarang</string>
-    <string name="complete_profile_referal_code">Kode Referal</string>
+    <string name="complete_profile_referal_code">Kode Referral</string>
     <string name="pilih_wilayah_desc">Selamat datang! Silakan isi wilayah tempat Anda berada!</string>
+    <string name="pusat_bantuan_title">Pusat Bantuan</string>
+    <string name="pusat_bantuan_desc">Pertanyaan umum tentang INI DESAKU</string>
+    <string name="form_bantuan_desc">Silahkan isi formulir dibawah ini!</string>
+    <string name="choose_item">Pilih</string>
+    <string name="form_bantuan_name">Nama Lengkap Anda</string>
+    <string name="form_bantuan_email">Email Anda</string>
+    <string name="form_bantuan_detail_pertanyaan">Detail Pertanyaan</string>
+    <string name="kirim">Kirim</string>
+    <string name="question_empty">*Masukkan pertanyaan.</string>
+    <string name="kategori_lokasi">Kategori Lokasi</string>
+    <string name="title_geotagging">Kontribusi Lokasi Penting dari Anda!</string>
+    <string name="nama_lokasi_penting">Nama Lokasi Penting</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="camera">Kamera</string>
+    <string name="gallery">Galeri</string>
+    <string name="save">Simpan</string>
+    <string name="image_preview">Pratinjau Gambar</string>
+    <string name="reupload_camera">Foto Ulang</string>
+    <string name="apply_upload">Gunakan Foto</string>
 </resources>
