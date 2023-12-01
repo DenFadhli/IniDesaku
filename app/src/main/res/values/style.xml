@@ -61,6 +61,24 @@
         <item name="android:fontFamily">@font/nunito_medium</item>
     </style>
 
+    <style name="Theme.IniDesakuBeta.TextView.Regular10.400" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/nunito_regular</item>
+        <item name="android:fontWeight">400</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.TextView.Regular10.600" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">10sp</item>
+        <item name="android:fontFamily">@font/nunito_regular</item>
+        <item name="android:fontWeight">600</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.TextView.SemiBold11.600" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">@font/nunito_semibold</item>
+        <item name="android:fontWeight">600</item>
+    </style>
+
     <style name="Theme.IniDesakuBeta.TextView.Regular12.400" parent="Widget.MaterialComponents.TextView">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">?attr/colorOnBackground</item>
@@ -80,6 +98,18 @@
         <item name="android:textColor">?attr/colorOnBackground</item>
         <item name="android:fontFamily">@font/nunito_regular</item>
         <item name="android:fontWeight">400</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.TextView.SemiBold16.600" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/nunito_semibold</item>
+        <item name="android:fontWeight">600</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.TextView.SemiBold20.600" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/nunito_semibold</item>
+        <item name="android:fontWeight">600</item>
     </style>
 
     <style name="Theme.IniDesakuBeta.TextView.Medium22.500" parent="Widget.MaterialComponents.TextView">
@@ -141,12 +171,16 @@
         <item name="android:fontFamily">@font/nunito_regular</item>
         <item name="android:textSize">14sp</item>
         <item name="android:fontWeight">600</item>
-
     </style>
 
 
     <style name="customImageView8Percent" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">8%</item>
+    </style>
+
+    <style name="customImageView16dp" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
     </style>
 </resources>

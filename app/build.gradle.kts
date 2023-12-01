@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
     id("kotlin-kapt")
+    id("androidx.navigation.safeargs")
 }
 
 android {
@@ -47,6 +48,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
 }
 
 dependencies {
@@ -87,13 +89,20 @@ dependencies {
     //live data
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
 
+
+
     //shimmer
 //    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    //exoPlayer
+    implementation ("com.google.android.exoplayer:exoplayer-core:2.19.1")
+    implementation ("com.google.android.exoplayer:exoplayer-ui:2.19.1")
+
 
 
     //viewModel
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
-    implementation ("androidx.activity:activity-ktx:1.8.0")
+    implementation ("androidx.activity:activity-ktx:1.8.1")
 
     //dataStore
 //    implementation "androidx.datastore:datastore-preferences:1.0.0"

@@ -11,6 +11,7 @@ import com.citiasia.inidesakubeta.databinding.FragmentPpobBinding
 import com.citiasia.inidesakubeta.ui.ppob.bpjs.BpjsActivity
 import com.citiasia.inidesakubeta.ui.ppob.listrikAir.ListrikAirActivity
 import com.citiasia.inidesakubeta.ui.ppob.pulsa.PulsaActivity
+import com.citiasia.inidesakubeta.ui.tvcc.TvccActivity
 
 class PpobFragment : Fragment() {
 
@@ -53,6 +54,10 @@ class PpobFragment : Fragment() {
 
             btnPbjsKesehatan.setOnClickListener {
                 toBpjsActivity()
+            }
+
+            btnTopUp.setOnClickListener {
+                startActivity(Intent(requireActivity(), TvccActivity::class.java))
             }
         }
     }

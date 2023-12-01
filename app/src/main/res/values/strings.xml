@@ -98,4 +98,7 @@
     <string name="belum_mempunyai_akun">Belum mempunyai akun?</string>
     <string name="password_wrong">Kata sandi yang anda masukan kurang dari 6 karakter</string>
     <string name="email_wrong">Email yang anda masukan tidak valid</string>
+    <string name="sedang_tayang">Sedang Tayang</string>
+    <string name="populer_sekarang">Populer sekarang</string>
+    <string name="semua">Semua</string>
 </resources>

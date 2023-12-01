@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:cardCornerRadius="6dp"
-    android:layout_marginBottom="16dp"
-    android:layout_marginEnd="8dp"
-    android:layout_gravity="center">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -16,37 +16,38 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/imgMainContent"
             android:layout_width="0dp"
-            android:layout_height="148dp"
+            android:layout_height="59dp"
             android:background="?attr/colorSecondaryContainer"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:src="@tools:sample/backgrounds/scenic"
-            android:scaleType="centerCrop"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic" />
 
         <TextView
             android:id="@+id/tvTitleMainContent"
+            style="@style/Theme.IniDesakuBeta.TextView.SemiBold11.600"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/imgMainContent"
-            app:layout_constraintTop_toBottomOf="@id/imgMainContent"
-            app:layout_constraintEnd_toEndOf="@id/imgMainContent"
-            android:layout_marginHorizontal="12dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="8dp"
             android:text="@string/title_of_content"
-            style="@style/Theme.IniDesakuBeta.Text.Headline5"/>
+            app:layout_constraintEnd_toEndOf="@id/imgMainContent"
+            app:layout_constraintStart_toStartOf="@id/imgMainContent"
+            app:layout_constraintTop_toBottomOf="@id/imgMainContent" />
 
         <TextView
             android:id="@+id/tvPopularNow"
+            style="@style/Theme.IniDesakuBeta.TextView.Regular10.400"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tvTitleMainContent"
-            app:layout_constraintStart_toStartOf="@id/tvTitleMainContent"
-            app:layout_constraintEnd_toEndOf="@id/tvTitleMainContent"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="8dp"
             android:text="@string/popular_now"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
-            android:paddingBottom="16dp"/>
+            android:textColor="@color/font300"
+            app:layout_constraintEnd_toEndOf="@id/tvTitleMainContent"
+            app:layout_constraintStart_toStartOf="@id/tvTitleMainContent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleMainContent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

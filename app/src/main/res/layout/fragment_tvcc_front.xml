@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,201 +8,208 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:background="?attr/colorPrimary"
+        android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
+            app:titleTextColor="?attr/colorOnPrimary"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:layout_anchor="@+id/appBarLayout"
+            app:titleCentered="true"
             app:layout_anchorGravity="center"
             app:navigationIcon="@drawable/baseline_arrow_back_24"
-            app:navigationIconTint="@color/black"
+            app:navigationIconTint="?attr/colorOnPrimary"
             app:title="TVCC"
             app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutSearch"
-        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
-        android:layout_width="0dp"
+    <ScrollView
+        android:id="@+id/scrollBar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="24dp"
-        android:hint="@string/cari_tvcc_yang_kamu_mau"
-        app:endIconDrawable="@drawable/search_icon"
-        app:endIconMode="custom"
-        app:layout_constraintEnd_toEndOf="@id/appBarLayout"
-        app:layout_constraintStart_toStartOf="@id/appBarLayout"
-        app:layout_constraintTop_toBottomOf="@id/appBarLayout">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textSearch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <HorizontalScrollView
-        android:id="@+id/scrollHorizontal"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:scrollbars="none"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutSearch">
-
-        <com.google.android.material.chip.ChipGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="24dp"
-            android:paddingEnd="24dp"
-            app:chipSpacingHorizontal="8dp"
-            app:singleLine="true"
-            app:singleSelection="true">
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/kategoriSatu"
-                style="@style/Theme.IniDesakuBeta.ChipButton."
-                app:chipStrokeColor="?attr/colorPrimary"
-                app:chipStartPadding="14dp"
-                app:chipMinHeight="35dp"
-                app:chipEndPadding="14dp"
-                app:rippleColor="?attr/colorPrimary"
-                app:chipBackgroundColor="@drawable/chip_background_selector"
-                android:textColor="@drawable/chip_text_selector"
-                android:checkable="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/kategori"
-                />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/kategoriDua"
-                style="@style/Theme.IniDesakuBeta.ChipButton."
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/kategori" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/kategoriTiga"
-                style="@style/Widget.Material3.Chip.Suggestion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/kategori" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/KategoriEmpat"
-                style="@style/Widget.Material3.Chip.Suggestion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/kategori" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/kategoriLima"
-                style="@style/Widget.Material3.Chip.Suggestion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/kategori" />
-
-
-        </com.google.android.material.chip.ChipGroup>
-
-    </HorizontalScrollView>
-
-    <TextView
-        android:id="@+id/tvRekomendasi"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/rekomendasi_tvcc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/scrollHorizontal" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardMainContent"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:cardCornerRadius="8dp"
-        app:layout_constraintEnd_toEndOf="@id/tvRekomendasi"
-        app:layout_constraintStart_toStartOf="@id/tvRekomendasi"
-        app:layout_constraintTop_toBottomOf="@id/tvRekomendasi">
+        android:layout_marginTop="?attr/actionBarSize"
+        android:scrollbars="none">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imgMainContent"
-                android:layout_width="0dp"
-                android:layout_height="148dp"
-                android:background="?attr/colorSecondaryContainer"
-                android:scaleType="centerCrop"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:src="@tools:sample/backgrounds/scenic" />
-
-            <TextView
-                android:id="@+id/tvTitleMainContent"
-                style="@style/Theme.IniDesakuBeta.Text.Headline5"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutSearch"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="12dp"
-                android:layout_marginTop="16dp"
-                android:text="@string/title_of_content"
-                app:layout_constraintEnd_toEndOf="@id/imgMainContent"
-                app:layout_constraintStart_toStartOf="@id/imgMainContent"
-                app:layout_constraintTop_toBottomOf="@id/imgMainContent" />
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:hint="@string/cari_tvcc_yang_kamu_mau"
+                app:endIconDrawable="@drawable/search_icon"
+                app:endIconMode="custom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/tvPopularNow"
-                style="@style/Theme.IniDesakuBeta.Text.Caption"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <HorizontalScrollView
+                android:id="@+id/scrollHorizontal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
-                android:paddingBottom="16dp"
-                android:text="@string/popular_now"
-                app:layout_constraintEnd_toEndOf="@id/tvTitleMainContent"
-                app:layout_constraintStart_toStartOf="@id/tvTitleMainContent"
-                app:layout_constraintTop_toBottomOf="@id/tvTitleMainContent" />
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutSearch">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    app:chipSpacingHorizontal="8dp"
+                    app:singleLine="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipSemua"
+                        style="@style/Theme.IniDesakuBeta.ChipButton."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/semua"
+                        android:checked="true"
+                        android:textColor="@drawable/chip_text_selector"
+                        app:chipBackgroundColor="@drawable/chip_background_selector"
+                        app:chipEndPadding="14dp"
+                        app:chipMinHeight="35dp"
+                        app:chipStartPadding="14dp"
+                        app:chipStrokeColor="?attr/colorPrimary"
+                        app:rippleColor="?attr/colorPrimary" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipKesehatan"
+                        style="@style/Theme.IniDesakuBeta.ChipButton."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kesehatan"
+                        android:textColor="@drawable/chip_text_selector"
+                        app:chipBackgroundColor="@drawable/chip_background_selector"
+                        app:chipEndPadding="14dp"
+                        app:chipMinHeight="35dp"
+                        app:chipStartPadding="14dp"
+                        app:chipStrokeColor="?attr/colorPrimary"
+                        app:rippleColor="?attr/colorPrimary" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipPenjualan"
+                        style="@style/Theme.IniDesakuBeta.ChipButton."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Penjualan"
+                        android:textColor="@drawable/chip_text_selector"
+                        app:chipBackgroundColor="@drawable/chip_background_selector"
+                        app:chipEndPadding="14dp"
+                        app:chipMinHeight="35dp"
+                        app:chipStartPadding="14dp"
+                        app:chipStrokeColor="?attr/colorPrimary"
+                        app:rippleColor="?attr/colorPrimary" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipPendidikan"
+                        style="@style/Theme.IniDesakuBeta.ChipButton."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pendidikan"
+                        android:textColor="@drawable/chip_text_selector"
+                        app:chipBackgroundColor="@drawable/chip_background_selector"
+                        app:chipEndPadding="14dp"
+                        app:chipMinHeight="35dp"
+                        app:chipStartPadding="14dp"
+                        app:chipStrokeColor="?attr/colorPrimary"
+                        app:rippleColor="?attr/colorPrimary" />
+
+
+
+
+
+                </com.google.android.material.chip.ChipGroup>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/tvRekomendasi"
+                style="@style/Theme.IniDesakuBeta.TextView.SemiBold16.600"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/rekomendasi_tvcc"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scrollHorizontal" />
+
+            <HorizontalScrollView
+                android:id="@+id/layoutBanner"
+                android:layout_width="0dp"
+                android:layout_height="216dp"
+                android:layout_marginTop="12dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvRekomendasi">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBannerLive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="12dp"
+                    tools:listitem="@layout/card_tvcc_live" />
+
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:id="@+id/tvListTvcc"
+                style="@style/Theme.IniDesakuBeta.TextView.SemiBold16.600"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/rekomendasi_tvcc"
+                app:layout_constraintEnd_toEndOf="@id/layoutBanner"
+                app:layout_constraintStart_toStartOf="@id/layoutBanner"
+                app:layout_constraintTop_toBottomOf="@id/layoutBanner" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvListContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvListTvcc"
+                tools:listitem="@layout/item_list_content_tvcc" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/tvListTvcc"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/rekomendasi_tvcc"
-        app:layout_constraintEnd_toEndOf="@id/cardMainContent"
-        app:layout_constraintStart_toStartOf="@id/cardMainContent"
-        app:layout_constraintTop_toBottomOf="@id/cardMainContent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvListContent"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvListTvcc"
-        tools:listitem="@layout/item_list_content_tvcc" />
+    </ScrollView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

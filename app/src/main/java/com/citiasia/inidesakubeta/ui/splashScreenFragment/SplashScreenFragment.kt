@@ -26,7 +26,8 @@ class SplashScreenFragment : Fragment() {
 
         Handler().postDelayed({
             lifecycleScope.launchWhenCreated {
-                findNavController().navigate(R.id.action_splashScreenFragment_to_onBoardingFragment)
+                findNavController().navigate(R.id.action_splashScreenFragment_to_homeActivity)
+//                findNavController().navigate(R.id.action_splashScreenFragment_to_onBoardingFragment)
             }
         }, MILISECON.toLong())
     }

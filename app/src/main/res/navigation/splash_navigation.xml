@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_splashScreenFragment_to_onBoardingFragment"
             app:destination="@id/onBoardingFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"

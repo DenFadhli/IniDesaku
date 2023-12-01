@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tvcc_navigation"
+    app:startDestination="@id/tvccFrontFragment">
+
+    <fragment
+        android:id="@+id/tvccFrontFragment"
+        android:name="com.citiasia.inidesakubeta.ui.tvcc.tvccHome.TvccFrontFragment"
+        android:label="fragment_tvcc_front"
+        tools:layout="@layout/fragment_tvcc_front" >
+        <action
+            android:id="@+id/action_tvccFrontFragment_to_tvccDetailFragment"
+            app:destination="@id/tvccDetailFragment"
+            app:popUpTo="@id/tvccDetailFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/tvccDetailFragment"
+        android:name="com.citiasia.inidesakubeta.ui.tvcc.tvccDetail.TvccDetailFragment"
+        android:label="fragment_tvcc_detail"
+        tools:layout="@layout/fragment_tvcc_detail" >
+
+        <argument
+            android:name="dataTvcc"
+            app:argType="com.citiasia.inidesakubeta.data.remote.model.ResponseTvcc" />
+    </fragment>
+</navigation>
