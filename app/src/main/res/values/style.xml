@@ -185,6 +185,17 @@
         <item name="cornerSize">8%</item>
     </style>
 
+    <style name="Widget.App.Button.OutlinedButton.IconOnly" parent="Widget.Material3.Button.IconButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+
     <style name="customImageView16dp" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">16dp</item>

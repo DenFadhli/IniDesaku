@@ -6,42 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".PotensiDesaFragment">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_fisik"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/potensi_fisik"
-        android:textColor="#40A752"
-        app:strokeWidth="1dp"
-        app:strokeColor="#40A752"
-        app:backgroundTint="@color/white"
-        app:cornerRadius="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/btn_non_fisik"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <!-- TODO: Update blank fragment layout -->
 
-    </com.google.android.material.button.MaterialButton>
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_non_fisik"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/potensi_non_fisik"
-        android:textColor="#40A752"
-        app:strokeWidth="1dp"
-        app:strokeColor="#40A752"
-        app:backgroundTint="@color/white"
-        app:cornerRadius="8dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_potensi"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_fisik"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_list_potensi">
 
-    </com.google.android.material.button.MaterialButton>
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
