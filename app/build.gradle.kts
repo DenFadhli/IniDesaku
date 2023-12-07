@@ -21,6 +21,7 @@ android {
 
     buildFeatures {
         buildConfig = true
+        viewBinding = true
     }
 
     buildTypes {
@@ -105,4 +106,7 @@ dependencies {
 
     //pref
     implementation ("androidx.datastore:datastore-preferences:1.0.0")
+
+    //carousel
+    implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
 }

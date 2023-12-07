@@ -8,6 +8,12 @@
     <string name="description_onboarding_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu dapibus sem, at viverra massa. Nam vitae quam vel ipsum sodales faucibus quis nec mauris</string>
     <string name="description_onboarding_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu dapibus sem, at viverra massa. Nam vitae quam vel ipsum sodales faucibus quis nec mauris</string>
     <string name="description_onboarding_3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu dapibus sem, at viverra massa. Nam vitae quam vel ipsum sodales faucibus quis nec mauris</string>
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquam efficitur euismod. Vivamus scelerisque et urna scelerisque volutpat. Mauris volutpat varius eros, et condimentum leo varius et. Maecenas tincidunt ligula metus, porttitor condimentum neque interdum at. Morbi est nisi, pulvinar vel rutrum quis, dignissim nec libero. Suspendisse eget hendrerit orci. Pellentesque et vestibulum ex. Donec posuere lorem diam, volutpat imperdiet urna ornare nec. Nunc at tellus eros.
+        Duis viverra ornare rutrum. Suspendisse sagittis, sem sed sagittis pretium, odio ante tempor dui, vel porta mauris leo non libero. Praesent aliquam maximus sem nec auctor. Morbi eget euismod ante, non dapibus diam. Nullam posuere consequat orci, et eleifend neque tempus vitae. Curabitur vitae congue lacus, a consequat mi. Suspendisse sapien diam, faucibus eget condimentum et, porta a felis.
+        Phasellus sem risus, faucibus sed tellus ac, iaculis aliquet velit. Suspendisse potenti. Vivamus tincidunt ipsum vitae turpis tristique auctor. Pellentesque bibendum vestibulum nulla at finibus. Pellentesque euismod mauris felis, vitae molestie neque sollicitudin et. Sed at urna vulputate, faucibus augue id, malesuada felis. Donec sed pulvinar diam. Sed ante felis, ultrices vel posuere tristique, convallis sit amet urna. Pellentesque non accumsan lectus, vitae placerat metus.
+        Nam magna diam, lobortis in ullamcorper vel, auctor sit amet tortor. Cras accumsan magna justo, eu molestie libero euismod et. Proin quis elit eget velit aliquam luctus. Mauris congue eu augue quis sollicitudin. Ut vehicula in eros ac rhoncus. Fusce cursus sem sapien, non bibendum lectus venenatis id. Nam eget augue ex. Aliquam eget erat eu velit euismod convallis. Aenean a orci id purus interdum maximus nec sed metus. Quisque vehicula, justo ac congue tristique, ante lectus hendrerit arcu, a tempus diam lacus quis ipsum. In hac habitasse platea dictumst. Ut tempor, libero eget dictum hendrerit, arcu dui mollis est, sed ultricies leo erat eu mauris. Nulla semper leo eget velit luctus, eu suscipit ligula tincidunt. Aliquam gravida lorem felis, eleifend auctor erat tincidunt vitae.
+    </string>
     <string name="testing">asdfasdf</string>
     <string name="email">Email</string>
     <string name="kata_sandi">Kata Sandi</string>
@@ -21,7 +27,7 @@
     <string name="selanjutnya">Selanjutnya</string>
     <string name="pilih_wilayah_anda">Pilih Wilayah Anda</string>
     <string name="province">Provinsi</string>
-    <string name="kota_kecamatan">Kota/Kecamatan</string>
+    <string name="kota_kab">Kota/Kabupaten</string>
     <string name="kecamatan">Kecamatan</string>
     <string name="desa">Desa</string>
     <string name="done">Selesai</string>
@@ -98,4 +104,39 @@
     <string name="belum_mempunyai_akun">Belum mempunyai akun?</string>
     <string name="password_wrong">Kata sandi yang anda masukan kurang dari 6 karakter</string>
     <string name="email_wrong">Email yang anda masukan tidak valid</string>
+    <string name="village_search">Mau lihat desa lain?</string>
+    <string name="village_address">Alamat desa</string>
+    <string name="title_activity_pesona_desa">PesonaDesaActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="berita_desa">Berita Desa</string>
+    <string name="potensi_desa">Potensi Desa</string>
+    <string name="budaya_lokal">Budaya Lokal</string>
+    <string name="wisata_desa">Wisata Desa</string>
+    <string name="cari_berita">Cari Berita</string>
+    <string name="nama_berita">Nama Berita</string>
+    <string name="informasi_desa">Informasi Desa</string>
+    <string name="kode_wilayah">32.12.14.2005</string>
+    <string name="nama_profil_desa">Desa Gelarmendala</string>
+    <string name="telp_desa">08123456789</string>
+    <string name="mail_desa">/@DesaGelarmendala</string>
+    <string name="admin_desa">Admin Desa</string>
+    <string name="tgl_berita">23-11-2023</string>
+    <string name="pelihat_berita">11</string>
+    <string name="pilih_desa">Pilih Wilayah Desa yang Ingin Anda Cari</string>
+    <string name="cari_desa">Cari</string>
+    <string name="berita_dan_edukasi_desa"><![CDATA[Berita Desa & Edukasi Desa]]></string>
+    <string name="pesona_desa">Pesona\nDesa</string>
+    <string name="kegiatan_desa">Kegiatan\nDesa</string>
+    <string name="layanan_desa">Layanan\nDesa</string>
+    <string name="produk_unggulan">Produk\nUnggulan</string>
+    <string name="ekonomi_dan_transaksi"><![CDATA[Ekonomi & Transaksi]]></string>
+    <string name="tvcc">TVCC</string>
+    <string name="donasi">Donasi</string>
+    <string name="pasar_desa">Pasar Desa</string>
+    <string name="nama_potensi">Nama Potensi</string>
+    <string name="value">Value :</string>
+    <string name="value_potensi">0.0</string>
+    <string name="tahun">Tahun :</string>
+    <string name="tahun_potensi">2018</string>
 </resources>
