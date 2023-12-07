@@ -6,6 +6,7 @@
     <color name="white">#FFFFFF</color>
     <color name="grey">#D0D5DD</color>
     <color name="danger500">#FF452C</color>
+    <color name="primary100">#E2F6E5</color>
     <color name="primary500">#40A752</color>
     <color name="primary600">#308940</color>
     <color name="font100">#EDEEF1</color>
@@ -14,4 +15,5 @@
     <color name="font400">#8A94A6</color>
     <color name="font500">#667085</color>
     <color name="red">#eb3434</color>
+
 </resources>
