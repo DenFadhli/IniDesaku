@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.donasi.detail.DetailDonasiActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/primary500">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_anchor="@+id/appBarLayout"
+            app:layout_anchorGravity="center"
+            app:navigationIcon="@drawable/baseline_arrow_back_24"
+            app:navigationIconTint="@color/white"
+            app:title="Donasi"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:titleTextColor="@color/white"
+            app:titleCentered="true"
+            android:contentInsetStart="0dp"
+            android:contentInsetEnd="0dp">
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_cover_article"
+                android:layout_width="wrap_content"
+                android:layout_height="250dp"
+                android:contentDescription="Donasi Cover"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/backgrounds/scenic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="235dp"
+                android:background="@drawable/layout_rounded_top_white_bg_12sp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="@+id/iv_cover_article">
+
+                <TextView
+                    android:id="@+id/tv_title_donasi"
+                    style="@style/Theme.IniDesakuBeta.Text.Headline5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="Judul Donasi Judul Donasi Judul Donasi Judul Donasi Judul Donasi Judul Donasi" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="24dp"
+                    app:chipSpacingHorizontal="8dp"
+                    app:singleLine="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/kategori"
+                        style="@style/Theme.IniDesakuBeta.ChipButton."
+                        app:chipStrokeColor="?attr/colorPrimary"
+                        app:chipStartPadding="14dp"
+                        app:chipMinHeight="35dp"
+                        app:chipEndPadding="14dp"
+                        app:rippleColor="?attr/colorPrimary"
+                        app:chipBackgroundColor="@color/primary50"
+                        android:textColor="@drawable/chip_text_selector"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kategori"
+                        />
+                </com.google.android.material.chip.ChipGroup>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="16dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="8dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tv_progress_donasi"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="8dp"
+                            android:text="Progres Donasi"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                            app:layout_constraintEnd_toStartOf="@+id/tv_sisa"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_sisa"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="12dp"
+                            android:layout_marginTop="8dp"
+                            android:text="12"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                            android:textColor="@color/primary500"
+                            app:layout_constraintEnd_toStartOf="@id/tv_total_hari"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_total_hari"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="12dp"
+                            android:text="/20 hari"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                            android:textColor="@color/primary500"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ProgressBar
+                            android:id="@+id/pb_donasi"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="12dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_centerVertical="true"
+                            android:max="20"
+                            android:progress="12"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_progress_donasi" />
+
+                        <TextView
+                            android:id="@+id/tv_terkumpul"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="8dp"
+                            android:text="Terkumpul"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/pb_donasi"/>
+
+                        <TextView
+                            android:id="@+id/tv_target"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginTop="8dp"
+                            android:text="Terkumpul"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                            android:textColor="@color/primary500"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/pb_donasi"/>
+
+                        <TextView
+                            android:id="@+id/tv_uang_terkumpul"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="1.000.000"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_terkumpul" />
+
+                        <TextView
+                            android:id="@+id/tv_uang_target"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="4.000.000"
+                            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                            android:textColor="@color/primary500"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_target" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tentang Program"
+                    style="@style/Theme.IniDesakuBeta.TextView.Regular14.600"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_tentang_program"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description_onboarding_1"
+                    style="@style/Theme.IniDesakuBeta.TextView.Regular14.600"
+                    android:layout_marginHorizontal="20dp"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="24dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_donasi"
+                        style="@style/Theme.IniDesakuBeta.Button."
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:text="Donasi"
+                        app:cornerRadius="4dp"
+                        app:layout_constraintEnd_toStartOf="@+id/btn_whatsapp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_whatsapp"
+                        style="@style/Theme.IniDesakuBeta.OutlineButton."
+                        app:strokeColor="@color/primary500"
+                        android:layout_width="44dp"
+                        android:layout_height="wrap_content"
+                        app:iconGravity="textStart"
+                        app:iconPadding="8dp"
+                        app:cornerRadius="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_gravity="center_vertical"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
