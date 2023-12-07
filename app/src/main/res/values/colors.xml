@@ -7,6 +7,7 @@
     <color name="grey">#D0D5DD</color>
     <color name="danger50">#FFF3F1</color>
     <color name="danger500">#FF452C</color>
+    <color name="primary50">#F2FBF3</color>
     <color name="primary500">#40A752</color>
     <color name="primary600">#308940</color>
     <color name="font100">#EDEEF1</color>
