@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.desa.penyuluhan_desa.detail.DetailPenyuluhanDesaFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/primary500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:contentInsetStart="0dp"
+                android:contentInsetEnd="0dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_anchor="@+id/appBarLayout"
+                app:layout_anchorGravity="center"
+                app:navigationIcon="@drawable/baseline_arrow_back_24"
+                app:navigationIconTint="@color/white"
+                app:title="Detail"
+                app:titleCentered="true"
+                app:titleTextColor="@color/white">
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="64dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_cover_article"
+                    android:layout_width="wrap_content"
+                    android:layout_height="170dp"
+                    android:contentDescription="Kegiatan Cover"
+                    android:scaleType="centerCrop"
+                    tools:src="@tools:sample/backgrounds/scenic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="165dp"
+                    android:background="@drawable/layout_rounded_top_white_bg_12sp"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="@+id/iv_cover_article">
+
+                    <TextView
+                        android:id="@+id/tv_title_donasi"
+                        style="@style/Theme.IniDesakuBeta.Text.Headline5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="24dp"
+                        android:text="Judul Kegiatan " />
+
+                    <TextView
+                        android:id="@+id/tv_tempat"
+                        style="@style/Theme.IniDesakuBeta.Text.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:padding="8dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:text="Balai Desa"
+                        app:drawableLeftCompat="@drawable/place_icon"
+                        app:drawableTint="@color/font400" />
+
+                    <TextView
+                        android:id="@+id/tv_waktu"
+                        style="@style/Theme.IniDesakuBeta.Text.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="8dp"
+                        android:padding="8dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:text="09 Agustus 2023, 08.00 WIB"
+                        app:drawableLeftCompat="@drawable/clock_icon"
+                        app:drawableTint="@color/font400" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_persyaratan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/tv_persyaratan"
+                                style="@style/Theme.IniDesakuBeta.Text.Subtitle1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginHorizontal="20dp"
+                                android:text="Persyaratan"
+                                android:textColor="@color/primary500"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_desc_persyaratan"
+                                style="@style/Theme.IniDesakuBeta.Text.Caption"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="12dp"
+                                android:text="Deskripsi Persyaratan Deskripsi Persyaratan Deskripsi Persyaratan Deskripsi Persyaratan Deskripsi Persyaratan Deskripsi Persyaratan"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@id/tv_persyaratan"
+                                app:layout_constraintStart_toStartOf="@id/tv_persyaratan"
+                                app:layout_constraintTop_toBottomOf="@id/tv_persyaratan" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_rincian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/tv_rincian"
+                                style="@style/Theme.IniDesakuBeta.Text.Subtitle1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginHorizontal="20dp"
+                                android:text="Rincian Penyuluhan"
+                                android:textColor="@color/primary500"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_desc_rincian"
+                                style="@style/Theme.IniDesakuBeta.Text.Caption"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="12dp"
+                                android:text="Deskripsi Rincian Deskripsi Rincian Deskripsi Rincian Deskripsi Rincian Deskripsi Rincian"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@id/tv_rincian"
+                                app:layout_constraintStart_toStartOf="@id/tv_rincian"
+                                app:layout_constraintTop_toBottomOf="@id/tv_rincian" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_manfaat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="16dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/tv_manfaat"
+                                style="@style/Theme.IniDesakuBeta.Text.Subtitle1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginHorizontal="20dp"
+                                android:text="Manfaat Penyuluhan"
+                                android:textColor="@color/primary500"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_desc_manfaat"
+                                style="@style/Theme.IniDesakuBeta.Text.Caption"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginBottom="12dp"
+                                android:text="Deskripsi Manfaat Deskripsi Manfaat Deskripsi Manfaat Deskripsi Manfaat Deskripsi Manfaat Deskripsi Manfaat"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="@id/tv_manfaat"
+                                app:layout_constraintStart_toStartOf="@id/tv_manfaat"
+                                app:layout_constraintTop_toBottomOf="@id/tv_manfaat" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

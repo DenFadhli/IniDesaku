@@ -26,6 +26,30 @@
             android:name=".ui.profile.ProfileActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.desa.pelayanan_desa.detail.DetailPelayananDesaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.produk_unggulan.detail.DetailProdukUnggulanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.produk_unggulan.list.ProdukUnggulanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.desa.pelayanan_desa.list.PelayananDesaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.desa.kegiatan_desa.KegiatanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.desa.kegiatan_desa.detail.DetailKegiatanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.donasi.list.DonasiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.donasi.detail.DetailDonasiActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.tvcc.TvccActivity"
             android:exported="false" />
         <activity
