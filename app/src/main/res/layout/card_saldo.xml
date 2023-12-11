@@ -1,92 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_saldo"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:layout_margin="24dp"
-    app:cardCornerRadius="12dp">
+    android:layout_gravity="center">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="12dp">
-
-        <TextView
-            android:id="@+id/tvTotalPembayaran"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/rincian_pembelian"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tvJumlahIuran"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/id_pelanggan"
-            app:layout_constraintEnd_toStartOf="@id/tvJumlahIuranValue"
-            app:layout_constraintStart_toStartOf="@id/tvTotalPembayaran"
-            app:layout_constraintTop_toBottomOf="@id/tvTotalPembayaran" />
-
-        <TextView
-            android:id="@+id/tvJumlahIuranValue"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dummy_id_pelanggan"
-            app:layout_constraintEnd_toEndOf="@id/tvTotalPembayaran"
-            app:layout_constraintTop_toTopOf="@id/tvJumlahIuran" />
-
-        <TextView
-            android:id="@+id/tvBiayaAdmin"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/name"
-            app:layout_constraintEnd_toStartOf="@id/tvBiayaAdminValue"
-            app:layout_constraintStart_toStartOf="@id/tvJumlahIuran"
-            app:layout_constraintTop_toBottomOf="@id/tvJumlahIuran" />
-
-        <TextView
-            android:id="@+id/tvBiayaAdminValue"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dummy_nama"
-            app:layout_constraintEnd_toEndOf="@id/tvJumlahIuranValue"
-            app:layout_constraintTop_toTopOf="@id/tvBiayaAdmin" />
-
-        <TextView
-            android:id="@+id/tvTotal"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/total_lembar_tagihan"
-            app:layout_constraintEnd_toStartOf="@id/tvTotalValue"
-            app:layout_constraintStart_toStartOf="@id/tvBiayaAdmin"
-            app:layout_constraintTop_toBottomOf="@id/tvBiayaAdmin" />
-
-        <TextView
-            android:id="@+id/tvTotalValue"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dummy_total_lembar"
-            app:layout_constraintEnd_toEndOf="@id/tvBiayaAdminValue"
-            app:layout_constraintTop_toTopOf="@id/tvTotal" />
-
-
-
+        android:layout_height="wrap_content">
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 </com.google.android.material.card.MaterialCardView>

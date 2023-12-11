@@ -49,6 +49,10 @@ object Tvcc {
         "https://media.geeksforgeeks.org/wp-content/uploads/20201217192146/Screenrecorder-2020-12-17-19-17-36-828.mp4?_=1",
     )
 
+    fun getImageData(): List<String> {
+        return thumnailGambar
+    }
+
     fun getTvccList(): ArrayList<ResponseTvcc> {
         val tempList = arrayListOf<ResponseTvcc>()
         for (i in title.indices) {

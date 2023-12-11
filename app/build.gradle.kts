@@ -4,6 +4,7 @@ plugins {
     id("kotlin-parcelize")
     id("kotlin-kapt")
     id("androidx.navigation.safeargs")
+    id("maven-publish")
 }
 
 android {
@@ -42,9 +43,11 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    viewBinding{
-        enable = true
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -68,7 +71,7 @@ dependencies {
     implementation("de.hdodenhof:circleimageview:3.1.0")
 
     //lottie
-//    implementation "com.airbnb.android:lottie:5.2.0"
+    implementation ("com.airbnb.android:lottie:5.2.0")
 
     //retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
@@ -89,6 +92,9 @@ dependencies {
     //live data
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
 
+    //otpView
+    implementation ("com.github.aabhasr1:OtpView:v1.1.2-ktx")
+    implementation ("com.github.aabhasr1:OtpView:v1.1.2")
 
 
     //shimmer

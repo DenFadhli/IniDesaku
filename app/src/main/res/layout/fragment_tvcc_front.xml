@@ -9,48 +9,57 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:background="?attr/colorPrimary"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
-            app:titleTextColor="?attr/colorOnPrimary"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:layout_anchor="@+id/appBarLayout"
-            app:titleCentered="true"
             app:layout_anchorGravity="center"
             app:navigationIcon="@drawable/baseline_arrow_back_24"
             app:navigationIconTint="?attr/colorOnPrimary"
             app:title="TVCC"
-            app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:titleTextColor="?attr/colorOnPrimary" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <ScrollView
         android:id="@+id/scrollBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="?attr/actionBarSize"
+        android:fillViewport="true"
         android:scrollbars="none">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layoutSearch"
                 style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
                 android:hint="@string/cari_tvcc_yang_kamu_mau"
+                android:textColorHint="@color/font400"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:boxStrokeColor="@color/font300"
+                app:boxStrokeWidth="1dp"
                 app:endIconDrawable="@drawable/search_icon"
                 app:endIconMode="custom"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:endIconTint="@color/font400"
+                app:hintAnimationEnabled="false"
+                app:hintTextColor="@color/font400">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/textSearch"
@@ -59,157 +68,223 @@
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <HorizontalScrollView
-                android:id="@+id/scrollHorizontal"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:scrollbars="none"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layoutSearch">
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="?attr/android:colorBackground"
+                    android:elevation="2dp"
+                    android:paddingHorizontal="20dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                <com.google.android.material.chip.ChipGroup
-                    android:id="@+id/chipGroup"
-                    android:layout_width="wrap_content"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="16dp"
+                        tools:listitem="@layout/item_list_tvcc_search" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutSearchNotFound"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:paddingTop="100dp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imgIlus"
+                            android:layout_width="0dp"
+                            android:layout_height="227dp"
+                            android:src="@drawable/data_search_not_found"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tvNotFoundTitle"
+                            style="@style/Theme.IniDesakuBeta.TextView.Medium22.500"
+                            android:layout_width="0dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/not_found_search_tvcc"
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="@id/imgIlus"
+                            app:layout_constraintStart_toStartOf="@id/imgIlus"
+                            app:layout_constraintTop_toBottomOf="@id/imgIlus" />
+
+                        <TextView
+                            android:id="@+id/tvNotFoundCation"
+                            style="@style/Theme.IniDesakuBeta.TextView.Regular16.400"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/not_found_search_tvcc_caption"
+                            android:textAlignment="center"
+                            app:layout_constraintEnd_toEndOf="@id/tvNotFoundTitle"
+                            app:layout_constraintStart_toStartOf="@id/tvNotFoundTitle"
+                            app:layout_constraintTop_toBottomOf="@id/tvNotFoundTitle" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </FrameLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/scrollHorizontal"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="20dp"
-                    app:chipSpacingHorizontal="8dp"
-                    app:singleLine="true"
-                    app:singleSelection="true">
+                    android:layout_marginTop="12dp"
+                    android:scrollbars="none"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipSemua"
-                        style="@style/Theme.IniDesakuBeta.ChipButton."
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGroup"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/semua"
-                        android:checked="true"
-                        android:textColor="@drawable/chip_text_selector"
-                        app:chipBackgroundColor="@drawable/chip_background_selector"
-                        app:chipEndPadding="14dp"
-                        app:chipMinHeight="35dp"
-                        app:chipStartPadding="14dp"
-                        app:chipStrokeColor="?attr/colorPrimary"
-                        app:rippleColor="?attr/colorPrimary" />
+                        android:paddingStart="20dp"
+                        android:paddingEnd="20dp"
+                        app:chipSpacingHorizontal="8dp"
+                        app:singleLine="true"
+                        app:singleSelection="true">
 
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipKesehatan"
-                        style="@style/Theme.IniDesakuBeta.ChipButton."
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipSemua"
+                            style="@style/Theme.IniDesakuBeta.ChipButton."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:text="@string/semua"
+                            android:textColor="@drawable/chip_text_selector"
+                            app:chipBackgroundColor="@drawable/chip_background_selector"
+                            app:chipEndPadding="14dp"
+                            app:chipMinHeight="35dp"
+                            app:chipStartPadding="14dp"
+                            app:chipStrokeColor="?attr/colorPrimary"
+                            app:rippleColor="?attr/colorPrimary" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipKesehatan"
+                            style="@style/Theme.IniDesakuBeta.ChipButton."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kesehatan"
+                            android:textColor="@drawable/chip_text_selector"
+                            app:chipBackgroundColor="@drawable/chip_background_selector"
+                            app:chipEndPadding="14dp"
+                            app:chipMinHeight="35dp"
+                            app:chipStartPadding="14dp"
+                            app:chipStrokeColor="?attr/colorPrimary"
+                            app:rippleColor="?attr/colorPrimary" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipPenjualan"
+                            style="@style/Theme.IniDesakuBeta.ChipButton."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Penjualan"
+                            android:textColor="@drawable/chip_text_selector"
+                            app:chipBackgroundColor="@drawable/chip_background_selector"
+                            app:chipEndPadding="14dp"
+                            app:chipMinHeight="35dp"
+                            app:chipStartPadding="14dp"
+                            app:chipStrokeColor="?attr/colorPrimary"
+                            app:rippleColor="?attr/colorPrimary" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipPendidikan"
+                            style="@style/Theme.IniDesakuBeta.ChipButton."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pendidikan"
+                            android:textColor="@drawable/chip_text_selector"
+                            app:chipBackgroundColor="@drawable/chip_background_selector"
+                            app:chipEndPadding="14dp"
+                            app:chipMinHeight="35dp"
+                            app:chipStartPadding="14dp"
+                            app:chipStrokeColor="?attr/colorPrimary"
+                            app:rippleColor="?attr/colorPrimary" />
+
+
+                    </com.google.android.material.chip.ChipGroup>
+
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/tvRekomendasi"
+                    style="@style/Theme.IniDesakuBeta.TextView.SemiBold16.600"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/rekomendasi_tvcc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/scrollHorizontal" />
+
+                <HorizontalScrollView
+                    android:id="@+id/layoutBanner"
+                    android:layout_width="0dp"
+                    android:layout_height="216dp"
+                    android:layout_marginTop="12dp"
+                    android:scrollbars="none"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvRekomendasi">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvBannerLive"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Kesehatan"
-                        android:textColor="@drawable/chip_text_selector"
-                        app:chipBackgroundColor="@drawable/chip_background_selector"
-                        app:chipEndPadding="14dp"
-                        app:chipMinHeight="35dp"
-                        app:chipStartPadding="14dp"
-                        app:chipStrokeColor="?attr/colorPrimary"
-                        app:rippleColor="?attr/colorPrimary" />
+                        android:orientation="horizontal"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="12dp"
+                        tools:listitem="@layout/card_tvcc_live" />
 
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipPenjualan"
-                        style="@style/Theme.IniDesakuBeta.ChipButton."
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Penjualan"
-                        android:textColor="@drawable/chip_text_selector"
-                        app:chipBackgroundColor="@drawable/chip_background_selector"
-                        app:chipEndPadding="14dp"
-                        app:chipMinHeight="35dp"
-                        app:chipStartPadding="14dp"
-                        app:chipStrokeColor="?attr/colorPrimary"
-                        app:rippleColor="?attr/colorPrimary" />
-
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/chipPendidikan"
-                        style="@style/Theme.IniDesakuBeta.ChipButton."
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Pendidikan"
-                        android:textColor="@drawable/chip_text_selector"
-                        app:chipBackgroundColor="@drawable/chip_background_selector"
-                        app:chipEndPadding="14dp"
-                        app:chipMinHeight="35dp"
-                        app:chipStartPadding="14dp"
-                        app:chipStrokeColor="?attr/colorPrimary"
-                        app:rippleColor="?attr/colorPrimary" />
+                </HorizontalScrollView>
 
 
-
-
-
-                </com.google.android.material.chip.ChipGroup>
-
-            </HorizontalScrollView>
-
-            <TextView
-                android:id="@+id/tvRekomendasi"
-                style="@style/Theme.IniDesakuBeta.TextView.SemiBold16.600"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="12dp"
-                android:text="@string/rekomendasi_tvcc"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/scrollHorizontal" />
-
-            <HorizontalScrollView
-                android:id="@+id/layoutBanner"
-                android:layout_width="0dp"
-                android:layout_height="216dp"
-                android:layout_marginTop="12dp"
-                android:scrollbars="none"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvRekomendasi">
+                <TextView
+                    android:id="@+id/tvListTvcc"
+                    style="@style/Theme.IniDesakuBeta.TextView.SemiBold16.600"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/rekomendasi_tvcc"
+                    app:layout_constraintEnd_toEndOf="@id/layoutBanner"
+                    app:layout_constraintStart_toStartOf="@id/layoutBanner"
+                    app:layout_constraintTop_toBottomOf="@id/layoutBanner" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvBannerLive"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/rvListContent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="12dp"
-                    tools:listitem="@layout/card_tvcc_live" />
-
-            </HorizontalScrollView>
-
-
-            <TextView
-                android:id="@+id/tvListTvcc"
-                style="@style/Theme.IniDesakuBeta.TextView.SemiBold16.600"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:text="@string/rekomendasi_tvcc"
-                app:layout_constraintEnd_toEndOf="@id/layoutBanner"
-                app:layout_constraintStart_toStartOf="@id/layoutBanner"
-                app:layout_constraintTop_toBottomOf="@id/layoutBanner" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvListContent"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="16dp"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvListTvcc"
-                tools:listitem="@layout/item_list_content_tvcc" />
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvListTvcc"
+                    tools:listitem="@layout/item_list_content_tvcc" />
 
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </ScrollView>
-
-
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
