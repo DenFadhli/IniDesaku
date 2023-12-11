@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import androidx.annotation.StringRes
 import androidx.core.widget.addTextChangedListener
 import androidx.core.widget.doAfterTextChanged
@@ -31,23 +32,46 @@ class PulsaActivity : AppCompatActivity() {
         onClick()
     }
 
+    private fun isValidPhoneNumber(phoneNumber: String): Boolean {
+        // Format nomor telepon Indonesia: +62 atau 8 diikuti dengan 8-15 digit
+        val regex = Regex("^\\+62|8[0-9]{8,15}\$")
+
+        return regex.matches(phoneNumber)
+    }
+
     private fun onClick() {
 
-        binding.textNumberPhone.addTextChangedListener(object : TextWatcher{
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+        binding.apply {
+            layoutNomor.isHelperTextEnabled = false
+            var errorEnable = false
 
-            }
 
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            textNumberPhone.addTextChangedListener(object : TextWatcher{
+                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
-            }
+                }
 
-            override fun afterTextChanged(s: Editable?) {
-                val data = PulsaDataInput(s.toString(), "")
-                pref.saveData(data)
-            }
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                    with(layoutNomor) {
+                        errorEnable = !(isValidPhoneNumber(s.toString()))
+                        isHelperTextEnabled = errorEnable
+                        helperText = "*nomor yang Anda masukan tidak valid"
 
-        })
+                        Log.e("Test errorEnable", errorEnable.toString())
+                    }
+                }
+
+                override fun afterTextChanged(s: Editable?) {
+                    layoutNomor.isHelperTextEnabled = errorEnable
+                    if (!errorEnable) {
+                        val data = PulsaDataInput(s.toString(), "")
+                        pref.saveData(data)
+                    }
+                }
+
+            })
+        }
+
 
         binding.topAppBar.setNavigationOnClickListener {
             onBackPressed()

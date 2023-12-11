@@ -2,12 +2,16 @@ package com.citiasia.inidesakubeta.ui.tvcc.tvccHome
 
 import android.content.Context
 import android.content.res.ColorStateList
+import android.opengl.Visibility
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
@@ -23,6 +27,7 @@ import com.citiasia.inidesakubeta.ui.ViewModelFactory
 import com.citiasia.inidesakubeta.ui.adapter.BulanTahunAdapter
 import com.citiasia.inidesakubeta.ui.adapter.TvccBannerAdapter
 import com.citiasia.inidesakubeta.ui.adapter.TvccListAdapter
+import com.citiasia.inidesakubeta.ui.adapter.TvccListSearchAdapter
 import com.citiasia.inidesakubeta.ui.ppob.bpjs.bpjsDialog.BottomSheetBpjs
 import com.citiasia.inidesakubeta.ui.sign.login.LoginViewModel
 import com.citiasia.inidesakubeta.ui.tvcc.tvccDetail.TvccDetailFragment
@@ -64,6 +69,56 @@ class TvccFrontFragment : Fragment() {
         setDataBannerAdapter(data)
         setDataListAdapter("Semua")
         setByChipSelected()
+        searchInputAction()
+    }
+
+    private fun searchInputAction() {
+        binding.textSearch.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                setSearchAdapter(s.toString())
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                if (s.isNullOrEmpty()) {
+                    binding.frameLayout.visibility = View.GONE
+                } else {
+                    binding.frameLayout.visibility = View.VISIBLE
+                }
+            }
+
+        })
+    }
+
+    private fun setSearchAdapter(text: String) {
+        val listData = viewModel.getTvccData()
+
+        val filteredList: List<ResponseTvcc> = listData.filter { tvcc ->
+            tvcc.title.contains(text, ignoreCase = true)
+        }
+
+        if (filteredList.size == 0) {
+            binding.layoutSearchNotFound.visibility = View.VISIBLE
+        } else {
+            binding.layoutSearchNotFound.visibility = View.GONE
+        }
+
+        val adapter = TvccListSearchAdapter(filteredList)
+
+        binding.rvSearch.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvSearch.adapter = adapter
+
+        adapter.setOnItemClickCallback(object : TvccListSearchAdapter.OnItemClickCallback{
+            override fun onItemClicked(data: ResponseTvcc) {
+                val action = TvccFrontFragmentDirections.actionTvccFrontFragmentToTvccDetailFragment(data)
+                findNavController().navigate(action)
+
+            }
+
+        })
     }
 
     private fun setChipButtonText(listKategori: List<String>) {

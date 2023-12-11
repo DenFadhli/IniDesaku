@@ -20,7 +20,6 @@ class PulsaListAdapter(private val list: List<PriceListDummy>) : RecyclerView.Ad
         fun bind(data: PriceListDummy) {
             binding.apply {
                 tvNominal.text = data.nominal
-                tvMasaAktif.text = "+ Masa aktif ${data.tambahanHari} hari"
                 tvHarga.text = "Harga Rp. ${data.harga}"
             }
         }

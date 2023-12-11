@@ -38,8 +38,8 @@
     <string name="history">Riwayat</string>
     <string name="top_up">Top Up</string>
     <string name="pulsa">Pulsa</string>
-    <string name="pulsa_prabayar">Pulsa Prabayar</string>
-    <string name="pulsa_pascabayar">Pulsa Pascabayar</string>
+    <string name="pulsa_prabayar">Prabayar</string>
+    <string name="pulsa_pascabayar">Pascabayar</string>
     <string name="listrik_air">Listrik dan Air</string>
     <string name="tagihan_pln">Tagihan PLN</string>
     <string name="token_pln">Token PLN</string>
@@ -101,4 +101,25 @@
     <string name="sedang_tayang">Sedang Tayang</string>
     <string name="populer_sekarang">Populer sekarang</string>
     <string name="semua">Semua</string>
+    <string name="not_found_search_tvcc">Program TVCC yang Anda cari tidak ditemukan</string>
+    <string name="not_found_search_tvcc_caption">Silahkan masukkan kembali program yang ingin Anda tonton</string>
+    <string name="paket_data">Paket Data</string>
+    <string name="indihome">Indihome</string>
+    <string name="telkom">Telkom</string>
+    <string name="multifinance">Multifinance</string>
+    <string name="masukan_nomor_telepon">Masukan nomor telepon</string>
+    <string name="rp_2_000">Rp. 2.000</string>
+    <string name="nominal_pulsa">Nominal pulsa</string>
+    <string name="saldo_rp_500_000_00">Saldo Rp.500.000,00</string>
+    <string name="masukan_pin_anda">Masukan Pin Anda</string>
+    <string name="pembayaran_pin_caption">Masukkan Pin keamanan Anda untuk melanjutkan proses pembayaran</string>
+    <string name="terima_kasih">Terima Kasih</string>
+    <string name="caption_pembayaran_berhasil">Pembelian pulsa berhasil diterima dan akan segera dikirimkan nomor Anda</string>
+    <string name="tanggal_pembayaran">Tanggal pembayaran</string>
+    <string name="gudang_voucer">Gudang Voucer</string>
+    <string name="status">Status</string>
+    <string name="berhasil">Berhasil</string>
+    <string name="kembali">Kembali</string>
+    <string name="total_biaya">Total biaya</string>
+    <string name="pin_error_caption">*Pin yang anda masukan tidak valid</string>
 </resources>

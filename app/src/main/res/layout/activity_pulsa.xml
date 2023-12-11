@@ -10,10 +10,10 @@
         android:id="@+id/appBarLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="?attr/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
@@ -21,44 +21,63 @@
             android:layout_height="?attr/actionBarSize"
             app:layout_anchor="@+id/appBarLayout"
             app:layout_anchorGravity="center"
-            app:title="@string/pulsa"
-            app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
             app:navigationIcon="@drawable/baseline_arrow_back_24"
-            app:navigationIconTint="@color/black"/>
+            app:navigationIconTint="?attr/colorOnPrimary"
+            app:title="@string/pulsa"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/Theme.IniDesakuBeta.TextView.SemiBold16.600"
+            app:titleTextColor="?attr/colorOnPrimary" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
 
     <TextView
         android:id="@+id/tvNoHp"
+        style="@style/Theme.IniDesakuBeta.TextView.SemiBold14.600"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
-        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
         android:text="@string/nomor_hp"
-        style="@style/Theme.IniDesakuBeta.Text.Caption"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutNomor"
-        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+        style="@style/Theme.IniDesakuBeta.InputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tvNoHp"
-        app:layout_constraintStart_toStartOf="@id/tvNoHp"
-        app:layout_constraintEnd_toEndOf="@id/tvNoHp"
         android:layout_marginTop="8dp"
-        app:endIconMode="custom"
-        app:endIconDrawable="@drawable/lucide_contact"
+        android:hint="@string/masukan_nomor_telepon"
+        android:textColorHint="@color/font300"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:boxStrokeColor="@color/font200"
+        app:boxStrokeWidth="1dp"
         app:endIconContentDescription="@string/contact"
-        android:hint=""
-        >
+        app:endIconDrawable="@drawable/users_icon"
+        app:endIconMode="custom"
+        app:endIconTint="@color/font300"
+        app:hintTextColor="@color/font300"
+        app:hintTextAppearance="@color/font300"
+        app:layout_constraintEnd_toEndOf="@id/tvNoHp"
+        app:layout_constraintStart_toStartOf="@id/tvNoHp"
+        app:layout_constraintTop_toBottomOf="@id/tvNoHp"
+        app:startIconDrawable="@drawable/indo_code_number_icon"
+        app:startIconTint="@color/font300"
+        app:helperText="*nomor yang Anda masukan tidak valid"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/danger500">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textNumberPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:textColor="?attr/colorOnBackground"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.tabs.TabLayout
@@ -66,18 +85,18 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        app:tabIndicatorFullWidth="true"
-        app:layout_constraintTop_toBottomOf="@id/layoutNomor"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@android:color/transparent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutNomor"
+        app:tabIndicatorFullWidth="true" />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tab_layout"
+        app:layout_constraintEnd_toEndOf="@id/tab_layout"
         app:layout_constraintStart_toStartOf="@id/tab_layout"
-        app:layout_constraintEnd_toEndOf="@id/tab_layout" />
+        app:layout_constraintTop_toBottomOf="@id/tab_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

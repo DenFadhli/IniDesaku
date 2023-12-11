@@ -71,7 +71,7 @@ class PrabayarFragment : Fragment() {
                 )
 
                 if(dataInputNumber.number.equals("")) {
-                    Toast.makeText(requireContext(), "Masukan nomor yang benar!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Nomor Anda tidak valid!", Toast.LENGTH_SHORT).show()
                 } else {
                     showDialog(dataParam)
                 }

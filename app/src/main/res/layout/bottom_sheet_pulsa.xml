@@ -21,55 +21,71 @@
 
         <TextView
             android:id="@+id/tvNomorPenerima"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/nomor_penerima"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iconCross"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/tvNumberPhone"
-            style="@style/Widget.Material3.Button.IconButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:gravity="start|center"
-            android:paddingHorizontal="0dp"
-            android:padding="0dp"
-            android:textAllCaps="false"
-            android:textSize="12sp"
-            app:cornerRadius="4dp"
-            app:icon="@drawable/profile_icon"
-            app:iconPadding="8dp"
-            app:layout_constraintEnd_toEndOf="@id/tvNomorPenerima"
+        <ImageView
+            android:id="@+id/iconCross"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvNomorPenerima"
+            app:layout_constraintTop_toTopOf="@id/tvNomorPenerima"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/cross_icon"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgProvider"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="@id/tvNomorPenerima"
             app:layout_constraintTop_toBottomOf="@id/tvNomorPenerima"
+            tools:src="@drawable/telkomsel_icon" />
+
+        <TextView
+            android:id="@+id/tvNumberPhone"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="@id/imgProvider"
+            app:layout_constraintEnd_toEndOf="@id/iconCross"
+            app:layout_constraintStart_toEndOf="@id/imgProvider"
+            app:layout_constraintTop_toTopOf="@id/imgProvider"
             tools:text="085774695584" />
+
 
         <TextView
             android:id="@+id/tvRincianPembelian"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/rincian_pembelian"
             app:layout_constraintEnd_toEndOf="@id/tvNumberPhone"
-            app:layout_constraintStart_toStartOf="@id/tvNumberPhone"
+            app:layout_constraintStart_toStartOf="@id/imgProvider"
             app:layout_constraintTop_toBottomOf="@id/tvNumberPhone" />
 
         <TextView
             android:id="@+id/tvNominal"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             app:layout_constraintEnd_toStartOf="@id/tvNominalValue"
             app:layout_constraintStart_toStartOf="@id/tvRincianPembelian"
             app:layout_constraintTop_toBottomOf="@id/tvRincianPembelian"
-            tools:text="Pulsa 15.000" />
+            android:text="@string/nominal_pulsa" />
 
         <TextView
             android:id="@+id/tvNominalValue"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -79,9 +95,10 @@
 
         <TextView
             android:id="@+id/tvPajak"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/pajak"
             app:layout_constraintEnd_toStartOf="@id/tvPajakValue"
             app:layout_constraintStart_toStartOf="@id/tvNominal"
@@ -89,28 +106,31 @@
 
         <TextView
             android:id="@+id/tvPajakValue"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:text="@string/rp_2_000"
             app:layout_constraintEnd_toEndOf="@id/tvNominalValue"
             app:layout_constraintStart_toStartOf="@id/tvNominalValue"
             app:layout_constraintTop_toBottomOf="@id/tvNominalValue"
-            app:layout_constraintTop_toTopOf="@id/tvPajak"
-            android:text="Rp. 2.000"/>
+            app:layout_constraintTop_toTopOf="@id/tvPajak" />
 
         <com.google.android.material.divider.MaterialDivider
             android:id="@+id/dividerSatu"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            app:dividerColor="@color/font400"
             app:layout_constraintEnd_toEndOf="@id/tvPajakValue"
             app:layout_constraintStart_toStartOf="@id/tvPajak"
             app:layout_constraintTop_toBottomOf="@id/tvPajak" />
 
         <TextView
             android:id="@+id/tvTotal"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/total"
             app:layout_constraintEnd_toStartOf="@id/tvTotalValue"
             app:layout_constraintStart_toStartOf="@id/dividerSatu"
@@ -118,52 +138,77 @@
 
         <TextView
             android:id="@+id/tvTotalValue"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textAlignment="textStart"
-            app:layout_constraintStart_toStartOf="@id/tvPajakValue"
             app:layout_constraintEnd_toEndOf="@id/dividerSatu"
+            app:layout_constraintStart_toStartOf="@id/tvPajakValue"
             app:layout_constraintTop_toBottomOf="@id/dividerSatu"
             app:layout_constraintTop_toTopOf="@id/tvTotal"
             tools:text="Rp. 17.000" />
 
         <TextView
             android:id="@+id/tvMetodePembayaran"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:text="@string/metode_pembayaran"
             app:layout_constraintEnd_toEndOf="@id/tvTotalValue"
             app:layout_constraintStart_toStartOf="@id/tvTotal"
             app:layout_constraintTop_toBottomOf="@id/tvTotal" />
 
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
             android:id="@+id/bankLayout"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="0dp"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="@string/pilih_metode_pembayaran"
-            app:layout_constraintEnd_toEndOf="@id/tvMetodePembayaran"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/layout_rounded_top_white"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="12dp"
             app:layout_constraintStart_toStartOf="@id/tvMetodePembayaran"
             app:layout_constraintTop_toBottomOf="@id/tvMetodePembayaran">
 
-            <AutoCompleteTextView
-                android:id="@+id/bankSpin"
-                android:textSize="14sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none"
-                app:simpleItems="@array/bank_items" />
+            <ImageView
+                android:layout_width="21.58dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="12dp"
+                android:maxWidth="30dp"
+                android:maxHeight="30dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_top_up" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/tvPhoneButton"
+                style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="@string/input_number_telphone" />
+
+            <TextView
+                android:id="@+id/tvSaldo"
+                style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/saldo_rp_500_000_00" />
+
+        </LinearLayout>
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBayar"
+            style="@style/Theme.IniDesakuBeta.Button."
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:enabled="false"
+            android:layout_marginTop="16dp"
             android:text="@string/bayar"
             android:textAllCaps="false"
             app:cornerRadius="4dp"
