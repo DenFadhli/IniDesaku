@@ -55,7 +55,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="@string/kota_kecamatan"
+        android:hint="@string/kota_kab"
         app:layout_constraintEnd_toEndOf="@id/provinsiLayout"
         app:layout_constraintStart_toStartOf="@id/provinsiLayout"
         app:layout_constraintTop_toBottomOf="@id/provinsiLayout">

@@ -16,6 +16,15 @@
         android:theme="@style/Theme.IniDesakuBeta"
         tools:targetApi="31">
         <activity
+            android:name=".DetailPotensiFisikActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailBudayaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailWisataActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetailBeritaActivity"
             android:exported="false" />
         <activity
@@ -39,10 +48,10 @@
             android:name=".ui.ppob.pulsa.PulsaActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.HomeActivity"
+            android:name=".ui.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

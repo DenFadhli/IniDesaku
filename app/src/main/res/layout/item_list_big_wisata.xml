@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="10dp"
-    android:layout_marginBottom="10dp"
     android:layout_gravity="center"
+    android:layout_marginBottom="10dp"
     android:elevation="6dp"
     app:cardCornerRadius="6dp">
 
@@ -15,7 +14,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/gambar_berita"
+            android:id="@+id/gambar_wisata"
             android:layout_width="100dp"
             android:layout_height="92dp"
             android:layout_marginStart="10dp"
@@ -28,29 +27,28 @@
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <TextView
-            android:id="@+id/judul_card_berita"
-            android:layout_width="0dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/nunito_bold"
-            android:lineHeight="20sp"
-            android:text="@string/nama_berita"
-            android:textSize="14sp"
-            android:textColor="#565E73"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/gambar_berita"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/icon_admin"
+            android:id="@+id/judul_card_wisata"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginTop="10dp"
-            app:layout_constraintStart_toEndOf="@+id/gambar_berita"
-            app:layout_constraintTop_toBottomOf="@+id/judul_card_berita"
-            app:srcCompat="@drawable/admin" />
+            android:fontFamily="@font/nunito_bold"
+            android:lineHeight="20sp"
+            android:text="@string/nama_wisata"
+            android:textColor="#565E73"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@+id/gambar_wisata"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon_lokasi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="@+id/gambar_wisata"
+            app:layout_constraintTop_toBottomOf="@+id/judul_card_wisata"
+            app:srcCompat="@drawable/location" />
 
         <ImageView
             android:id="@+id/icon_waktu"
@@ -58,61 +56,52 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginTop="10dp"
-            app:layout_constraintStart_toEndOf="@+id/gambar_berita"
-            app:layout_constraintTop_toBottomOf="@+id/icon_admin"
+            app:layout_constraintStart_toEndOf="@+id/gambar_wisata"
+            app:layout_constraintTop_toBottomOf="@+id/lokasi_wisata"
             app:srcCompat="@drawable/date" />
 
-        <ImageView
-            android:id="@+id/icon_pelihat"
+        <TextView
+            android:id="@+id/selengkapnya"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/nunito_regular"
+            android:lineHeight="16sp"
+            android:text="@string/selengkapnya"
+            android:textAlignment="center"
+            android:textColor="#8A94A6"
+            android:textSize="10sp"
             app:layout_constraintTop_toBottomOf="@id/icon_waktu"
-            app:layout_constraintStart_toEndOf="@+id/gambar_berita"
-            app:srcCompat="@drawable/viewers" />
+            app:layout_constraintStart_toEndOf="@+id/gambar_wisata" />
 
         <TextView
-            android:id="@+id/admin_desa"
+            android:id="@+id/lokasi_wisata"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="10dp"
-            android:text="@string/admin_desa"
+            android:text="@string/lokasi_wisata"
             android:textColor="#8A94A6"
             android:textSize="10sp"
             android:fontFamily="@font/nunito_regular"
             android:lineHeight="16sp"
-            app:layout_constraintStart_toEndOf="@+id/icon_admin"
-            app:layout_constraintTop_toBottomOf="@+id/judul_card_berita" />
+            app:layout_constraintStart_toEndOf="@+id/icon_lokasi"
+            app:layout_constraintTop_toBottomOf="@+id/judul_card_wisata" />
 
         <TextView
-            android:id="@+id/tgl_berita"
+            android:id="@+id/waktu_wisata"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="@string/tgl_berita"
+            android:text="@string/waktu_wisata"
             android:textColor="#8A94A6"
             android:textSize="10sp"
             android:fontFamily="@font/nunito_regular"
             android:lineHeight="16sp"
             app:layout_constraintStart_toEndOf="@+id/icon_waktu"
-            app:layout_constraintTop_toBottomOf="@+id/admin_desa" />
-
-        <TextView
-            android:id="@+id/pelihat_berita"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/pelihat_berita"
-            android:textColor="#8A94A6"
-            android:textSize="10sp"
-            android:fontFamily="@font/nunito_regular"
-            android:lineHeight="16sp"
-            app:layout_constraintStart_toEndOf="@+id/icon_pelihat"
-            app:layout_constraintTop_toBottomOf="@+id/tgl_berita" />
+            app:layout_constraintTop_toBottomOf="@+id/lokasi_wisata" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

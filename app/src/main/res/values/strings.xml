@@ -12,7 +12,6 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquam efficitur euismod. Vivamus scelerisque et urna scelerisque volutpat. Mauris volutpat varius eros, et condimentum leo varius et. Maecenas tincidunt ligula metus, porttitor condimentum neque interdum at. Morbi est nisi, pulvinar vel rutrum quis, dignissim nec libero. Suspendisse eget hendrerit orci. Pellentesque et vestibulum ex. Donec posuere lorem diam, volutpat imperdiet urna ornare nec. Nunc at tellus eros.
         Duis viverra ornare rutrum. Suspendisse sagittis, sem sed sagittis pretium, odio ante tempor dui, vel porta mauris leo non libero. Praesent aliquam maximus sem nec auctor. Morbi eget euismod ante, non dapibus diam. Nullam posuere consequat orci, et eleifend neque tempus vitae. Curabitur vitae congue lacus, a consequat mi. Suspendisse sapien diam, faucibus eget condimentum et, porta a felis.
         Phasellus sem risus, faucibus sed tellus ac, iaculis aliquet velit. Suspendisse potenti. Vivamus tincidunt ipsum vitae turpis tristique auctor. Pellentesque bibendum vestibulum nulla at finibus. Pellentesque euismod mauris felis, vitae molestie neque sollicitudin et. Sed at urna vulputate, faucibus augue id, malesuada felis. Donec sed pulvinar diam. Sed ante felis, ultrices vel posuere tristique, convallis sit amet urna. Pellentesque non accumsan lectus, vitae placerat metus.
-        Nam magna diam, lobortis in ullamcorper vel, auctor sit amet tortor. Cras accumsan magna justo, eu molestie libero euismod et. Proin quis elit eget velit aliquam luctus. Mauris congue eu augue quis sollicitudin. Ut vehicula in eros ac rhoncus. Fusce cursus sem sapien, non bibendum lectus venenatis id. Nam eget augue ex. Aliquam eget erat eu velit euismod convallis. Aenean a orci id purus interdum maximus nec sed metus. Quisque vehicula, justo ac congue tristique, ante lectus hendrerit arcu, a tempus diam lacus quis ipsum. In hac habitasse platea dictumst. Ut tempor, libero eget dictum hendrerit, arcu dui mollis est, sed ultricies leo erat eu mauris. Nulla semper leo eget velit luctus, eu suscipit ligula tincidunt. Aliquam gravida lorem felis, eleifend auctor erat tincidunt vitae.
     </string>
     <string name="testing">asdfasdf</string>
     <string name="email">Email</string>
@@ -139,4 +138,17 @@
     <string name="value_potensi">0.0</string>
     <string name="tahun">Tahun :</string>
     <string name="tahun_potensi">2018</string>
+    <string name="nama_budaya">Nama Budaya</string>
+    <string name="selengkapnya">Selengkapnya</string>
+    <string name="rekomendasi_untuk_anda">Rekomendasi Untuk Anda</string>
+    <string name="budaya_sekitar">Budaya Lokal Disekitar Anda</string>
+    <string name="banyak_dicari">Paling Banyak Dicari</string>
+    <string name="koperasi">Koperasi</string>
+    <string name="nama_wisata">Nama Wisata</string>
+    <string name="waktu_wisata">10:00 WIB - 17:00 WIB</string>
+    <string name="lokasi_wisata">Lokasi Wisata</string>
+    <string name="semua_umur">Semua Umur</string>
+    <string name="galeri_budaya">Galeri Budaya</string>
+    <string name="potensi_fisik">Potensi Fisik</string>
+    <string name="potensi_non_fisik">Potensi Non Fisik</string>
 </resources>

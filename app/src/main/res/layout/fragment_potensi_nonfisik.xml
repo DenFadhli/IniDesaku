@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PotensiDesaFragment">
+    tools:context=".PotensiNonfisikFragment">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_fisik"
@@ -43,5 +43,18 @@
         app:layout_constraintTop_toTopOf="parent">
 
     </com.google.android.material.button.MaterialButton>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_potensi_nonfisik"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_non_fisik"
+        tools:listitem="@layout/item_list_potensi_nonfisik">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
