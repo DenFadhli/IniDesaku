@@ -38,5 +38,14 @@ class PesonaDesaActivity : AppCompatActivity() {
             }.attach()
         }
 
+        setPreviousPage()
+
     }
+
+    private fun setPreviousPage() {
+        binding.topAppBar.setNavigationOnClickListener {
+            onBackPressed()
+        }
+    }
+
 }

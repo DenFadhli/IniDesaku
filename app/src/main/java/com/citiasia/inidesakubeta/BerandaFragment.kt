@@ -14,25 +14,10 @@ import com.citiasia.inidesakubeta.ui.ppob.pulsa.PulsaActivity
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [BerandaFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class BerandaFragment : Fragment() {
 
     private var _binding: FragmentBerandaBinding? = null
     private val binding get() = _binding !!
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -61,15 +46,15 @@ class BerandaFragment : Fragment() {
 
     private fun iconClick() {
         with(binding) {
+            cariDesa.setOnClickListener {
+                val intent = Intent(requireActivity(), CariDesaActivity::class.java)
+                startActivity(intent)
+            }
             btnPesonaDesa.setOnClickListener {
-                toPesonaDesa()
+                val intent = Intent(requireActivity(), PesonaDesaActivity::class.java)
+                startActivity(intent)
             }
         }
-    }
-
-    private fun toPesonaDesa() {
-        val intent = Intent(requireActivity(), PesonaDesaActivity::class.java)
-        startActivity(intent)
     }
 
 }

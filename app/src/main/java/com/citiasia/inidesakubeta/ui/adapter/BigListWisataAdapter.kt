@@ -5,19 +5,20 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.citiasia.inidesakubeta.data.database.Berita
+import com.citiasia.inidesakubeta.data.database.Wisata
 import com.citiasia.inidesakubeta.databinding.ItemListBeritaBinding
+import com.citiasia.inidesakubeta.databinding.ItemListBigWisataBinding
 
-class ListBeritaAdapter(private val listBerita: List<Berita>) : RecyclerView.Adapter<ListBeritaAdapter.ListViewHolder>() {
-    class ListViewHolder(var binding: ItemListBeritaBinding): RecyclerView.ViewHolder(binding.root) {
-        fun binding(berita: Berita){
+class BigListWisataAdapter(private val listWisata: List<Wisata>) : RecyclerView.Adapter<BigListWisataAdapter.ListViewHolder>() {
+    class ListViewHolder(var binding: ItemListBigWisataBinding): RecyclerView.ViewHolder(binding.root) {
+        fun binding(wisata: Wisata){
             binding.apply {
                 Glide.with(itemView)
-                    .load(berita.image)
-                    .into(gambarBerita)
-                judulCardBerita.text = berita.title
-                adminDesa.text = berita.admin
-                tglBerita.text = berita.time
-                pelihatBerita.text = berita.viewer
+                    .load(wisata.image)
+                    .into(gambarWisata)
+                judulCardWisata.text = wisata.title
+                lokasiWisata.text = wisata.lokasi
+                waktuWisata.text = wisata.time
             }
         }
     }
@@ -29,25 +30,25 @@ class ListBeritaAdapter(private val listBerita: List<Berita>) : RecyclerView.Ada
     }
 
     interface OnItemClickCallback {
-        fun onItemClicked(data: Berita)
+        fun onItemClicked(data: Wisata)
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ListViewHolder {
-        val binding = ItemListBeritaBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup,false )
+        val binding = ItemListBigWisataBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup,false )
         return ListViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val berita = listBerita[position]
-        holder.binding(berita)
+        val wisata = listWisata[position]
+        holder.binding(wisata)
         holder.itemView.setOnClickListener{
-            onItemClickCallback.onItemClicked(berita)
+            onItemClickCallback.onItemClicked(wisata)
         }
 
     }
 
     override fun getItemCount(): Int {
-        return listBerita.size
+        return listWisata.size
     }
 
 }

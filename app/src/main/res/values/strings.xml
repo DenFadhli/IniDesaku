@@ -115,7 +115,7 @@
     <string name="potensi_desa">Potensi Desa</string>
     <string name="budaya_lokal">Budaya Lokal</string>
     <string name="wisata_desa">Wisata Desa</string>
-    <string name="cari_berita">Cari Berita</string>
+    <string name="cari_berita_desa">Cari Berita Desa</string>
     <string name="nama_berita">Nama Berita</string>
     <string name="informasi_desa">Informasi Desa</string>
     <string name="kode_wilayah">32.12.14.2005</string>
@@ -154,4 +154,6 @@
     <string name="galeri_budaya">Galeri Budaya</string>
     <string name="potensi_fisik">Potensi Fisik</string>
     <string name="potensi_non_fisik">Potensi Non Fisik</string>
+    <string name="cari_budaya_lokal">Cari Budaya Lokal</string>
+    <string name="cari_wisata_desa">Cari Wisata Desa</string>
 </resources>

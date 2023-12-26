@@ -7,6 +7,7 @@
     android:layout_gravity="center"
     android:layout_marginBottom="10dp"
     android:elevation="6dp"
+    android:layout_rowSpan="3"
     app:cardCornerRadius="6dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,6 +21,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
+            android:scaleType="fitXY"
             app:shapeAppearanceOverlay="@style/roundedImageView8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"

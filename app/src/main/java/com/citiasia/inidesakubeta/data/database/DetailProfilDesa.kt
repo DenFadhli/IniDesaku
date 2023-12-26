@@ -1,5 +1,7 @@
 package com.citiasia.inidesakubeta.data.database
 
+import android.util.Log
+
 object DetailProfilDesa {
     private val data = arrayOf(
         arrayOf(
@@ -14,19 +16,36 @@ object DetailProfilDesa {
         ),
     )
 
-    val listData : ArrayList<ProfilDesa>get() {
-        val list = ArrayList<ProfilDesa>()
-        for (d in data) {
-            val dataDetail = ProfilDesa()
-            dataDetail.desc = d[0]
-            dataDetail.code = d[1]
-            dataDetail.village = d[2]
-            dataDetail.number = d[3]
-            dataDetail.mail = d[4]
-            dataDetail.web = d[5]
+//    val listData : ArrayList<ProfilDesa>get() {
+//        val list = ArrayList<ProfilDesa>()
+//        for (d in data) {
+//            val dataDetail = ProfilDesa()
+//            dataDetail.desc = d[0]
+//            dataDetail.code = d[1]
+//            dataDetail.village = d[2]
+//            dataDetail.number = d[3]
+//            dataDetail.mail = d[4]
+//            dataDetail.web = d[5]
+//
+//            list.add(dataDetail)
+//        }
+//        return list
+//    }
 
-            list.add(dataDetail)
+    fun getProfilDesaList(): ArrayList<ProfilDesa> {
+        val tempList = arrayListOf<ProfilDesa>()
+        for (i in data) {
+            Log.e("jumlah data Profil Desa", i.toString())
+            val profilDesa = ProfilDesa(
+                desc = i[0],
+                code = i[1],
+                village = i[2],
+                number = i[3],
+                mail = i[4],
+                web = i[5]
+            )
+            tempList.add(profilDesa)
         }
-        return list
+        return tempList
     }
 }

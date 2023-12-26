@@ -50,12 +50,12 @@
             android:layout_width="match_parent"
             android:layout_height="8dp"
             android:background="@drawable/rounded_shape"
-            app:layout_constraintBottom_toTopOf="@id/judul_card_budaya"
+            app:layout_constraintBottom_toTopOf="@id/judul_card_budaya_detail"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/judul_card_budaya"
+            android:id="@+id/judul_card_budaya_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -74,7 +74,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/judul_card_budaya"
+            app:layout_constraintTop_toBottomOf="@+id/judul_card_budaya_detail"
             app:srcCompat="@drawable/admin" />
 
         <ImageView
@@ -109,7 +109,7 @@
             android:fontFamily="@font/nunito_regular"
             android:lineHeight="16sp"
             app:layout_constraintStart_toEndOf="@+id/icon_admin"
-            app:layout_constraintTop_toBottomOf="@+id/judul_card_budaya" />
+            app:layout_constraintTop_toBottomOf="@+id/judul_card_budaya_detail" />
 
         <TextView
             android:id="@+id/tgl_budaya"
@@ -166,12 +166,27 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/materialDivider2" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_galeri_budaya"
+            android:layout_width="match_parent"
+            android:layout_height="176dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="36dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/galeri_budaya"
+            tools:listitem="@layout/item_card_budaya">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
         <TextView
             android:id="@+id/desc_budaya"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/nunito_regular"
             android:gravity="top"
@@ -183,7 +198,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/galeri_budaya" />
+            app:layout_constraintTop_toBottomOf="@+id/rv_galeri_budaya" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

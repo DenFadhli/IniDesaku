@@ -200,8 +200,10 @@
             android:id="@+id/layout1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/materialDivider"
             app:layout_constraintStart_toStartOf="@+id/materialDivider"
             app:layout_constraintTop_toBottomOf="@id/textView">
@@ -211,7 +213,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                tools:listitem="@layout/item_list_small_potensi"/>
+                tools:listitem="@layout/item_list_small_potensi" />
 
         </LinearLayout>
 

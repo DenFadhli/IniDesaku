@@ -13,6 +13,7 @@
         android:layout_width="54dp"
         android:layout_height="68dp"
         android:elevation="36dp"
+        android:scaleType="centerCrop"
         tools:srcCompat="@tools:sample/backgrounds/scenic"/>
 
 </androidx.cardview.widget.CardView>

@@ -6,25 +6,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BeritaFragment">
-
-    <com.google.android.material.search.SearchBar
+    
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/cari_berita"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="56dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:backgroundTint="@color/white"
-        android:hint="@string/cari_berita"
-        android:textAppearance="@style/Theme.IniDesakuBeta.TextView.Regular14.600"
-        app:strokeWidth="1px"
-        app:strokeColor="#B3B9C6"
-        app:navigationIconTint="#8A94A6"
+        android:hint="@string/cari_berita_desa"
+        android:textColorHint="#8A94A6"
+        app:hintTextColor="#8A94A6"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeColor="#B3B9C6"
+        app:boxCornerRadiusBottomEnd="8dp"
+        app:boxCornerRadiusBottomStart="8dp"
+        app:boxCornerRadiusTopEnd="8dp"
+        app:boxCornerRadiusTopStart="8dp"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/search_icon"
+        app:endIconTint="#8A94A6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-    </com.google.android.material.search.SearchBar>
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <com.google.android.material.search.SearchBar-->
+<!--        android:id="@+id/cari_berita"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        android:hint="@string/cari_berita"-->
+<!--        android:textAppearance="@style/Theme.IniDesakuBeta.TextView.Regular14.600"-->
+<!--        app:strokeWidth="1px"-->
+<!--        app:strokeColor="#B3B9C6"-->
+<!--        app:navigationIconTint="#8A94A6"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--    </com.google.android.material.search.SearchBar>-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_list_berita"
