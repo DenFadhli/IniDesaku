@@ -118,10 +118,10 @@
     <string name="cari_berita_desa">Cari Berita Desa</string>
     <string name="nama_berita">Nama Berita</string>
     <string name="informasi_desa">Informasi Desa</string>
-    <string name="kode_wilayah">32.12.14.2005</string>
-    <string name="nama_profil_desa">Desa Gelarmendala</string>
+    <string name="kode_wilayah">Kode Wilayah 32.12.14.2005</string>
+    <string name="nama_profil_desa">Desa.Gelarmendala</string>
     <string name="telp_desa">08123456789</string>
-    <string name="mail_desa">/@DesaGelarmendala</string>
+    <string name="mail_desa">//@DesaGelarmendala</string>
     <string name="admin_desa">Admin Desa</string>
     <string name="tgl_berita">23-11-2023</string>
     <string name="pelihat_berita">11</string>
@@ -129,7 +129,7 @@
     <string name="cari_desa">Cari</string>
     <string name="berita_dan_edukasi_desa"><![CDATA[Berita Desa & Edukasi Desa]]></string>
     <string name="pesona_desa">Pesona\nDesa</string>
-    <string name="kegiatan_desa">Kegiatan\nDesa</string>
+    <string name="pemberdayaan_desa">Pemberdayaan\nDesa</string>
     <string name="layanan_desa">Layanan\nDesa</string>
     <string name="produk_unggulan">Produk\nUnggulan</string>
     <string name="ekonomi_dan_transaksi"><![CDATA[Ekonomi & Transaksi]]></string>

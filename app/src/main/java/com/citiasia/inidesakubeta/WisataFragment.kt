@@ -2,6 +2,8 @@ package com.citiasia.inidesakubeta
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -45,6 +47,7 @@ class WisataFragment : Fragment() {
         setDataRekomListAdapter("Rekomendasi")
         setDataSekitarListAdapter("Sekitar")
         setDataDicariListAdapter("Dicari")
+        searchInput()
 
     }
 
@@ -117,6 +120,64 @@ class WisataFragment : Fragment() {
                 override fun onItemClicked(data: Wisata) {
                     val intent = Intent(requireActivity(), DetailWisataActivity::class.java)
                     intent.putExtra("dicari", data)
+                    startActivity(intent)
+                }
+            })
+        }
+    }
+
+    private fun searchInput() {
+        binding.svCariWisata.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                searchData(s.toString())
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                if (s.isNullOrEmpty()) {
+                    binding.textView14.visibility = View.VISIBLE
+                    binding.textView15.visibility = View.VISIBLE
+                    binding.layout1.visibility = View.VISIBLE
+                    binding.textView16.visibility = View.VISIBLE
+                    binding.layout2.visibility = View.VISIBLE
+                } else {
+                    binding.textView14.visibility = View.GONE
+                    binding.textView15.visibility = View.GONE
+                    binding.layout1.visibility = View.GONE
+                    binding.textView16.visibility = View.GONE
+                    binding.layout2.visibility = View.GONE
+                }
+            }
+
+        })
+    }
+
+    private fun searchData(query: String) {
+        val listData = viewModel.getWisataData()
+
+        val filteredList: List<Wisata> = listData.filter { wisata ->
+            wisata.title.contains(query, ignoreCase = true)
+        }
+
+//        if (filteredList.isEmpty()){
+//            binding.layoutSearchNotFound.visibility = View.VISIBLE
+//        }else {
+//            binding.layoutSearchNotFound.visibility = View.GONE
+//        }
+
+        val adapter = BigListWisataAdapter(filteredList)
+
+        with(binding){
+            rvRekomWisata.layoutManager = LinearLayoutManager(requireContext())
+            rvRekomWisata.adapter = adapter
+
+            adapter.setOnItemClickCallback(object : BigListWisataAdapter.OnItemClickCallback{
+                override fun onItemClicked(data: Wisata) {
+                    val intent = Intent(requireActivity(), DetailWisataActivity::class.java)
+                    intent.putExtra("rekomendasi", data)
                     startActivity(intent)
                 }
             })

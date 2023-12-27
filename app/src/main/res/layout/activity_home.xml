@@ -21,8 +21,9 @@
             app:layout_anchorGravity="center"
             app:titleTextColor="?attr/colorOnPrimary"
             app:title="@string/app_name"
+            app:titleCentered="true"
             app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-            app:navigationIcon="@drawable/ppob_icon"
+            app:navigationIcon="@drawable/inidesaku_icon_white"
             app:navigationIconTint="@color/white"/>
 
 

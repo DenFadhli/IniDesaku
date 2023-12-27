@@ -17,6 +17,7 @@
             android:id="@+id/imageSlider2"
             android:layout_width="match_parent"
             android:layout_height="224dp"
+            app:iss_title_background="@color/transparent"
             app:iss_selected_dot="@drawable/dot_carousel_green"
             app:iss_unselected_dot="@drawable/dot_carousel_white"
             app:iss_auto_cycle="true"

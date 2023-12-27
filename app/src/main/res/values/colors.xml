@@ -13,6 +13,7 @@
     <color name="font200">#D7DAE0</color>
     <color name="font300">#B3B9C6</color>
     <color name="font400">#8A94A6</color>
+    <color name="font500">#667085</color>
     <color name="red">#eb3434</color>
 
 </resources>
