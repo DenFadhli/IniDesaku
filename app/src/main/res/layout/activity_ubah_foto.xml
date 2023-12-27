@@ -5,14 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.profile.UbahFotoActivity">
-
-    <?xml version="1.0" encoding="utf-8"?>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.profile.UbahPasswordActivity">
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBarLayout"
             android:layout_width="0dp"
@@ -71,7 +63,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_gravity="center"
-                        android:src="@tools:sample/avatars" />
+                        tools:src="@tools:sample/avatars" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -96,7 +88,7 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnDaftar"
+                    android:id="@+id/btnKamera"
                     style="@style/Theme.IniDesakuBeta.OutlineButton."
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
@@ -107,11 +99,11 @@
                     android:textAllCaps="false"
                     app:cornerRadius="8dp"
                     app:elevation="2dp"
-                    app:icon="@drawable/camera"
+                    android:src="@drawable/red_camer_icon"
                     app:strokeColor="?attr/colorPrimary" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnDaftar"
+                    android:id="@+id/btnGaleri"
                     style="@style/Theme.IniDesakuBeta.OutlineButton."
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
@@ -140,5 +132,3 @@
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,25 +14,23 @@
             android:id="@+id/appBarLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@color/primary500"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="?attr/colorPrimary">
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/topAppBar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:contentInsetStart="0dp"
-                android:contentInsetEnd="0dp"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 app:layout_anchor="@+id/appBarLayout"
                 app:layout_anchorGravity="center"
                 app:navigationIcon="@drawable/baseline_arrow_back_24"
-                app:navigationIconTint="@color/white"
+                app:navigationIconTint="?attr/colorOnPrimary"
                 app:title="Detail"
-                app:titleCentered="true"
-                app:titleTextColor="@color/white">
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:titleTextColor="?attr/colorOnPrimary"
+                app:titleCentered="true">
 
             </com.google.android.material.appbar.MaterialToolbar>
 
@@ -41,16 +39,17 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="64dp">
+            android:layout_marginTop="64dp"
+            android:background="@color/white">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="0dp">
 
                 <ImageView
-                    android:id="@+id/iv_cover_article"
+                    android:id="@+id/iv_cover_kegiatan"
                     android:layout_width="wrap_content"
-                    android:layout_height="170dp"
+                    android:layout_height="180dp"
                     android:contentDescription="Kegiatan Cover"
                     android:scaleType="centerCrop"
                     tools:src="@tools:sample/backgrounds/scenic"
@@ -61,30 +60,32 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="165dp"
-                    android:background="@drawable/layout_rounded_top_white_bg_12sp"
                     android:orientation="vertical"
-                    app:layout_constraintTop_toTopOf="@+id/iv_cover_article">
+                    android:layout_marginTop="165dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_default="wrap"
+                    app:layout_constraintTop_toTopOf="@+id/iv_cover_kegiatan"
+                    android:background="@drawable/layout_rounded_top_white_bg_12sp">
 
                     <TextView
-                        android:id="@+id/tv_title_donasi"
+                        android:id="@+id/tv_title_kegiatan"
                         style="@style/Theme.IniDesakuBeta.Text.Headline5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="20dp"
                         android:layout_marginTop="24dp"
-                        android:text="Judul Kegiatan " />
+                        tools:text="Judul Kegiatan" />
 
                     <TextView
                         android:id="@+id/tv_tempat"
                         style="@style/Theme.IniDesakuBeta.Text.Caption"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginTop="12dp"
                         android:drawablePadding="8dp"
                         android:padding="8dp"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginHorizontal="20dp"
-                        android:text="Balai Desa"
+                        tools:text="Balai Desa"
                         app:drawableLeftCompat="@drawable/place_icon"
                         app:drawableTint="@color/font400" />
 
@@ -93,10 +94,10 @@
                         style="@style/Theme.IniDesakuBeta.Text.Caption"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="20dp"
                         android:drawablePadding="8dp"
                         android:padding="8dp"
-                        android:layout_marginHorizontal="20dp"
-                        android:text="09 Agustus 2023, 08.00 WIB"
+                        tools:text="09 Agustus 2023, 08.00 WIB"
                         app:drawableLeftCompat="@drawable/clock_icon"
                         app:drawableTint="@color/font400" />
 
@@ -118,9 +119,9 @@
                                 style="@style/Theme.IniDesakuBeta.Text.Subtitle1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="12dp"
                                 android:layout_marginHorizontal="20dp"
-                                android:text="Persyaratan"
+                                android:layout_marginTop="12dp"
+                                android:text="@string/persyaratan"
                                 android:textColor="@color/primary500"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -133,7 +134,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
                                 android:layout_marginBottom="12dp"
-                                android:text="Deskripsi Persyaratan Deskripsi Persyaratan Deskripsi Persyaratan Deskripsi Persyaratan Deskripsi Persyaratan Deskripsi Persyaratan"
+                                android:text="@string/description_onboarding_1"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="@id/tv_persyaratan"
                                 app:layout_constraintStart_toStartOf="@id/tv_persyaratan"
@@ -159,9 +160,9 @@
                                 style="@style/Theme.IniDesakuBeta.Text.Subtitle1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="12dp"
                                 android:layout_marginHorizontal="20dp"
-                                android:text="Rincian Kegiatan"
+                                android:layout_marginTop="12dp"
+                                android:text="@string/rincian_kegiatan"
                                 android:textColor="@color/primary500"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -174,7 +175,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
                                 android:layout_marginBottom="12dp"
-                                android:text="Deskripsi Rincian Deskripsi Rincian Deskripsi Rincian Deskripsi Rincian Deskripsi Rincian"
+                                android:text="@string/description_onboarding_1"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="@id/tv_rincian"
                                 app:layout_constraintStart_toStartOf="@id/tv_rincian"
@@ -188,6 +189,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="20dp"
                         android:layout_marginTop="16dp"
+                        android:layout_marginBottom="12dp"
                         app:cardCornerRadius="8dp"
                         app:cardElevation="2dp">
 
@@ -200,9 +202,9 @@
                                 style="@style/Theme.IniDesakuBeta.Text.Subtitle1"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="12dp"
                                 android:layout_marginHorizontal="20dp"
-                                android:text="Manfaat Kegiatan"
+                                android:layout_marginTop="12dp"
+                                android:text="@string/manfaat_kegiatan"
                                 android:textColor="@color/primary500"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
@@ -215,7 +217,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
                                 android:layout_marginBottom="12dp"
-                                android:text="Deskripsi Manfaat Deskripsi Manfaat Deskripsi Manfaat Deskripsi Manfaat Deskripsi Manfaat Deskripsi Manfaat"
+                                android:text="@string/description_onboarding_1"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="@id/tv_manfaat"
                                 app:layout_constraintStart_toStartOf="@id/tv_manfaat"

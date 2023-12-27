@@ -15,7 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IniDesakuBeta"
         tools:targetApi="31">
-      
+        <activity
+            android:name=".ui.donasi.detail.DonasiSelesaiActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.konfirmasi.KonfirmasiActivity"
             android:exported="false" />
@@ -41,16 +43,10 @@
             android:name=".ui.desa.kegiatan_desa.KegiatanActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.desa.kegiatan_desa.detail.DetailKegiatanActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.donasi.list.DonasiActivity"
             android:exported="false" />
         <activity
             android:name=".ui.donasi.detail.DetailDonasiActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.profile.ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".ui.tvcc.TvccActivity"

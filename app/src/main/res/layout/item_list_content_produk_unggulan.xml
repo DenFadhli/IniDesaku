@@ -21,8 +21,10 @@
             app:cardCornerRadius="8dp">
 
             <ImageView
+                android:id="@+id/iv_image_cover"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:scaleType="centerCrop"
                 tools:src="@tools:sample/avatars" />
         </androidx.cardview.widget.CardView>
 
@@ -33,46 +35,48 @@
             android:layout_margin="12dp">
 
             <TextView
-                android:id="@+id/tv_nama_kegiatan"
+                android:id="@+id/tv_nama_produk"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Judul Kegiatan"
+                android:text="@string/judul_produk_unggulan"
                 android:padding="8dp"
                 android:lineSpacingExtra="1.5dp"
-                style="@style/Theme.IniDesakuBeta.Text.Headline5"/>
+                style="@style/Theme.IniDesakuBeta.Text.Subtitle2"
+                android:textColor="?attr/colorPrimary"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/admin"
+                android:drawablePadding="8dp"
+                android:padding="8dp"
+                style="@style/Theme.IniDesakuBeta.TextView.Regular10.400"
+                app:drawableLeftCompat="@drawable/admin_icon"
+                app:drawableTint="@color/font400" />
 
             <TextView
                 android:id="@+id/tv_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Aldi"
-                android:drawableLeft="@drawable/users_icon"
-                android:drawableTint="@color/font400"
+                android:text="@string/waktu"
                 android:drawablePadding="8dp"
                 android:padding="8dp"
-                style="@style/Theme.IniDesakuBeta.Text.Caption"/>
-
-            <TextView
-                android:id="@+id/tv_place"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="23 November 2023"
-                android:drawableLeft="@drawable/clock_icon"
-                android:drawableTint="@color/font400"
-                android:drawablePadding="8dp"
-                android:padding="8dp"
-                style="@style/Theme.IniDesakuBeta.Text.Caption"/>
+                style="@style/Theme.IniDesakuBeta.TextView.Regular10.400"
+                app:drawableLeftCompat="@drawable/clock_icon"
+                app:drawableTint="@color/font400" />
 
             <TextView
                 android:id="@+id/tv_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="5"
-                android:drawableLeft="@drawable/eye_icon"
-                android:drawableTint="@color/font400"
+                tools:text="5"
                 android:drawablePadding="8dp"
                 android:padding="8dp"
-                style="@style/Theme.IniDesakuBeta.Text.Caption"/>
+                style="@style/Theme.IniDesakuBeta.TextView.Regular10.400"
+                app:drawableLeftCompat="@drawable/eye_icon"
+                app:drawableTint="@color/font400" />
 
         </LinearLayout>
 

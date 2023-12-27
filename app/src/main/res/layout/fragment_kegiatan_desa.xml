@@ -16,7 +16,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="16dp"
             android:hint="@string/cari_kegiatan_yang_kamu_mau"
             app:endIconDrawable="@drawable/search_icon"
             app:endIconMode="custom"
@@ -31,27 +30,219 @@
                 android:inputType="text" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvListCategoryKegiatan"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:elevation="2dp"
+            android:paddingHorizontal="20dp"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layoutSearch"
-            tools:listitem="@layout/item_list_category"/>
+            app:layout_constraintTop_toBottomOf="@+id/layoutSearch">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                tools:listitem="@layout/item_list_content_produk_unggulan" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutSearchNotFound"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:paddingTop="100dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/iv_not_found_illustration"
+                    android:layout_width="0dp"
+                    android:layout_height="230dp"
+                    android:src="@drawable/data_search_not_found"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_not_found_title"
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium22.500"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kegiatan_yang_anda_cari_tidak_ditemukan"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="@id/iv_not_found_illustration"
+                    app:layout_constraintStart_toStartOf="@id/iv_not_found_illustration"
+                    app:layout_constraintTop_toBottomOf="@id/iv_not_found_illustration" />
+
+                <TextView
+                    android:id="@+id/tv_not_found_caption"
+                    style="@style/Theme.IniDesakuBeta.TextView.Regular16.400"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/silahkan_masukkan_kembali_kegiatan_yang_ingin_anda_cari"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="@id/tv_not_found_title"
+                    app:layout_constraintStart_toStartOf="@id/tv_not_found_title"
+                    app:layout_constraintTop_toBottomOf="@id/tv_not_found_title"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/scrollHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutSearch">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_semua"
+                    style="@style/Theme.IniDesakuBeta.ChipButton."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/semua"
+                    android:textColor="@drawable/chip_text_selector"
+                    app:chipBackgroundColor="@drawable/chip_background_selector"
+                    app:chipEndPadding="14dp"
+                    app:chipMinHeight="35dp"
+                    app:chipStartPadding="14dp"
+                    app:chipStrokeColor="?attr/colorPrimary"
+                    app:rippleColor="?attr/colorPrimary" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_pertanian"
+                    style="@style/Theme.IniDesakuBeta.ChipButton."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pertanian"
+                    android:textColor="@drawable/chip_text_selector"
+                    app:chipBackgroundColor="@drawable/chip_background_selector"
+                    app:chipEndPadding="14dp"
+                    app:chipMinHeight="35dp"
+                    app:chipStartPadding="14dp"
+                    app:chipStrokeColor="?attr/colorPrimary"
+                    app:rippleColor="?attr/colorPrimary" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_ekonomi"
+                    style="@style/Theme.IniDesakuBeta.ChipButton."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ekonomi"
+                    android:textColor="@drawable/chip_text_selector"
+                    app:chipBackgroundColor="@drawable/chip_background_selector"
+                    app:chipEndPadding="14dp"
+                    app:chipMinHeight="35dp"
+                    app:chipStartPadding="14dp"
+                    app:chipStrokeColor="?attr/colorPrimary"
+                    app:rippleColor="?attr/colorPrimary" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_lingkungan"
+                    style="@style/Theme.IniDesakuBeta.ChipButton."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lingkungan"
+                    android:textColor="@drawable/chip_text_selector"
+                    app:chipBackgroundColor="@drawable/chip_background_selector"
+                    app:chipEndPadding="14dp"
+                    app:chipMinHeight="35dp"
+                    app:chipStartPadding="14dp"
+                    app:chipStrokeColor="?attr/colorPrimary"
+                    app:rippleColor="?attr/colorPrimary" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_pendidikan"
+                    style="@style/Theme.IniDesakuBeta.ChipButton."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pendidikan"
+                    android:textColor="@drawable/chip_text_selector"
+                    app:chipBackgroundColor="@drawable/chip_background_selector"
+                    app:chipEndPadding="14dp"
+                    app:chipMinHeight="35dp"
+                    app:chipStartPadding="14dp"
+                    app:chipStrokeColor="?attr/colorPrimary"
+                    app:rippleColor="?attr/colorPrimary" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_kebudayaan"
+                    style="@style/Theme.IniDesakuBeta.ChipButton."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kebudayaan"
+                    android:textColor="@drawable/chip_text_selector"
+                    app:chipBackgroundColor="@drawable/chip_background_selector"
+                    app:chipEndPadding="14dp"
+                    app:chipMinHeight="35dp"
+                    app:chipStartPadding="14dp"
+                    app:chipStrokeColor="?attr/colorPrimary"
+                    app:rippleColor="?attr/colorPrimary" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_kesehatan"
+                    style="@style/Theme.IniDesakuBeta.ChipButton."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kesehatan"
+                    android:textColor="@drawable/chip_text_selector"
+                    app:chipBackgroundColor="@drawable/chip_background_selector"
+                    app:chipEndPadding="14dp"
+                    app:chipMinHeight="35dp"
+                    app:chipStartPadding="14dp"
+                    app:chipStrokeColor="?attr/colorPrimary"
+                    app:rippleColor="?attr/colorPrimary" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_kebersihan"
+                    style="@style/Theme.IniDesakuBeta.ChipButton."
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kebersihan"
+                    android:textColor="@drawable/chip_text_selector"
+                    app:chipBackgroundColor="@drawable/chip_background_selector"
+                    app:chipEndPadding="14dp"
+                    app:chipMinHeight="35dp"
+                    app:chipStartPadding="14dp"
+                    app:chipStrokeColor="?attr/colorPrimary"
+                    app:rippleColor="?attr/colorPrimary" />
+
+
+            </com.google.android.material.chip.ChipGroup>
+
+        </HorizontalScrollView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvListContentKegiatan"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:paddingBottom="260dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/rvListCategoryKegiatan"
-            tools:listitem="@layout/item_list_content_kegiatan"/>
+            app:layout_constraintTop_toBottomOf="@id/scrollHorizontal"
+            tools:listitem="@layout/item_list_content_kegiatan" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

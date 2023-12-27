@@ -1,60 +1,96 @@
 package com.citiasia.inidesakubeta.ui.desa.pelatihan_desa.detail
 
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.Glide
 import com.citiasia.inidesakubeta.R
+import com.citiasia.inidesakubeta.data.remote.model.ResponseKegiatanDesa
+import com.citiasia.inidesakubeta.data.remote.model.ResponsePelatihan
+import com.citiasia.inidesakubeta.databinding.FragmentDetailPelatihanDesaBinding
+import com.citiasia.inidesakubeta.ui.desa.kegiatan_desa.detail.DetailKegiatanDesaFragment
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [DetailPelatihanDesaFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class DetailPelatihanDesaFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentDetailPelatihanDesaBinding? = null
+    private val binding get() = _binding!!
+    private var data: ResponsePelatihan? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detail_pelatihan_desa, container, false)
+        _binding = FragmentDetailPelatihanDesaBinding.inflate(layoutInflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        data = arguments?.getParcelable(EXTRA_DETAIL)
+        data?.let {
+            showDetail(it)
+        }
+
+        binding.topAppBar.setNavigationOnClickListener {
+            requireActivity().onBackPressed()
+        }
+    }
+
+    private fun showDetail(data: ResponsePelatihan) {
+        binding.apply {
+            tvDescManfaat.text = data.manfaat
+            tvDescPersyaratan.text = data.persyaratan
+            tvDescRincian.text = data.rincian
+            tvTempat.text = data.place
+            tvWaktu.text = data.time
+            tvTitlePelatihan.text = data.title
+            tvUang.text = data.fee
+            Glide.with(requireContext())
+                .load(data?.imageCover)
+                .into(ivCoverPelatihan)
+
+            if (data.videoPelatihan.isNotEmpty()) {
+                val videoUri = Uri.parse(data.videoPelatihan)
+                videoView.setVideoURI(videoUri)
+
+                videoView.setOnPreparedListener { mediaPlayer ->
+                    val videoWidth = mediaPlayer.videoWidth
+                    val videoHeight = resources.getDimensionPixelSize(R.dimen.video_height)
+
+                    val layoutParams = videoView.layoutParams
+                    layoutParams.width = videoWidth
+                    layoutParams.height = videoHeight
+                    videoView.layoutParams = layoutParams
+
+                    btnPlayVideo.setOnClickListener {
+                        videoView.start()
+                        btnPlayVideo.visibility = View.GONE
+                    }
+
+                    videoView.setOnCompletionListener {
+                        btnPlayVideo.visibility = View.VISIBLE
+                    }
+                }
+                videoView.visibility = View.VISIBLE
+            } else {
+                relativeVideo.visibility = View.GONE
+                linearVideo.visibility = View.GONE
+                tvVideo.visibility = View.GONE
+            }
+        }
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment DetailPelatihanDesaFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            DetailPelatihanDesaFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        const val EXTRA_DETAIL = "extra_detail"
+        fun newInstance(data: ResponsePelatihan): DetailPelatihanDesaFragment {
+            val fragment = DetailPelatihanDesaFragment()
+            val args = Bundle()
+            args.putParcelable(EXTRA_DETAIL, data)
+            fragment.arguments = args
+            return fragment
+        }
     }
 }

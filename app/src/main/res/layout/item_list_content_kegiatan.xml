@@ -21,8 +21,10 @@
             app:cardCornerRadius="8dp">
 
             <ImageView
+                android:id="@+id/iv_cover"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:scaleType="centerCrop"
                 tools:src="@tools:sample/avatars" />
         </androidx.cardview.widget.CardView>
 
@@ -36,32 +38,33 @@
                 android:id="@+id/tv_nama_kegiatan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Judul Kegiatan"
+                android:text="@string/judul_kegiatan"
                 android:padding="8dp"
                 android:lineSpacingExtra="1.5dp"
-                style="@style/Theme.IniDesakuBeta.Text.Headline5"/>
+                style="@style/Theme.IniDesakuBeta.Text.Subtitle2"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/tv_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="08 Agustus 2023, 08.00 WIB"
-                android:drawableLeft="@drawable/clock_icon"
-                android:drawableTint="@color/font400"
+                android:text="@string/waktu"
                 android:drawablePadding="8dp"
                 android:padding="8dp"
-                style="@style/Theme.IniDesakuBeta.Text.Caption"/>
+                style="@style/Theme.IniDesakuBeta.TextView.Regular10.400"
+                app:drawableLeftCompat="@drawable/clock_icon"
+                app:drawableTint="@color/font400" />
 
             <TextView
                 android:id="@+id/tv_place"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Balai RW"
-                android:drawableLeft="@drawable/place_icon"
-                android:drawableTint="@color/font400"
+                android:text="@string/tempat"
                 android:drawablePadding="8dp"
                 android:padding="8dp"
-                style="@style/Theme.IniDesakuBeta.Text.Caption"/>
+                style="@style/Theme.IniDesakuBeta.TextView.Regular10.400"
+                app:drawableLeftCompat="@drawable/place_icon"
+                app:drawableTint="@color/font400" />
 
         </LinearLayout>
 

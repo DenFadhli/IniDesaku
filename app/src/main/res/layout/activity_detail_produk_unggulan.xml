@@ -13,7 +13,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/primary500">
+        android:background="?attr/colorPrimary">
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
@@ -22,13 +22,11 @@
             app:layout_anchor="@+id/appBarLayout"
             app:layout_anchorGravity="center"
             app:navigationIcon="@drawable/baseline_arrow_back_24"
-            app:navigationIconTint="@color/white"
+            app:navigationIconTint="?attr/colorOnPrimary"
             app:title="Produk Unggulan"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
-            app:titleTextColor="@color/white"
-            app:titleCentered="true"
-            android:contentInsetStart="0dp"
-            android:contentInsetEnd="0dp">
+            app:titleTextColor="?attr/colorOnPrimary"
+            app:titleCentered="true">
 
         </com.google.android.material.appbar.MaterialToolbar>
 
@@ -47,7 +45,7 @@
             android:id="@+id/bg_color"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            app:cardBackgroundColor="@color/primary500" />
+            app:cardBackgroundColor="?attr/colorPrimary" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/img_cover"
@@ -55,10 +53,11 @@
             android:layout_height="200dp"
             android:layout_centerInParent="true"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             app:cardCornerRadius="8dp">
 
             <ImageView
+                android:id="@+id/iv_image_cover"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -73,8 +72,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:text="Judul Produk Unggulan"
-        android:textColor="@color/primary500"
+        android:text="@string/judul_produk_unggulan"
+        android:textColor="?attr/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
@@ -87,11 +86,11 @@
         android:drawablePadding="8dp"
         android:padding="8dp"
         android:layout_marginTop="8dp"
-        android:text="Admin Desa"
+        android:text="@string/admin"
         app:layout_constraintEnd_toEndOf="@+id/tv_judul_produk_unggulan"
         app:layout_constraintStart_toStartOf="@+id/tv_judul_produk_unggulan"
         app:layout_constraintTop_toBottomOf="@+id/tv_judul_produk_unggulan"
-        app:drawableLeftCompat="@drawable/users_icon"
+        app:drawableLeftCompat="@drawable/admin_icon"
         app:drawableTint="@color/font400" />
 
     <TextView
@@ -102,7 +101,7 @@
         android:drawablePadding="8dp"
         android:padding="8dp"
         android:layout_marginTop="4dp"
-        android:text="23-11-2023"
+        android:text="@string/waktu"
         app:layout_constraintEnd_toEndOf="@+id/tv_admin"
         app:layout_constraintStart_toStartOf="@+id/tv_admin"
         app:layout_constraintTop_toBottomOf="@+id/tv_admin"
@@ -117,7 +116,7 @@
         android:drawablePadding="8dp"
         android:padding="8dp"
         android:layout_marginTop="4dp"
-        android:text="5"
+        tools:text="5"
         app:layout_constraintEnd_toEndOf="@+id/tv_time"
         app:layout_constraintStart_toStartOf="@+id/tv_time"
         app:layout_constraintTop_toBottomOf="@+id/tv_time"
@@ -161,7 +160,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:gravity="center"
-        android:text="Ingin memesan? hubungi"
+        android:text="@string/ingin_memesan_hubungi"
         app:layout_constraintEnd_toEndOf="@id/divider_desc"
         app:layout_constraintStart_toStartOf="@id/divider_desc"
         app:layout_constraintTop_toBottomOf="@id/divider_desc" />
@@ -173,7 +172,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="8dp"
-        android:text="Telepon"
+        android:text="@string/telepon"
         android:textColor="@color/font400"
         app:backgroundTint="@android:color/transparent"
         app:icon="@drawable/phone_icon"
@@ -193,13 +192,13 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="8dp"
-        android:text="Whatsapp"
+        android:text="@string/whatsapp"
         android:textColor="@color/font400"
         app:backgroundTint="@android:color/transparent"
         app:icon="@drawable/whatsapp"
         app:iconGravity="start"
         app:iconSize="20dp"
-        app:iconTint=""
+        app:iconTint="@color/primary500"
         app:layout_constraintEnd_toEndOf="@+id/tv_hubungi"
         app:layout_constraintStart_toEndOf="@+id/btnCall"
         app:layout_constraintTop_toBottomOf="@+id/tv_hubungi"
