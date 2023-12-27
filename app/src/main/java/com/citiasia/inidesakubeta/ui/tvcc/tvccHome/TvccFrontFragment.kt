@@ -113,6 +113,7 @@ class TvccFrontFragment : Fragment() {
 
         adapter.setOnItemClickCallback(object : TvccListSearchAdapter.OnItemClickCallback{
             override fun onItemClicked(data: ResponseTvcc) {
+
                 val action = TvccFrontFragmentDirections.actionTvccFrontFragmentToTvccDetailFragment(data)
                 findNavController().navigate(action)
 

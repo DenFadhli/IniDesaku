@@ -64,38 +64,63 @@
                 android:text="@string/saldo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/btnHistory"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@id/tvSaldoString"
                 app:layout_constraintTop_toBottomOf="@id/tvSaldoString" />
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/btnHistory"
-                style="@style/Theme.IniDesakuBeta.IconButtonSmall.Regular11.400"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
                 android:layout_marginEnd="8dp"
-                android:text="@string/history"
-                app:cornerRadius="4dp"
-                app:icon="@drawable/icon_riwayat"
-                app:iconTintMode="multiply"
-                app:iconGravity="top"
-                app:iconPadding="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="@id/tvSaldo"
                 app:layout_constraintEnd_toStartOf="@id/btnTopUp"
-                app:layout_constraintTop_toTopOf="@id/btnTopUp" />
+                app:layout_constraintTop_toTopOf="@id/tvSaldoString">
 
-            <com.google.android.material.button.MaterialButton
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/icon_riwayat" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Regular11.400"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/history" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/btnTopUp"
-                style="@style/Theme.IniDesakuBeta.IconButtonSmall.Regular11.400"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/top_up"
-                app:cornerRadius="4dp"
-                app:icon="@drawable/icon_top_up"
-                app:iconGravity="top"
-                app:iconPadding="4dp"
-                app:layout_constraintBottom_toBottomOf="@id/tvSaldo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/btnHistory"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/icon_top_up" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Regular11.400"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/top_up" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -130,54 +155,91 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/btnPrabayar"
-                style="@style/Theme.IniDesakuBeta.IconButtonSmall.Medium14.500"
                 android:layout_width="74dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center|center_vertical"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="12dp"
-                android:text="@string/pulsa_prabayar"
-                app:cornerRadius="4dp"
-                app:icon="@drawable/icon_prabayar"
-                app:iconGravity="top"
-                app:iconPadding="6dp"
-                app:iconSize="38dp"
-                app:iconTint="@color/grey"
+                android:gravity="center"
+                android:orientation="vertical"
                 app:layout_constraintStart_toStartOf="@id/tvPulsa"
-                app:layout_constraintTop_toBottomOf="@id/tvPulsa" />
+                app:layout_constraintTop_toBottomOf="@id/tvPulsa">
 
-            <com.google.android.material.button.MaterialButton
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/prabayar_icon" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/pulsa_prabayar" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/btnPascabayar"
-                style="@style/Theme.IniDesakuBeta.IconButtonSmall.Medium14.500"
                 android:layout_width="74dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:text="@string/pulsa_pascabayar"
-                app:cornerRadius="4dp"
-                app:icon="@drawable/icon_prabayar"
-                app:iconGravity="top"
-                app:iconPadding="6dp"
-                app:iconSize="38dp"
-                app:iconTint="@color/grey"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:gravity="top"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/btnPrabayar"
                 app:layout_constraintStart_toEndOf="@id/btnPrabayar"
-                app:layout_constraintTop_toTopOf="@id/btnPrabayar" />
+                app:layout_constraintTop_toTopOf="@id/btnPrabayar">
 
-            <com.google.android.material.button.MaterialButton
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/pascabayar_icon" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center"
+                    android:text="@string/pulsa_pascabayar" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/btnPaketData"
-                style="@style/Theme.IniDesakuBeta.IconButtonSmall.Medium14.500"
                 android:layout_width="74dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:text="@string/paket_data"
-                app:cornerRadius="4dp"
-                app:icon="@drawable/icon_prabayar"
-                app:iconGravity="top"
-                app:iconPadding="6dp"
-                app:iconSize="38dp"
-                app:iconTint="@color/grey"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/btnPascabayar"
                 app:layout_constraintStart_toEndOf="@id/btnPascabayar"
-                app:layout_constraintTop_toTopOf="@id/btnPascabayar" />
+                app:layout_constraintTop_toTopOf="@id/btnPascabayar">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+
+                    android:src="@drawable/paket_data_icon" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="@string/paket_data" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -209,54 +271,90 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/btnTagihanPln"
-                style="@style/Theme.IniDesakuBeta.IconButtonSmall.Medium14.500"
                 android:layout_width="74dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center|center_vertical"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="12dp"
-                android:text="@string/tagihan_pln"
-                app:cornerRadius="4dp"
-                app:icon="@drawable/tagihan_pln"
-                app:iconGravity="top"
-                app:iconPadding="6dp"
-                app:iconSize="38dp"
-                app:iconTint="@color/grey"
+                android:gravity="center"
+                android:orientation="vertical"
                 app:layout_constraintStart_toStartOf="@id/tvListrik"
-                app:layout_constraintTop_toBottomOf="@id/tvListrik" />
+                app:layout_constraintTop_toBottomOf="@id/tvListrik">
 
-            <com.google.android.material.button.MaterialButton
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/tagihan_pln" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/tagihan_pln" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/btnTokenPln"
-                style="@style/Theme.IniDesakuBeta.IconButtonSmall.Medium14.500"
                 android:layout_width="74dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:text="@string/token_pln"
-                app:cornerRadius="4dp"
-                app:icon="@drawable/tagihan_pln"
-                app:iconGravity="top"
-                app:iconPadding="6dp"
-                app:iconSize="38dp"
-                app:iconTint="@color/grey"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:gravity="top"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/btnTagihanPln"
                 app:layout_constraintStart_toEndOf="@id/btnTagihanPln"
-                app:layout_constraintTop_toTopOf="@id/btnTagihanPln" />
+                app:layout_constraintTop_toTopOf="@id/btnTagihanPln">
 
-            <com.google.android.material.button.MaterialButton
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/token_pln" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="top|center_horizontal"
+                    android:paddingTop="7dp"
+                    android:text="@string/token_pln" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/btnPdam"
-                style="@style/Theme.IniDesakuBeta.IconButtonSmall.Medium14.500"
                 android:layout_width="74dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:text="@string/pdam"
-                app:cornerRadius="4dp"
-                app:icon="@drawable/tagihan_pln"
-                app:iconGravity="top"
-                app:iconPadding="6dp"
-                app:iconSize="38dp"
-                app:iconTint="@color/grey"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/btnTokenPln"
                 app:layout_constraintStart_toEndOf="@id/btnTokenPln"
-                app:layout_constraintTop_toTopOf="@id/btnTokenPln" />
+                app:layout_constraintTop_toTopOf="@id/btnTokenPln">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+
+                    android:src="@drawable/pdam_icon" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:paddingTop="7dp"
+                    android:text="@string/pdam" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -289,38 +387,61 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/btnKesehatan"
-                style="@style/Theme.IniDesakuBeta.IconButtonSmall.Medium14.500"
                 android:layout_width="74dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center|center_vertical"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="12dp"
-                android:text="@string/kesehatan"
-                app:cornerRadius="4dp"
-                app:icon="@drawable/tagihan_pln"
-                app:iconGravity="top"
-                app:iconPadding="6dp"
-                app:iconSize="38dp"
-                app:iconTint="@color/grey"
+                android:gravity="center"
+                android:orientation="vertical"
                 app:layout_constraintStart_toStartOf="@id/tvBpjs"
-                app:layout_constraintTop_toBottomOf="@id/tvBpjs" />
+                app:layout_constraintTop_toBottomOf="@id/tvBpjs">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnKetenagakerja"
-                style="@style/Theme.IniDesakuBeta.IconButtonSmall.Medium14.500"
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/kesehatan_icon" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/kesehatan" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnKetenagakerjaan"
                 android:layout_width="74dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:text="@string/ketenagakerjaan"
-                app:cornerRadius="4dp"
-                app:icon="@drawable/tagihan_pln"
-                app:iconGravity="top"
-                app:iconPadding="6dp"
-                app:iconSize="38dp"
-                app:iconTint="@color/grey"
+                android:layout_marginStart="12dp"
+                android:gravity="top"
+                android:orientation="vertical"
                 app:layout_constraintStart_toEndOf="@id/btnKesehatan"
-                app:layout_constraintTop_toTopOf="@id/btnKesehatan" />
+                app:layout_constraintTop_toTopOf="@id/btnKesehatan">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ketenaga_icon" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="top|center_horizontal"
+                    android:paddingTop="7dp"
+                    android:text="@string/ketenagakerjaan" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -355,54 +476,89 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/btnIndihome"
-                style="@style/Theme.IniDesakuBeta.IconButtonSmall.Medium14.500"
                 android:layout_width="74dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center|center_vertical"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="12dp"
-                android:text="@string/indihome"
-                app:cornerRadius="4dp"
-                app:icon="@drawable/tagihan_pln"
-                app:iconGravity="top"
-                app:iconPadding="6dp"
-                app:iconSize="38dp"
-                app:iconTint="@color/grey"
+                android:gravity="center"
+                android:orientation="vertical"
                 app:layout_constraintStart_toStartOf="@id/tvLainnya"
-                app:layout_constraintTop_toBottomOf="@id/tvLainnya" />
+                app:layout_constraintTop_toBottomOf="@id/tvLainnya">
 
-            <com.google.android.material.button.MaterialButton
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/indihome_icon" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/indihome" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/btnTelkom"
-                style="@style/Theme.IniDesakuBeta.IconButtonSmall.Medium14.500"
                 android:layout_width="74dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:text="@string/telkom"
-                app:cornerRadius="4dp"
-                app:icon="@drawable/tagihan_pln"
-                app:iconGravity="top"
-                app:iconPadding="6dp"
-                app:iconSize="38dp"
-                app:iconTint="@color/grey"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:gravity="top"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/btnIndihome"
                 app:layout_constraintStart_toEndOf="@id/btnIndihome"
-                app:layout_constraintTop_toTopOf="@id/btnIndihome" />
+                app:layout_constraintTop_toTopOf="@id/btnIndihome">
 
-            <com.google.android.material.button.MaterialButton
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/telkom_icon" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="top|center_horizontal"
+                    android:paddingTop="7dp"
+                    android:text="@string/telkom" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/btnMultifinance"
-                style="@style/Theme.IniDesakuBeta.IconButtonSmall.Medium14.500"
                 android:layout_width="74dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="12dp"
-                android:text="@string/multifinance"
-                app:cornerRadius="4dp"
-                app:icon="@drawable/tagihan_pln"
-                app:iconGravity="top"
-                app:iconPadding="6dp"
-                app:iconSize="38dp"
-                app:iconTint="@color/grey"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:gravity="center"
+                android:orientation="vertical"
                 app:layout_constraintStart_toEndOf="@id/btnTelkom"
-                app:layout_constraintTop_toTopOf="@id/btnTelkom" />
+                app:layout_constraintTop_toTopOf="@id/btnTelkom">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:src="@drawable/multi_icon" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="top|center_horizontal"
+                    android:paddingTop="7dp"
+                    android:text="@string/multifinance" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

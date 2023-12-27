@@ -58,7 +58,12 @@ class KonfrimasiBerhasilFragment : Fragment() {
     }
 
     private fun setUpData(pref: DataJenisPembayaranPreference) = with(binding) {
-
+        when (pref.getData()[0]) {
+            "Pulsa" -> tvCaption.text = resources.getString(R.string.caption_berhasil_pulsa)
+            "BPJS" -> tvCaption.text = resources.getString(R.string.caption_berhasil_bpjs)
+            "tagihan PDAM" -> tvCaption.text = resources.getString(R.string.caption_berhasil_pdam)
+            else -> {}
+        }
         tvKodeTokenValue.height = 0
         tvTanggalValue.text = getTodayDate()
         tvIdValue.text = getRandomIdGenerate()

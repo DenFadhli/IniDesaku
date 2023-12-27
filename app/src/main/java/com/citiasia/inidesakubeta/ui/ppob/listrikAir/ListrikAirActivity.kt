@@ -45,8 +45,7 @@ class ListrikAirActivity : AppCompatActivity() {
         @StringRes
         private val TAB_TITLES = intArrayOf(
             R.string.tab_listrik_1,
-            R.string.tab_listrik_2,
-            R.string.tab_listrik_3
+            R.string.tab_listrik_2
         )
     }
 }

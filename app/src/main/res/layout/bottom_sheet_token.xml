@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.Material3.BottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_rounded_top_white_bg"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="24dp">
+
+        <TextView
+            android:id="@+id/tvRincianPembelian"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rincian_pembelian"
+            app:layout_constraintEnd_toStartOf="@id/iconCross"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iconCross"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            android:src="@drawable/cross_icon"
+            app:layout_constraintBottom_toBottomOf="@id/tvRincianPembelian"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvRincianPembelian" />
+
+        <TextView
+            android:id="@+id/tvJumlahIuran"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/jumlah_iuran"
+            app:layout_constraintEnd_toStartOf="@id/tvJumlahIuranValue"
+            app:layout_constraintStart_toStartOf="@id/tvRincianPembelian"
+            app:layout_constraintTop_toBottomOf="@id/tvRincianPembelian" />
+
+        <TextView
+            android:id="@+id/tvJumlahIuranValue"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_jumlah_iuran"
+            app:layout_constraintEnd_toEndOf="@id/iconCross"
+            app:layout_constraintTop_toTopOf="@id/tvJumlahIuran" />
+
+        <TextView
+            android:id="@+id/tvBiayaAdmin"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/biaya_admin"
+            app:layout_constraintEnd_toStartOf="@id/tvBiayaAdminValue"
+            app:layout_constraintStart_toStartOf="@id/tvJumlahIuran"
+            app:layout_constraintTop_toBottomOf="@id/tvJumlahIuran" />
+
+        <TextView
+            android:id="@+id/tvBiayaAdminValue"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_biaya_admin"
+            app:layout_constraintEnd_toEndOf="@id/tvJumlahIuranValue"
+            app:layout_constraintTop_toTopOf="@id/tvBiayaAdmin" />
+
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/totalDivider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@id/tvBiayaAdminValue"
+            app:layout_constraintStart_toStartOf="@id/tvBiayaAdmin"
+            app:layout_constraintTop_toBottomOf="@id/tvBiayaAdmin" />
+
+        <TextView
+            android:id="@+id/tvTotal"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/total"
+            app:layout_constraintEnd_toStartOf="@id/tvTotalValue"
+            app:layout_constraintStart_toStartOf="@id/totalDivider"
+            app:layout_constraintTop_toBottomOf="@id/totalDivider" />
+
+        <TextView
+            android:id="@+id/tvTotalValue"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_total"
+            app:layout_constraintEnd_toEndOf="@id/tvBiayaAdminValue"
+            app:layout_constraintTop_toTopOf="@id/tvTotal" />
+
+        <TextView
+            android:id="@+id/tvMetodePembayaran"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/metode_pembayaran"
+            app:layout_constraintEnd_toEndOf="@id/tvTotalValue"
+            app:layout_constraintStart_toStartOf="@id/tvTotal"
+            app:layout_constraintTop_toBottomOf="@id/tvTotal" />
+
+        <LinearLayout
+            android:id="@+id/bankLayout"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/layout_rounded_top_white"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="10dp"
+            app:layout_constraintStart_toStartOf="@id/tvMetodePembayaran"
+            app:layout_constraintTop_toBottomOf="@id/tvMetodePembayaran">
+
+            <ImageView
+                android:layout_width="21.58dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="12dp"
+                android:maxWidth="30dp"
+                android:maxHeight="30dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_top_up" />
+
+            <TextView
+                android:id="@+id/tvPhoneButton"
+                style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/input_number_telphone" />
+
+            <TextView
+                android:id="@+id/tvSaldo"
+                style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/saldo_rp_500_000_00" />
+
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBayar"
+            style="@style/Theme.IniDesakuBeta.Button."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/bayar"
+            android:textAllCaps="false"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="@id/bankLayout"
+            app:layout_constraintStart_toStartOf="@id/bankLayout"
+            app:layout_constraintTop_toBottomOf="@id/bankLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</FrameLayout>
