@@ -30,7 +30,6 @@ class HomeActivity : AppCompatActivity() {
                     binding.topAppBar.setTitle("IniDesaku")
                 }
                 R.id.geo -> {
-                    replaceFragment(TvccFrontFragment())
                     binding.topAppBar.setTitle("Geospacial")
                 }
                 R.id.profileDesa -> {

@@ -2,8 +2,10 @@
 
     <style name="Theme.IniDesakuBeta" parent="Base.Theme.IniDesakuBeta">
         <!-- Transparent system bars for edge-to-edge. -->
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+        <item name="colorPrimary">@color/primary500</item>
+        <item name="colorPrimaryVariant">@color/primary600</item>
+        <item name="colorPrimaryContainer">@color/primary600</item>
+        <item name="colorSecondaryContainer">@color/grey</item>
+        <item name="colorOnBackground">@color/font500</item>
     </style>
 </resources>

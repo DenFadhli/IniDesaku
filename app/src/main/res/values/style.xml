@@ -79,6 +79,20 @@
         <item name="android:fontWeight">400</item>
     </style>
 
+    <style name="Theme.IniDesakuBeta.TextView.Medium11.500" parent="">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">?attr/colorOnBackground</item>
+        <item name="android:fontFamily">@font/nunito_medium</item>
+        <item name="android:fontWeight">500</item>
+    </style>
+
+    <style name="Theme.IniDesakuBeta.ButtomBarActive.Medium11.500" parent="">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+        <item name="android:fontFamily">@font/nunito_medium</item>
+        <item name="android:fontWeight">500</item>
+    </style>
+
     <style name="Theme.IniDesakuBeta.TextView.SemiBold11.600" parent="Widget.MaterialComponents.TextView">
         <item name="android:textSize">11sp</item>
         <item name="android:fontFamily">@font/nunito_semibold</item>
