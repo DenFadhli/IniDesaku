@@ -30,6 +30,8 @@ class TvccBannerAdapter(private val list: List<ResponseTvcc>) : RecyclerView.Ada
         }
     }
 
+    //add comment
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
             CardTvccLiveBinding.inflate(
