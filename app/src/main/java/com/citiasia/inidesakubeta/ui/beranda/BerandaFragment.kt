@@ -9,6 +9,10 @@ import androidx.fragment.app.Fragment
 import com.citiasia.inidesakubeta.ui.pesona.PesonaDesaActivity
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.FragmentBerandaBinding
+import com.citiasia.inidesakubeta.ui.desa.kegiatan_desa.KegiatanActivity
+import com.citiasia.inidesakubeta.ui.desa.pelayanan_desa.list.PelayananDesaActivity
+import com.citiasia.inidesakubeta.ui.donasi.list.DonasiActivity
+import com.citiasia.inidesakubeta.ui.produk_unggulan.list.ProdukUnggulanActivity
 import com.citiasia.inidesakubeta.ui.tvcc.TvccActivity
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
@@ -55,8 +59,21 @@ class BerandaFragment : Fragment() {
             }
             btnTvcc.setOnClickListener {
                 startActivity(Intent(requireActivity(), TvccActivity::class.java))
-
             }
+            btnDonasi.setOnClickListener {
+                startActivity(Intent(requireActivity(), DonasiActivity::class.java))
+            }
+            btnKegiatanDesa.setOnClickListener {
+                startActivity(Intent(requireActivity(), KegiatanActivity::class.java))
+            }
+            btnLayananDesa.setOnClickListener {
+                startActivity(Intent(requireActivity(), PelayananDesaActivity::class.java))
+            }
+            btnProdukUnggulan.setOnClickListener {
+                startActivity(Intent(requireActivity(), ProdukUnggulanActivity::class.java))
+            }
+            btnPasarDesa.setOnClickListener {}
+            btnKoperasi.setOnClickListener {}
         }
     }
 
