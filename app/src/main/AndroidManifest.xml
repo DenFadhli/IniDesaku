@@ -42,6 +42,23 @@
             android:label="@string/title_activity_pesona_desa"
             android:theme="@style/Theme.IniDesakuBeta.NoActionBar" />
         <activity
+            android:name=".ui.pengaturanPin.PengaturanPinActivity"
+            android:exported="false"
+            android:label="@string/title_activity_pengaturan_pin"
+            android:theme="@style/Theme.IniDesakuBeta" />
+        <activity
+            android:name=".ui.ppob.lainnya.indihome.IndihomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ppob.lainnya.telkom.TelkomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ppob.listrikAir.pdam.PdamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.konfirmasi.KonfirmasiActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.tvcc.TvccActivity"
             android:exported="false" />
         <activity

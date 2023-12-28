@@ -53,6 +53,7 @@ class ViewModelFactory(private val context: Context) : ViewModelProvider.Factory
             @Suppress("UNCHECKED_CAST")
             return ListWisataViewModel(Injection.provideFiturnRepo(context)) as T
         }
+
         throw IllegalArgumentException("Unknown ViewModel class")
     }
 }

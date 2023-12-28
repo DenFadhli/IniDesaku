@@ -39,4 +39,18 @@
         <item>Menginformasikan budaya lokal, wisata desa dan produk unggulan dari desa</item>
     </string-array>
 
+    <string-array name="periode_tagihan_item">
+        <item>1 Bulan</item>
+        <item>2 Bulan</item>
+        <item>3 Bulan</item>
+        <item>6 Bulan</item>
+        <item>12 Bulan</item>
+    </string-array>
+
+    <string-array name="wilayah_pdam">
+        <item>PDAM Kab Bandung Barat</item>
+        <item>PDAM Kab Bekasi</item>
+        <item>PDAM Kab Bogor</item>
+    </string-array>
+
 </resources>

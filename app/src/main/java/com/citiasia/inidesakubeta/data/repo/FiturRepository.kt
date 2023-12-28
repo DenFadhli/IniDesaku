@@ -54,4 +54,7 @@ class FiturRepository {
         return DetailWisata.getWisataList()
     }
 
+    fun getTvcc() : List<ResponseTvcc>  {
+        return Tvcc.getTvccList()
+    }
 }
