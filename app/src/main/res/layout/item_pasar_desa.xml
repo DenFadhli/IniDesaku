@@ -1,0 +1,129 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="32dp"
+    android:layout_gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container_image_product"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textProductName"
+        app:cardCornerRadius="16dp">
+
+        <ImageView
+            android:id="@+id/imageProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/backgrounds/scenic"
+            android:contentDescription="@string/image_preview"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/textProductName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nama Produk"
+        android:textSize="12sp"
+        android:textColor="@color/font500"
+        android:textFontWeight="600"
+        android:fontFamily="@font/nunito_semibold"
+        android:letterSpacing="0.055"
+        app:layout_constraintTop_toBottomOf="@id/container_image_product"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textProductPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="@color/font600"
+        android:textFontWeight="400"
+        android:fontFamily="@font/nunito_regular"
+        android:letterSpacing="0.050"
+        android:text="Rp. 200.000"
+        app:layout_constraintTop_toBottomOf="@id/textProductName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/layoutRating"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/textProductPrice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start">
+
+            <ImageView
+                android:id="@+id/iconNilaiProduk"
+                android:layout_width="45dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_bintang_lima"
+                android:layout_gravity="center"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textRating"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.5"
+                android:fontFamily="@font/nunito_regular"
+                android:textSize="10sp"
+                android:textFontWeight="500"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/font700"
+                app:layout_constraintStart_toEndOf="@+id/iconNilaiProduk"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/textTerjual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:text="500 Terjual"
+            android:fontFamily="@font/nunito_regular"
+            android:textSize="10sp"
+            android:textFontWeight="400"
+            android:textColor="@color/font500" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textDeskripsiProduk"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0"
+        app:layout_constraintTop_toBottomOf="@id/layoutRating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

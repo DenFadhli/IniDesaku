@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_user_avatar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="8dp"
+        app:shapeAppearanceOverlay="@style/customImageView50Percent"
+        tools:src="@tools:sample/backgrounds/scenic"
+        android:contentDescription="@string/image_preview"
+        app:layout_constraintEnd_toStartOf="@+id/user_penilaian_layout"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/user_penilaian_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="34dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_user_avatar"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_nama_user_penilaian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jennie Ruby Jane"
+            android:textColor="@color/font500"
+            android:textSize="12sp"
+            android:fontFamily="@font/nunito_semibold"
+            android:textFontWeight="600" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_bintang_lima"
+            android:layout_gravity="start"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tv_user_penilaian_produk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+            android:textColor="@color/font500"
+            android:textSize="12sp"
+            android:fontFamily="@font/nunito_regular"
+            android:letterSpacing="0.055"
+            android:textFontWeight="400"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

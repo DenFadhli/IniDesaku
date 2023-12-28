@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pembayaran_navigation"
+    app:startDestination="@id/konfirmasiPinFragment">
+
+    <fragment
+        android:id="@+id/konfirmasiPinFragment"
+        android:name="com.citiasia.inidesakubeta.ui.konfirmasi.pin.KonfirmasiPinFragment"
+        android:label="fragment_konfirmasi_pin"
+        tools:layout="@layout/fragment_konfirmasi_pin" >
+        <action
+            android:id="@+id/action_konfirmasiPinFragment_to_konfrimasiBerhasilFragment"
+            app:destination="@id/konfrimasiBerhasilFragment" />
+        <action
+            android:id="@+id/action_konfirmasiPinFragment_to_konfirmasiBarangBerhasilFragment"
+            app:destination="@id/konfirmasiBarangBerhasilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/konfrimasiBerhasilFragment"
+        android:name="com.citiasia.inidesakubeta.ui.konfirmasi.pulsaBerhasil.KonfirmasiBerhasilFragment"
+        android:label="fragment_konfrimasi_berhasil"
+        tools:layout="@layout/fragment_konfirmasi_berhasil" />
+    <fragment
+        android:id="@+id/konfirmasiBarangBerhasilFragment"
+        android:name="com.citiasia.inidesakubeta.ui.konfirmasi.barang.KonfirmasiBarangBerhasilFragment"
+        android:label="fragment_konfirmasi_barang_berhasil"
+        tools:layout="@layout/fragment_konfirmasi_barang_berhasil" />
+</navigation>
