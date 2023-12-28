@@ -8,6 +8,7 @@ import com.citiasia.inidesakubeta.ui.profilDesa.ProfilDesaFragment
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.ActivityHomeBinding
 import com.citiasia.inidesakubeta.ui.ppob.PpobFragment
+import com.citiasia.inidesakubeta.ui.profile.profileFragment.ProfileFragment
 
 class HomeActivity : AppCompatActivity() {
 
@@ -43,6 +44,7 @@ class HomeActivity : AppCompatActivity() {
                     binding.topAppBar.setTitle("PPOB")
                 }
                 R.id.profile -> {
+                    replaceFragment(ProfileFragment())
                     binding.topAppBar.setTitle("Profile")
                 }
             }

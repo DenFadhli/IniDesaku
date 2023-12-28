@@ -271,4 +271,12 @@
     <string name="ubah_pin">Ubah Pin</string>
     <string name="lupa_pin">Lupa Pin</string>
     <string name="id_inpur_wrong">*ID yang anda masukan salah</string>
+    <string name="email_dummy">\@gimnastiar@gmail.com</string>
+    <string name="jenis_kelamin">Jenis Kelamin</string>
+    <string name="laki_laki">Laki-laki</string>
+    <string name="no_dummy">0812345678</string>
+    <string name="alamat">Alamat</string>
+    <string name="alamat_dummy">Gelarmendala, kec. Baolongan Kab. INDRAMAYU - JAWA BARAT</string>
+    <string name="ubah_data_diri">Ubah Data Diri</string>
+    <string name="ganti_password">Ganti Password</string>
 </resources>

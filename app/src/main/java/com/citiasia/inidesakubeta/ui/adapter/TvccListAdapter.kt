@@ -15,6 +15,7 @@ class TvccListAdapter(private val list: List<ResponseTvcc>) : RecyclerView.Adapt
         this.onItemClickCallback = onItemClickCallback
     }
 
+
     inner class ViewHolder(val view: ItemListContentTvccBinding) : RecyclerView.ViewHolder(view.root) {
         private val binding = view
         fun bind(data: ResponseTvcc) {
