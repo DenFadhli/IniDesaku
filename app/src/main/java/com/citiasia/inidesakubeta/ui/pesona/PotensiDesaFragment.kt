@@ -1,11 +1,12 @@
-package com.citiasia.inidesakubeta
+package com.citiasia.inidesakubeta.ui.pesona
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.citiasia.inidesakubeta.databinding.FragmentBeritaBinding
+import android.widget.Toast
+import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.FragmentPotensiDesaBinding
 
 class PotensiDesaFragment : Fragment() {
@@ -25,11 +26,17 @@ class PotensiDesaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnFisik.setOnClickListener{
-            replaceFragment(PotensiFisikFragment())
-        }
-        binding.btnNonFisik.setOnClickListener{
-            replaceFragment(PotensiNonfisikFragment())
+        binding.toggleButtonGroup.addOnButtonCheckedListener{toggleButtonGroup, checkedId, isCheked ->
+            if (isCheked) {
+                when (checkedId) {
+                    R.id.btn_fisik -> replaceFragment(PotensiFisikFragment())
+                    R.id.btn_non_fisik -> replaceFragment(PotensiNonfisikFragment())
+                }
+            } else {
+                if (toggleButtonGroup.checkedButtonId == View.NO_ID) {
+                    Toast.makeText(requireContext(), "LIST SHOW", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
     }
 

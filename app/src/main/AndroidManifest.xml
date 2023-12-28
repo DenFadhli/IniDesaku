@@ -16,13 +16,13 @@
         android:theme="@style/Theme.IniDesakuBeta"
         tools:targetApi="31">
         <activity
-            android:name=".DetailPotensiFisikActivity"
+            android:name=".ui.pesona.DetailPotensiFisikActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailBudayaActivity"
+            android:name=".ui.pesona.DetailBudayaActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailWisataActivity"
+            android:name=".ui.pesona.DetailWisataActivity"
             android:exported="false" />
         <activity
             android:name=".ui.profile.UbahFotoActivity"
@@ -31,13 +31,13 @@
             android:name=".ui.profile.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailBeritaActivity"
+            android:name=".ui.pesona.DetailBeritaActivity"
             android:exported="false" />
         <activity
-            android:name=".CariDesaActivity"
+            android:name=".ui.beranda.CariDesaActivity"
             android:exported="false" />
         <activity
-            android:name=".PesonaDesaActivity"
+            android:name=".ui.pesona.PesonaDesaActivity"
             android:exported="false"
             android:label="@string/title_activity_pesona_desa"
             android:theme="@style/Theme.IniDesakuBeta.NoActionBar" />

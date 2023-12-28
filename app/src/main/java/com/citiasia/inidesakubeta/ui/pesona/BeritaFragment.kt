@@ -1,4 +1,4 @@
-package com.citiasia.inidesakubeta
+package com.citiasia.inidesakubeta.ui.pesona
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,17 +9,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.citiasia.inidesakubeta.data.database.Berita
-import com.citiasia.inidesakubeta.data.remote.model.ResponseTvcc
 import com.citiasia.inidesakubeta.databinding.FragmentBeritaBinding
-import com.citiasia.inidesakubeta.databinding.FragmentPrabayarBinding
 import com.citiasia.inidesakubeta.ui.ViewModelFactory
 import com.citiasia.inidesakubeta.ui.adapter.ListBeritaAdapter
-import com.citiasia.inidesakubeta.ui.adapter.TvccListAdapter
-import com.citiasia.inidesakubeta.ui.tvcc.tvccHome.TvccFrontViewModel
 
 class BeritaFragment : Fragment() {
 

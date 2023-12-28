@@ -1,6 +1,5 @@
-package com.citiasia.inidesakubeta
+package com.citiasia.inidesakubeta.ui.pesona
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,12 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.citiasia.inidesakubeta.data.database.Berita
 import com.citiasia.inidesakubeta.data.database.PotensiNonFisik
-import com.citiasia.inidesakubeta.databinding.FragmentBeritaBinding
 import com.citiasia.inidesakubeta.databinding.FragmentPotensiNonfisikBinding
 import com.citiasia.inidesakubeta.ui.ViewModelFactory
-import com.citiasia.inidesakubeta.ui.adapter.ListBeritaAdapter
 import com.citiasia.inidesakubeta.ui.adapter.ListPotensiNonFisikAdapter
 
 class PotensiNonfisikFragment : Fragment() {

@@ -318,4 +318,10 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">8dp</item>
     </style>
+
+    <style name="customChipsPotensi" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/chip_bg_potensi</item>
+        <item name="android:textColor">@color/chip_text_potensi</item>
+    </style>
+
 </resources>

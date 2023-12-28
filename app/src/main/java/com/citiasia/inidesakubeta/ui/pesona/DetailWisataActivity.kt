@@ -1,12 +1,10 @@
-package com.citiasia.inidesakubeta
+package com.citiasia.inidesakubeta.ui.pesona
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.citiasia.inidesakubeta.data.database.Berita
 import com.citiasia.inidesakubeta.data.database.Wisata
-import com.citiasia.inidesakubeta.databinding.ActivityDetailBeritaBinding
 import com.citiasia.inidesakubeta.databinding.ActivityDetailWisataBinding
 import com.citiasia.inidesakubeta.ui.ViewModelFactory
 

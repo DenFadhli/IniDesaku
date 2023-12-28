@@ -1,4 +1,4 @@
-package com.citiasia.inidesakubeta
+package com.citiasia.inidesakubeta.ui.pesona
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,14 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.citiasia.inidesakubeta.data.database.Berita
-import com.citiasia.inidesakubeta.data.database.DetailPotensiFisik
 import com.citiasia.inidesakubeta.data.database.PotensiFisik
-import com.citiasia.inidesakubeta.databinding.FragmentBeritaBinding
 import com.citiasia.inidesakubeta.databinding.FragmentPotensiFisikBinding
 import com.citiasia.inidesakubeta.ui.ViewModelFactory
 import com.citiasia.inidesakubeta.ui.adapter.BigListPotensiFisikAdapter
-import com.citiasia.inidesakubeta.ui.adapter.ListBeritaAdapter
+import com.citiasia.inidesakubeta.ui.pesona.DetailPotensiFisikActivity
 
 class PotensiFisikFragment : Fragment() {
     private var _binding: FragmentPotensiFisikBinding? = null

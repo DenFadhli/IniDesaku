@@ -1,15 +1,12 @@
-package com.citiasia.inidesakubeta
+package com.citiasia.inidesakubeta.ui.pesona
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.citiasia.inidesakubeta.data.database.Berita
-import com.citiasia.inidesakubeta.databinding.ActivityBpjsBinding
 import com.citiasia.inidesakubeta.databinding.ActivityDetailBeritaBinding
-import com.citiasia.inidesakubeta.databinding.FragmentTvccDetailBinding
 import com.citiasia.inidesakubeta.ui.ViewModelFactory
-import com.citiasia.inidesakubeta.ui.tvcc.tvccDetail.TvccDetailViewModel
 
 class DetailBeritaActivity : AppCompatActivity() {
 

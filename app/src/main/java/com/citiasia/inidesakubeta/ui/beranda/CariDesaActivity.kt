@@ -1,7 +1,8 @@
-package com.citiasia.inidesakubeta
+package com.citiasia.inidesakubeta.ui.beranda
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.citiasia.inidesakubeta.R
 
 class CariDesaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

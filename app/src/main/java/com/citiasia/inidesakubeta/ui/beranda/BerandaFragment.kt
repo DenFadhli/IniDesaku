@@ -1,11 +1,13 @@
-package com.citiasia.inidesakubeta
+package com.citiasia.inidesakubeta.ui.beranda
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.citiasia.inidesakubeta.ui.pesona.PesonaDesaActivity
+import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.FragmentBerandaBinding
 import com.citiasia.inidesakubeta.ui.tvcc.TvccActivity
 import com.denzcoskun.imageslider.ImageSlider

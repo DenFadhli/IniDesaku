@@ -1,11 +1,11 @@
-package com.citiasia.inidesakubeta
+package com.citiasia.inidesakubeta.ui.profilDesa
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.citiasia.inidesakubeta.databinding.FragmentBerandaBinding
+import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.FragmentProfilDesaBinding
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel

@@ -1,4 +1,4 @@
-package com.citiasia.inidesakubeta
+package com.citiasia.inidesakubeta.ui.pesona
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,14 +10,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.citiasia.inidesakubeta.data.database.Berita
 import com.citiasia.inidesakubeta.data.database.Wisata
-import com.citiasia.inidesakubeta.databinding.FragmentBeritaBinding
 import com.citiasia.inidesakubeta.databinding.FragmentWisataBinding
 import com.citiasia.inidesakubeta.ui.ViewModelFactory
 import com.citiasia.inidesakubeta.ui.adapter.BigListWisataAdapter
-import com.citiasia.inidesakubeta.ui.adapter.ListBeritaAdapter
 import com.citiasia.inidesakubeta.ui.adapter.SmallListWisataAdapter
+import com.citiasia.inidesakubeta.ui.pesona.DetailWisataActivity
 
 class WisataFragment : Fragment() {
 

@@ -1,19 +1,14 @@
-package com.citiasia.inidesakubeta
+package com.citiasia.inidesakubeta.ui.pesona
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.citiasia.inidesakubeta.data.database.Budaya
 import com.citiasia.inidesakubeta.data.database.PicBudaya
-import com.citiasia.inidesakubeta.data.database.Wisata
 import com.citiasia.inidesakubeta.databinding.ActivityDetailBudayaBinding
-import com.citiasia.inidesakubeta.databinding.ActivityDetailWisataBinding
 import com.citiasia.inidesakubeta.ui.ViewModelFactory
-import com.citiasia.inidesakubeta.ui.adapter.BigListBudayaAdapter
 import com.citiasia.inidesakubeta.ui.adapter.ListPicBudayaAdapter
 
 class DetailBudayaActivity : AppCompatActivity() {

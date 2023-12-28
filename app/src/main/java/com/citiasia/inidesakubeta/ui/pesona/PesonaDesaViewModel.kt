@@ -1,4 +1,4 @@
-package com.citiasia.inidesakubeta
+package com.citiasia.inidesakubeta.ui.pesona
 
 import androidx.lifecycle.ViewModel
 import com.citiasia.inidesakubeta.data.database.Berita

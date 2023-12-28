@@ -1,4 +1,4 @@
-package com.citiasia.inidesakubeta
+package com.citiasia.inidesakubeta.ui.pesona
 
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
