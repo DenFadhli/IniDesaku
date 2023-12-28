@@ -53,8 +53,4 @@ class FiturRepository {
     fun getWisata() : List<Wisata> {
         return DetailWisata.getWisataList()
     }
-
-    fun getTvcc() : List<ResponseTvcc>  {
-        return Tvcc.getTvccList()
-    }
 }

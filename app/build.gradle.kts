@@ -120,6 +120,8 @@ dependencies {
 //    kapt 'androidx.room:room-compiler:2.5.1'
 //    implementation 'androidx.room:room-ktx:2.5.1'
 
+    implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
+
     //pref
     implementation ("androidx.datastore:datastore-preferences:1.0.0")
 

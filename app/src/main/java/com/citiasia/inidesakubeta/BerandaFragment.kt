@@ -7,10 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.citiasia.inidesakubeta.databinding.FragmentBerandaBinding
-import com.citiasia.inidesakubeta.databinding.FragmentPpobBinding
-import com.citiasia.inidesakubeta.ui.ppob.bpjs.BpjsActivity
-import com.citiasia.inidesakubeta.ui.ppob.listrikAir.ListrikAirActivity
-import com.citiasia.inidesakubeta.ui.ppob.pulsa.PulsaActivity
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
 
