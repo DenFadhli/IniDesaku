@@ -20,7 +20,9 @@ class BpjsActivity : AppCompatActivity() {
         binding = ActivityBpjsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         setTabAdapter()
+        buttonClick()
     }
 
     private fun setTabAdapter() {
@@ -31,6 +33,13 @@ class BpjsActivity : AppCompatActivity() {
                 tab.text = resources.getString(TAB_TITLES[position])
             }.attach()
         }
+    }
+
+    private fun buttonClick() = with(binding) {
+        topAppBar.setNavigationOnClickListener {
+            onBackPressed()
+        }
+
     }
 
     companion object{

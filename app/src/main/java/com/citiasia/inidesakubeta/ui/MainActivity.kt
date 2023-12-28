@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        setStatusBarColor(R.color.white)
+        setStatusBarColor(R.color.transparent)
     }
 
     private fun setStatusBarColor(colorAttr: Int) {

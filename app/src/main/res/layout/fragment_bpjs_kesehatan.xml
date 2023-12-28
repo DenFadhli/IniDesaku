@@ -9,11 +9,12 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingVertical="24dp">
+        android:paddingVertical="20dp">
 
         <TextView
             android:id="@+id/tvPelanggan"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+            android:textColor="?attr/colorPrimary"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
@@ -24,44 +25,90 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/layoutPembayaran"
-            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+            style="@style/Theme.IniDesakuBeta.InputLayout"
+            android:textColorHint="@color/font300"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/transparent"
+            app:boxStrokeWidth="1dp"
+            app:hintTextColor="@color/font300"
+            app:hintTextAppearance="@color/font300"
+            android:hint="@string/nomor_kartu_atau_no_va"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="@string/id_pelanggan"
             app:layout_constraintEnd_toEndOf="@id/tvPelanggan"
             app:layout_constraintStart_toStartOf="@id/tvPelanggan"
             app:layout_constraintTop_toBottomOf="@id/tvPelanggan">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textPembayaran"
+                style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
+                android:textColor="@color/font600"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/tvPilihBulan"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:id="@+id/tvPilihPeriode"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+            android:textColor="?attr/colorPrimary"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/pilih_bulan"
+            android:text="@string/pilih_periode_tagihan"
+            android:paddingTop="16dp"
             app:layout_constraintEnd_toEndOf="@id/layoutPembayaran"
             app:layout_constraintStart_toStartOf="@id/layoutPembayaran"
             app:layout_constraintTop_toBottomOf="@id/layoutPembayaran" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvKesehatanPbjs"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutPeriodeTagihan"
+            style="@style/Theme.IniDesakuBeta.Outline.Exposed"
+            android:textColorHint="@color/font300"
+            app:boxStrokeColor="@color/transparent"
+            app:boxStrokeWidth="1dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvPilihBulan"
-            tools:listitem="@layout/item_list_bulan" />
+            android:layout_marginTop="12dp"
+            app:endIconTint="@color/font600"
+            app:endIconDrawable="@drawable/arrow_down"
+            app:layout_constraintEnd_toEndOf="@id/tvPilihPeriode"
+            app:layout_constraintStart_toStartOf="@id/tvPilihPeriode"
+            app:layout_constraintTop_toBottomOf="@id/tvPilihPeriode">
+
+            <AutoCompleteTextView
+                android:id="@+id/spinPeriode"
+                style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
+                android:textColor="@color/font600"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/periode_tagihan"
+                android:inputType="none"
+                app:simpleItems="@array/periode_tagihan_item" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBayar"
+            style="@style/Theme.IniDesakuBeta.Button."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/bayar"
+            android:enabled="false"
+            android:textAllCaps="false"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="@id/layoutPeriodeTagihan"
+            app:layout_constraintStart_toStartOf="@id/layoutPeriodeTagihan"
+            app:layout_constraintTop_toBottomOf="@id/layoutPeriodeTagihan" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,20 +1,14 @@
 package com.citiasia.inidesakubeta.ui.tvcc.tvccHome
 
-import android.content.Context
-import android.content.res.ColorStateList
-import android.opengl.Visibility
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.core.content.ContextCompat
-import androidx.core.os.bundleOf
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -24,13 +18,9 @@ import com.citiasia.inidesakubeta.data.remote.dummyObject.Tvcc
 import com.citiasia.inidesakubeta.data.remote.model.ResponseTvcc
 import com.citiasia.inidesakubeta.databinding.FragmentTvccFrontBinding
 import com.citiasia.inidesakubeta.ui.ViewModelFactory
-import com.citiasia.inidesakubeta.ui.adapter.BulanTahunAdapter
 import com.citiasia.inidesakubeta.ui.adapter.TvccBannerAdapter
 import com.citiasia.inidesakubeta.ui.adapter.TvccListAdapter
 import com.citiasia.inidesakubeta.ui.adapter.TvccListSearchAdapter
-import com.citiasia.inidesakubeta.ui.ppob.bpjs.bpjsDialog.BottomSheetBpjs
-import com.citiasia.inidesakubeta.ui.sign.login.LoginViewModel
-import com.citiasia.inidesakubeta.ui.tvcc.tvccDetail.TvccDetailFragment
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipDrawable
 
@@ -113,6 +103,7 @@ class TvccFrontFragment : Fragment() {
 
         adapter.setOnItemClickCallback(object : TvccListSearchAdapter.OnItemClickCallback{
             override fun onItemClicked(data: ResponseTvcc) {
+
                 val action = TvccFrontFragmentDirections.actionTvccFrontFragmentToTvccDetailFragment(data)
                 findNavController().navigate(action)
 

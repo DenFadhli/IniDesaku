@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import com.citiasia.inidesakubeta.R
+import com.citiasia.inidesakubeta.data.remote.dummyObject.PricePPOB
 import com.citiasia.inidesakubeta.databinding.FragmentPrabayarBinding
 import com.citiasia.inidesakubeta.data.remote.model.DataPulsaUser
 import com.citiasia.inidesakubeta.data.remote.model.PriceListDummy
@@ -21,7 +22,7 @@ class PrabayarFragment : Fragment() {
     private var _binding: FragmentPrabayarBinding? = null
     private val binding get() = _binding!!
 
-    private var priceList = mutableListOf<PriceListDummy>()
+    private var priceList = PricePPOB.getPulsaList()
     private lateinit var prefNumber: PulsaPreference
     private val dialog = BottomSheetPulsa()
 
@@ -36,10 +37,10 @@ class PrabayarFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        priceList = ArrayList()
         prefNumber = PulsaPreference(requireContext())
-        prepareDataList()
         setUpAdapter()
+
+//        prepareDataList()
 //        setUpParamDialog()
 
     }
@@ -61,6 +62,7 @@ class PrabayarFragment : Fragment() {
 
                 var dataParam = DataPulsaUser(
                     PriceListDummy(
+                        data.jenis,
                         data.nominal,
                         data.tambahanHari,
                         data.harga
@@ -88,32 +90,32 @@ class PrabayarFragment : Fragment() {
     }
 
     private fun prepareDataList() {
-        var list = PriceListDummy("15.000", 12, 17000.0)
-        priceList.add(list)
-        list = PriceListDummy("20.000", 20, 22000.0)
-        priceList.add(list)
-        list = PriceListDummy("25.000", 22, 27000.0)
-        priceList.add(list)
-        list = PriceListDummy("15.000", 12, 17000.0)
-        priceList.add(list)
-        list = PriceListDummy("20.000", 20, 22000.0)
-        priceList.add(list)
-        list = PriceListDummy("25.000", 22, 27000.0)
-        priceList.add(list)
-        list = PriceListDummy("15.000", 12, 17000.0)
-        priceList.add(list)
-        list = PriceListDummy("20.000", 20, 22000.0)
-        priceList.add(list)
-        list = PriceListDummy("25.000", 22, 27000.0)
-        priceList.add(list)
-        list = PriceListDummy("20.000", 20, 22000.0)
-        priceList.add(list)
-        list = PriceListDummy("25.000", 22, 27000.0)
-        priceList.add(list)
-        list = PriceListDummy("20.000", 20, 22000.0)
-        priceList.add(list)
-        list = PriceListDummy("25.000", 22, 27000.0)
-        priceList.add(list)
+//        var list = PriceListDummy("15.000", 12, 17000.0)
+//        priceList.add(list)
+//        list = PriceListDummy("20.000", 20, 22000.0)
+//        priceList.add(list)
+//        list = PriceListDummy("25.000", 22, 27000.0)
+//        priceList.add(list)
+//        list = PriceListDummy("15.000", 12, 17000.0)
+//        priceList.add(list)
+//        list = PriceListDummy("20.000", 20, 22000.0)
+//        priceList.add(list)
+//        list = PriceListDummy("25.000", 22, 27000.0)
+//        priceList.add(list)
+//        list = PriceListDummy("15.000", 12, 17000.0)
+//        priceList.add(list)
+//        list = PriceListDummy("20.000", 20, 22000.0)
+//        priceList.add(list)
+//        list = PriceListDummy("25.000", 22, 27000.0)
+//        priceList.add(list)
+//        list = PriceListDummy("20.000", 20, 22000.0)
+//        priceList.add(list)
+//        list = PriceListDummy("25.000", 22, 27000.0)
+//        priceList.add(list)
+//        list = PriceListDummy("20.000", 20, 22000.0)
+//        priceList.add(list)
+//        list = PriceListDummy("25.000", 22, 27000.0)
+//        priceList.add(list)
 
     }
 

@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.IniDesakuBeta" parent="Base.Theme.IniDesakuBeta">
+        <!-- Transparent system bars for edge-to-edge. -->
+        <item name="colorPrimary">@color/primary500</item>
+        <item name="colorPrimaryVariant">@color/primary600</item>
+        <item name="colorPrimaryContainer">@color/primary600</item>
+        <item name="colorSecondaryContainer">@color/grey</item>
+        <item name="colorOnBackground">@color/font500</item>
+    </style>
+</resources>

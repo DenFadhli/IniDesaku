@@ -10,6 +10,7 @@ import androidx.core.view.marginTop
 import androidx.navigation.fragment.findNavController
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.FragmentKonfirmasiPinBinding
+import com.citiasia.inidesakubeta.utils.DataJenisPembayaranPreference
 import `in`.aabhasjindal.otptextview.OTPListener
 
 
@@ -18,6 +19,8 @@ class KonfirmasiPinFragment : Fragment() {
 //    private val binding by viewBinding(FragmentKonfirmasiPinBinding::bind)
     private var _binding: FragmentKonfirmasiPinBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var pref: DataJenisPembayaranPreference
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,11 +33,11 @@ class KonfirmasiPinFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        pref = DataJenisPembayaranPreference(requireContext())
+
         binding.topAppBar.setNavigationOnClickListener {
             onBackPressed()
         }
-
-//        heightError = binding.tvErrorCaption.height
 
         onVerifyPin()
 //        onClickButton()
@@ -59,7 +62,11 @@ class KonfirmasiPinFragment : Fragment() {
     private fun verifyPin(data: String) = with(binding) {
         if (data == "000000") {
             pinView.showSuccess()
-            findNavController().navigate(R.id.action_konfirmasiPinFragment_to_konfrimasiBerhasilFragment)
+            if (pref.getData()[0].equals("token")) {
+                findNavController().navigate(R.id.action_konfirmasiPinFragment_to_konfirmasiBerhasilTokenFragment)
+            } else {
+                findNavController().navigate(R.id.action_konfirmasiPinFragment_to_konfrimasiBerhasilFragment)
+            }
         } else {
             tvErrorCaption.visibility = View.VISIBLE
             pinView.showError()

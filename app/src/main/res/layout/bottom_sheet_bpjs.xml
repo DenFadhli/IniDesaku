@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     style="@style/Widget.Material3.BottomSheet"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,16 +21,26 @@
 
         <TextView
             android:id="@+id/tvRincianPembelian"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/rincian_pembelian"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iconCross"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/iconCross"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvRincianPembelian"
+            app:layout_constraintTop_toTopOf="@id/tvRincianPembelian"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/cross_icon"/>
+
         <TextView
             android:id="@+id/tvCalonNama"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -40,19 +51,19 @@
 
         <TextView
             android:id="@+id/tvCalonNamaValue"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dummy_nama"
-            app:layout_constraintEnd_toEndOf="@id/tvRincianPembelian"
+            app:layout_constraintEnd_toEndOf="@id/iconCross"
             app:layout_constraintTop_toTopOf="@id/tvCalonNama" />
 
         <TextView
             android:id="@+id/tvNomorVa"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/nomor_va"
             app:layout_constraintEnd_toStartOf="@id/tvNomorVaValue"
             app:layout_constraintStart_toStartOf="@id/tvCalonNama"
@@ -60,7 +71,7 @@
 
         <TextView
             android:id="@+id/tvNomorVaValue"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nomor_seri_dummy"
@@ -69,10 +80,10 @@
 
         <TextView
             android:id="@+id/tvIdTransaksi"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/id_transaksi"
             app:layout_constraintEnd_toStartOf="@id/tvIdTransaksiValue"
             app:layout_constraintStart_toStartOf="@id/tvNomorVa"
@@ -80,7 +91,7 @@
 
         <TextView
             android:id="@+id/tvIdTransaksiValue"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/nomor_seri_dummy"
@@ -89,10 +100,10 @@
 
         <TextView
             android:id="@+id/tvTotalPeserta"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/total_peserta"
             app:layout_constraintEnd_toStartOf="@id/tvTotalPesertaValue"
             app:layout_constraintStart_toStartOf="@id/tvIdTransaksi"
@@ -100,7 +111,7 @@
 
         <TextView
             android:id="@+id/tvTotalPesertaValue"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dummy_total_lembar"
@@ -109,18 +120,18 @@
 
         <TextView
             android:id="@+id/tvJumlahBulan"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/total_peserta"
+            android:layout_marginTop="16dp"
+            android:text="@string/jumlah_bulan"
             app:layout_constraintEnd_toStartOf="@id/tvJumlahBulanValue"
             app:layout_constraintStart_toStartOf="@id/tvTotalPeserta"
             app:layout_constraintTop_toBottomOf="@id/tvTotalPeserta" />
 
         <TextView
             android:id="@+id/tvJumlahBulanValue"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dummy_total_lembar"
@@ -128,18 +139,42 @@
             app:layout_constraintTop_toTopOf="@id/tvJumlahBulan" />
 
         <TextView
-            android:id="@+id/tvRincianPembayaran"
-            android:layout_width="0dp"
+            android:id="@+id/tvBulan"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/rincian_pembayaran"
-            android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toEndOf="@id/tvJumlahBulanValue"
+            android:layout_marginTop="16dp"
+            android:text="@string/bulan"
             app:layout_constraintStart_toStartOf="@id/tvJumlahBulan"
             app:layout_constraintTop_toBottomOf="@id/tvJumlahBulan" />
 
         <TextView
+            android:id="@+id/tvBulanValue"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Desember"
+            android:textAlignment="textEnd"
+            android:layout_marginStart="4dp"
+            android:maxLines="1"
+            app:layout_constraintStart_toEndOf="@id/tvBulan"
+            app:layout_constraintEnd_toEndOf="@id/tvJumlahBulanValue"
+            app:layout_constraintTop_toTopOf="@id/tvBulan" />
+
+        <TextView
+            android:id="@+id/tvRincianPembayaran"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rincian_pembayaran"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@id/tvBulanValue"
+            app:layout_constraintStart_toStartOf="@id/tvBulan"
+            app:layout_constraintTop_toBottomOf="@id/tvBulan" />
+
+        <TextView
             android:id="@+id/tvJumlahIuran"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -150,7 +185,7 @@
 
         <TextView
             android:id="@+id/tvJumlahIuranValue"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dummy_jumlah_iuran"
@@ -159,10 +194,10 @@
 
         <TextView
             android:id="@+id/tvBiayaAdmin"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/biaya_admin"
             app:layout_constraintEnd_toStartOf="@id/tvBiayaAdminValue"
             app:layout_constraintStart_toStartOf="@id/tvJumlahIuran"
@@ -170,7 +205,7 @@
 
         <TextView
             android:id="@+id/tvBiayaAdminValue"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dummy_biaya_admin"
@@ -184,14 +219,14 @@
             app:layout_constraintTop_toBottomOf="@id/tvBiayaAdmin"
             app:layout_constraintStart_toStartOf="@id/tvBiayaAdmin"
             app:layout_constraintEnd_toEndOf="@id/tvBiayaAdminValue"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="16dp"/>
 
         <TextView
             android:id="@+id/tvTotal"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
             android:text="@string/total"
             app:layout_constraintEnd_toStartOf="@id/tvTotalValue"
             app:layout_constraintStart_toStartOf="@id/totalDivider"
@@ -199,7 +234,7 @@
 
         <TextView
             android:id="@+id/tvTotalValue"
-            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium12.500"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/dummy_total"
@@ -208,44 +243,67 @@
 
         <TextView
             android:id="@+id/tvMetodePembayaran"
+            style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="16dp"
             android:text="@string/metode_pembayaran"
             app:layout_constraintEnd_toEndOf="@id/tvTotalValue"
             app:layout_constraintStart_toStartOf="@id/tvTotal"
             app:layout_constraintTop_toBottomOf="@id/tvTotal" />
 
-        <com.google.android.material.textfield.TextInputLayout
+        <LinearLayout
             android:id="@+id/bankLayout"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="0dp"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:hint="@string/pilih_metode_pembayaran"
-            app:layout_constraintEnd_toEndOf="@id/tvMetodePembayaran"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/layout_rounded_top_white"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="12dp"
             app:layout_constraintStart_toStartOf="@id/tvMetodePembayaran"
             app:layout_constraintTop_toBottomOf="@id/tvMetodePembayaran">
 
-            <AutoCompleteTextView
-                android:id="@+id/bankSpin"
-                android:textSize="14sp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="none"
-                app:simpleItems="@array/bank_items" />
+            <ImageView
+                android:layout_width="21.58dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="12dp"
+                android:maxWidth="30dp"
+                android:maxHeight="30dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_top_up" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/tvPhoneButton"
+                style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="@string/input_number_telphone" />
+
+            <TextView
+                android:id="@+id/tvSaldo"
+                style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/saldo_rp_500_000_00" />
+
+        </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBayar"
+            style="@style/Theme.IniDesakuBeta.Button."
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:enabled="false"
+            android:layout_marginTop="16dp"
             android:text="@string/bayar"
             android:textAllCaps="false"
-            app:cornerRadius="4dp"
+            app:cornerRadius="8dp"
             app:layout_constraintEnd_toEndOf="@id/bankLayout"
             app:layout_constraintStart_toStartOf="@id/bankLayout"
             app:layout_constraintTop_toBottomOf="@id/bankLayout" />

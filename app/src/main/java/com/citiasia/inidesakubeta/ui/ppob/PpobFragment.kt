@@ -16,7 +16,10 @@ import com.citiasia.inidesakubeta.data.remote.model.ResponseTvcc
 import com.citiasia.inidesakubeta.databinding.FragmentPpobBinding
 import com.citiasia.inidesakubeta.ui.adapter.BannerSliderAdapter
 import com.citiasia.inidesakubeta.ui.ppob.bpjs.BpjsActivity
+import com.citiasia.inidesakubeta.ui.ppob.lainnya.indihome.IndihomeActivity
+import com.citiasia.inidesakubeta.ui.ppob.lainnya.telkom.TelkomActivity
 import com.citiasia.inidesakubeta.ui.ppob.listrikAir.ListrikAirActivity
+import com.citiasia.inidesakubeta.ui.ppob.listrikAir.pdam.PdamActivity
 import com.citiasia.inidesakubeta.ui.ppob.pulsa.PulsaActivity
 import com.citiasia.inidesakubeta.ui.tvcc.TvccActivity
 
@@ -42,7 +45,7 @@ class PpobFragment : Fragment() {
 
         dots = ArrayList()
 
-        binding.btnTopUp.icon.setTintList(null)
+//        binding.btnTopUp.icon.setTintList(null)
 
         iconClick()
         setBannerSlider()
@@ -104,6 +107,10 @@ class PpobFragment : Fragment() {
                 toListrikAirActivity()
             }
 
+            btnPdam.setOnClickListener {
+                toPdamActivity()
+            }
+
             btnKesehatan.setOnClickListener {
                 toBpjsActivity()
             }
@@ -111,7 +118,19 @@ class PpobFragment : Fragment() {
             btnTopUp.setOnClickListener {
                 startActivity(Intent(requireActivity(), TvccActivity::class.java))
             }
+            btnTelkom.setOnClickListener {
+                toTelkomActivity()
+            }
+
+            btnIndihome.setOnClickListener {
+                toIndihomeActivity()
+            }
         }
+    }
+
+    private fun toPdamActivity() {
+        val intent = Intent(requireActivity(), PdamActivity::class.java)
+        startActivity(intent)
     }
 
     private fun toBpjsActivity() {
@@ -130,5 +149,14 @@ class PpobFragment : Fragment() {
         startActivity(intent)
     }
 
+    private fun toTelkomActivity() {
+        val intent = Intent(requireActivity(), TelkomActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun toIndihomeActivity() {
+        val intent = Intent(requireActivity(), IndihomeActivity::class.java)
+        startActivity(intent)
+    }
 
 }

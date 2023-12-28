@@ -3,10 +3,11 @@ package com.citiasia.inidesakubeta.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.citiasia.inidesakubeta.ui.beranda.BerandaFragment
+import com.citiasia.inidesakubeta.ui.profilDesa.ProfilDesaFragment
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.ActivityHomeBinding
 import com.citiasia.inidesakubeta.ui.ppob.PpobFragment
-import com.citiasia.inidesakubeta.ui.tvcc.tvccHome.TvccFrontFragment
 
 class HomeActivity : AppCompatActivity() {
 
@@ -18,7 +19,7 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        replaceFragment(PpobFragment())
+        replaceFragment(BerandaFragment())
         iconBarClick()
 
     }
@@ -27,13 +28,14 @@ class HomeActivity : AppCompatActivity() {
         binding.bottomNavigation.setOnItemSelectedListener {
             when(it.itemId) {
                 R.id.beranda -> {
+                    replaceFragment(BerandaFragment())
                     binding.topAppBar.setTitle("IniDesaku")
                 }
                 R.id.geo -> {
-                    replaceFragment(TvccFrontFragment())
                     binding.topAppBar.setTitle("Geospacial")
                 }
                 R.id.profileDesa -> {
+                    replaceFragment(ProfilDesaFragment())
                     binding.topAppBar.setTitle("Profile Desa")
                 }
                 R.id.ppob -> {

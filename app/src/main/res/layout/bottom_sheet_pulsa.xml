@@ -211,7 +211,7 @@
             android:layout_marginTop="16dp"
             android:text="@string/bayar"
             android:textAllCaps="false"
-            app:cornerRadius="4dp"
+            app:cornerRadius="8dp"
             app:layout_constraintEnd_toEndOf="@id/bankLayout"
             app:layout_constraintStart_toStartOf="@id/bankLayout"
             app:layout_constraintTop_toBottomOf="@id/bankLayout" />

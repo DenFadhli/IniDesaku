@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+    android:background="#F6F7F9"
+    tools:context=".ui.pesona.DetailWisataActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:liftOnScroll="true">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_anchor="@+id/appBarLayout"
+                app:layout_anchorGravity="center"
+                app:title="Wisata Desa"
+                app:titleCentered="true"
+                app:titleTextColor="?attr/colorOnPrimary"
+                app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:navigationIcon="@drawable/baseline_arrow_back_24"
+                app:navigationIconTint="@color/white"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:id="@+id/gambar_detail_wisata"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@drawable/rounded_shape"
+            app:layout_constraintBottom_toTopOf="@id/judul_card_wisata_detail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/judul_card_wisata_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/nunito_bold"
+            android:lineHeight="28sp"
+            android:text="@string/nama_wisata"
+            android:textColor="#40A752"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gambar_detail_wisata" />
+
+        <ImageView
+            android:id="@+id/icon_lokasi"
+            android:layout_width="14dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialDivider2"
+            app:srcCompat="@drawable/location" />
+
+        <ImageView
+            android:id="@+id/icon_waktu"
+            android:layout_width="14dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icon_lokasi"
+            app:srcCompat="@drawable/date" />
+
+        <ImageView
+            android:id="@+id/icon_orang"
+            android:layout_width="14dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/icon_waktu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/peoples" />
+
+        <TextView
+            android:id="@+id/lokasi_wisata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/lokasi_wisata"
+            android:textColor="#8A94A6"
+            android:textSize="12sp"
+            android:fontFamily="@font/nunito_regular"
+            android:lineHeight="16sp"
+            app:layout_constraintStart_toEndOf="@+id/icon_lokasi"
+            app:layout_constraintTop_toBottomOf="@+id/materialDivider2" />
+
+        <TextView
+            android:id="@+id/waktu_wisata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/waktu_wisata"
+            android:textColor="#8A94A6"
+            android:textSize="12sp"
+            android:fontFamily="@font/nunito_regular"
+            android:lineHeight="16sp"
+            app:layout_constraintStart_toEndOf="@+id/icon_waktu"
+            app:layout_constraintTop_toBottomOf="@+id/lokasi_wisata" />
+
+        <TextView
+            android:id="@+id/batas_umur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/semua_umur"
+            android:textColor="#8A94A6"
+            android:textSize="12sp"
+            android:fontFamily="@font/nunito_regular"
+            android:lineHeight="16sp"
+            app:layout_constraintStart_toEndOf="@+id/icon_orang"
+            app:layout_constraintTop_toBottomOf="@+id/waktu_wisata" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/materialDivider2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/desc_wisata">
+
+        </com.google.android.material.divider.MaterialDivider>
+
+        <TextView
+            android:id="@+id/desc_wisata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nunito_regular"
+            android:gravity="top"
+            android:lineHeight="16sp"
+            android:text="@string/lorem_ipsum"
+            android:textAlignment="gravity"
+            android:textColor="#667085"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/judul_card_wisata_detail" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/grey_font"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/desc_wisata"
+            app:layout_constraintStart_toStartOf="@id/desc_wisata"
+            app:layout_constraintTop_toBottomOf="@id/icon_orang">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/maps"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@string/lokasi_wisata">
+
+            </com.google.android.gms.maps.MapView>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
