@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.produk_unggulan.detail.DetailProdukUnggulanActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="?attr/colorPrimary">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_anchor="@+id/appBarLayout"
+            app:layout_anchorGravity="center"
+            app:navigationIcon="@drawable/baseline_arrow_back_24"
+            app:navigationIconTint="?attr/colorOnPrimary"
+            app:title="Produk Unggulan"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:titleTextColor="?attr/colorOnPrimary"
+            app:titleCentered="true">
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bg_color"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            app:cardBackgroundColor="?attr/colorPrimary" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/img_cover"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:id="@+id/iv_image_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/backgrounds/scenic" />
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_judul_produk_unggulan"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:text="@string/judul_produk_unggulan"
+        android:textColor="?attr/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+    <TextView
+        android:id="@+id/tv_admin"
+        style="@style/Theme.IniDesakuBeta.Text.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/admin"
+        app:layout_constraintEnd_toEndOf="@+id/tv_judul_produk_unggulan"
+        app:layout_constraintStart_toStartOf="@+id/tv_judul_produk_unggulan"
+        app:layout_constraintTop_toBottomOf="@+id/tv_judul_produk_unggulan"
+        app:drawableLeftCompat="@drawable/admin_icon"
+        app:drawableTint="@color/font400" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/Theme.IniDesakuBeta.Text.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/waktu"
+        app:layout_constraintEnd_toEndOf="@+id/tv_admin"
+        app:layout_constraintStart_toStartOf="@+id/tv_admin"
+        app:layout_constraintTop_toBottomOf="@+id/tv_admin"
+        app:drawableLeftCompat="@drawable/clock_icon"
+        app:drawableTint="@color/font400" />
+
+    <TextView
+        android:id="@+id/tv_view"
+        style="@style/Theme.IniDesakuBeta.Text.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        tools:text="5"
+        app:layout_constraintEnd_toEndOf="@+id/tv_time"
+        app:layout_constraintStart_toStartOf="@+id/tv_time"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time"
+        app:drawableLeftCompat="@drawable/eye_icon"
+        app:drawableTint="@color/font400" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider_judul"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_view"
+        app:layout_constraintStart_toStartOf="@+id/tv_view"
+        app:layout_constraintTop_toBottomOf="@+id/tv_view" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/description_onboarding_1"
+        app:layout_constraintEnd_toEndOf="@id/divider_judul"
+        app:layout_constraintStart_toStartOf="@id/divider_judul"
+        app:layout_constraintTop_toBottomOf="@id/divider_judul"
+        style="@style/Theme.IniDesakuBeta.Text.Medium.12sp"
+        android:textColor="@color/font500"/>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_desc"
+        app:layout_constraintStart_toStartOf="@+id/tv_desc"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+    <TextView
+        android:id="@+id/tv_hubungi"
+        style="@style/Theme.IniDesakuBeta.Text.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:text="@string/ingin_memesan_hubungi"
+        app:layout_constraintEnd_toEndOf="@id/divider_desc"
+        app:layout_constraintStart_toStartOf="@id/divider_desc"
+        app:layout_constraintTop_toBottomOf="@id/divider_desc" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCall"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="@string/telepon"
+        android:textColor="@color/font400"
+        app:backgroundTint="@android:color/transparent"
+        app:icon="@drawable/phone_icon"
+        app:iconGravity="start"
+        app:iconSize="20dp"
+        app:iconTint="@color/blue"
+        app:layout_constraintStart_toStartOf="@+id/tv_hubungi"
+        app:layout_constraintEnd_toStartOf="@+id/btnWa"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hubungi"
+        app:rippleColor="@android:color/transparent"
+        app:strokeColor="@android:color/transparent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnWa"
+        style="@style/Widget.Material3.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="@string/whatsapp"
+        android:textColor="@color/font400"
+        app:backgroundTint="@android:color/transparent"
+        app:icon="@drawable/whatsapp"
+        app:iconGravity="start"
+        app:iconSize="20dp"
+        app:iconTint="@color/primary500"
+        app:layout_constraintEnd_toEndOf="@+id/tv_hubungi"
+        app:layout_constraintStart_toEndOf="@+id/btnCall"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hubungi"
+        app:rippleColor="@android:color/transparent"
+        app:strokeColor="@android:color/transparent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

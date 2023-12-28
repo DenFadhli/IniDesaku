@@ -15,6 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IniDesakuBeta"
         tools:targetApi="31">
+      
+        <activity
+            android:name=".ui.donasi.detail.DonasiSelesaiActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.pesona.DetailPotensiFisikActivity"
             android:exported="false" />
@@ -57,6 +61,33 @@
             android:exported="false" />
         <activity
             android:name=".ui.konfirmasi.KonfirmasiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.UbahFotoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.desa.pelayanan_desa.detail.DetailPelayananDesaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.produk_unggulan.detail.DetailProdukUnggulanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.produk_unggulan.list.ProdukUnggulanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.desa.pelayanan_desa.list.PelayananDesaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.desa.kegiatan_desa.KegiatanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.donasi.list.DonasiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.donasi.detail.DetailDonasiActivity"
             android:exported="false" />
         <activity
             android:name=".ui.tvcc.TvccActivity"
