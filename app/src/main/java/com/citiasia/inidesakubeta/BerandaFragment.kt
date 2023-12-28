@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.citiasia.inidesakubeta.databinding.FragmentBerandaBinding
+import com.citiasia.inidesakubeta.ui.tvcc.TvccActivity
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
 
@@ -49,6 +50,10 @@ class BerandaFragment : Fragment() {
             btnPesonaDesa.setOnClickListener {
                 val intent = Intent(requireActivity(), PesonaDesaActivity::class.java)
                 startActivity(intent)
+            }
+            btnTvcc.setOnClickListener {
+                startActivity(Intent(requireActivity(), TvccActivity::class.java))
+
             }
         }
     }
