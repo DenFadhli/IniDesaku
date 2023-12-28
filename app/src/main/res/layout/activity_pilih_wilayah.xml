@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
-    tools:context=".ui.pilihWIlayah.PilihWilayahFragment">
+    tools:context=".ui.pilihWilayah.PilihWilayahActivity">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvTitleWIlayah"
@@ -45,7 +45,6 @@
         app:boxStrokeWidth="0dp"
         android:hint="@string/province"
         android:background="@drawable/input_layout"
-        app:endIconMode="custom"
         app:endIconDrawable="@drawable/baseline_keyboard_arrow_down_24"
         app:layout_constraintEnd_toEndOf="@id/tvCaptionWilayahAnda"
         app:layout_constraintStart_toStartOf="@id/tvCaptionWilayahAnda"
@@ -70,7 +69,6 @@
         app:boxStrokeWidth="0dp"
         android:hint="@string/kota_kabupaten"
         android:background="@drawable/input_layout"
-        app:endIconMode="custom"
         app:endIconDrawable="@drawable/baseline_keyboard_arrow_down_24"
         app:layout_constraintEnd_toEndOf="@id/provinsiLayout"
         app:layout_constraintStart_toStartOf="@id/provinsiLayout"
@@ -95,7 +93,6 @@
         android:hint="@string/kecamatan"
         app:boxStrokeWidth="0dp"
         android:background="@drawable/input_layout"
-        app:endIconMode="custom"
         app:endIconDrawable="@drawable/baseline_keyboard_arrow_down_24"
         app:layout_constraintEnd_toEndOf="@id/layoutKota"
         app:layout_constraintStart_toStartOf="@id/layoutKota"
@@ -119,7 +116,6 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/input_layout"
         android:hint="@string/desa_kelurahan"
-        app:endIconMode="custom"
         app:boxStrokeWidth="0dp"
         app:endIconDrawable="@drawable/baseline_keyboard_arrow_down_24"
         app:layout_constraintEnd_toEndOf="@id/layoutKecamatan"
@@ -140,7 +136,7 @@
         android:id="@+id/btnNext"
         style="@style/Widget.Material3.Button.Icon"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:textAllCaps="false"
         app:cornerRadius="8dp"
         android:text="@string/selanjutnya"

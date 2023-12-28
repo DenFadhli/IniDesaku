@@ -13,7 +13,19 @@
         android:theme="@style/Theme.IniDesakuBeta"
         tools:targetApi="31">
         <activity
-            android:name=".ui.desa.pasar_desa.PasarDesaActivity"
+            android:name=".ui.konfirmasi.KonfirmasiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.pasar_desa.KeranjangActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.history.RiwayatTransaksiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.pasar_desa.DetailProdukActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.pasar_desa.PasarDesaActivity"
             android:exported="false" />
         <activity
             android:name=".ui.geografi.geotagging.GeotaggingActivity"
@@ -35,6 +47,9 @@
             android:exported="false" />
         <activity
             android:name=".ui.sign.signUp.OtpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.pilihWilayah.PilihWilayahActivity"
             android:exported="false" />
         <activity
             android:name=".ui.tvcc.TvccActivity"

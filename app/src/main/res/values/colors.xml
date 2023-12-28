@@ -3,10 +3,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#D0D5DD</color>
+    <color name="primary50">#F2FBF3</color>
     <color name="primary200">#C6ECCC</color>
     <color name="primary400">#65C375</color>
     <color name="primary500">#40A752</color>
     <color name="primary600">#308940</color>
+    <color name="font700">#464C5E</color>
     <color name="font600">#565E73</color>
     <color name="font500">#667085</color>
     <color name="font400">#8A94A6</color>
@@ -16,5 +18,7 @@
     <color name="font50">#F6F7F9</color>
     <color name="disabled_text_button">#CBE0FFFF</color>
     <color name="signup_description">#797979</color>
+    <color name="danger50">#FFF3F1</color>
     <color name="danger500">#FF452C</color>
+    <color name="stroke_color_textfield">#D7DAE0</color>
 </resources>

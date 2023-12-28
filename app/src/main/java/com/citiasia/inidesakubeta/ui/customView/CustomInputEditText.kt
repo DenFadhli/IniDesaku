@@ -5,6 +5,7 @@ import android.graphics.Canvas
 import android.os.Handler
 import android.os.Looper
 import android.text.Editable
+import android.text.InputType
 import android.text.TextWatcher
 import android.util.AttributeSet
 import android.util.Patterns
@@ -41,16 +42,44 @@ class CustomInputEditText: TextInputEditText {
 
             private val inputFinishChecker = Runnable {
                 when (inputType) {
-                    0x00000021 -> {
-                        if (!Patterns.EMAIL_ADDRESS.matcher(text.toString()).matches()) {
-                            textInputLayout.error = context.getString(R.string.email_wrong)
-                        }
-                    }
-                    0x00000081 -> {
+//                    InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS -> {
+//                        if (!Patterns.EMAIL_ADDRESS.matcher(text.toString()).matches()) {
+//                            textInputLayout.error = context.getString(R.string.email_wrong)
+//                        }
+//                        else if (text.isNullOrEmpty()) {
+//                            textInputLayout.error = context.getString(R.string.email_empty)
+//                        }else {
+//                            textInputLayout.isErrorEnabled = false
+//                        }
+//                    }
+                    InputType.TYPE_TEXT_VARIATION_PASSWORD -> {
                         if (text.toString().length < 6) {
                             textInputLayout.error = context.getString(R.string.password_wrong)
+                        } else {
+                            textInputLayout.isErrorEnabled = false
                         }
                     }
+                    InputType.TYPE_TEXT_VARIATION_PERSON_NAME -> {
+                        if (text.toString().trim().isEmpty()) {
+                            textInputLayout.error = context.getString(R.string.name_invalid)
+                        } else {
+                            textInputLayout.isErrorEnabled = false
+                        }
+                    }
+                    InputType.TYPE_CLASS_TEXT -> {
+                        if (text.toString().trim().isEmpty()) {
+                            textInputLayout.error = context.getString(R.string.username_empty)
+                        } else {
+                            textInputLayout.isErrorEnabled = false
+                        }
+                    }
+//                    InputType.TYPE_CLASS_NUMBER -> {
+//                        if (text.toString().length >= 13 || !text.toString().startsWith("8")) {
+//                            textInputLayout.error = context.getString(R.string.format_phone_wrong)
+//                        } else {
+//                            textInputLayout.isErrorEnabled = false
+//                        }
+//                    }
                 }
             }
 
@@ -58,7 +87,7 @@ class CustomInputEditText: TextInputEditText {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                textInputLayout.isErrorEnabled = false
+//                textInputLayout.isErrorEnabled = false
                 handler.removeCallbacks(inputFinishChecker)
             }
 

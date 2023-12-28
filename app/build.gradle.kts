@@ -3,6 +3,8 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
     id("kotlin-kapt")
+    id("androidx.navigation.safeargs")
+    id("maven-publish")
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
@@ -22,19 +24,26 @@ android {
 
     buildTypes {
         release {
+            buildConfigField("String", "BASE_URL", "\"https://api-gv.inidesaku.id\"")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
+        debug {
+            buildConfigField("String", "BASE_URL", "\"https://api-gv.inidesaku.id\"")
+        }
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    viewBinding{
-        enable = true
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+        buildConfig = true
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -58,7 +67,7 @@ dependencies {
     implementation("de.hdodenhof:circleimageview:3.1.0")
 
     //lottie
-//    implementation "com.airbnb.android:lottie:5.2.0"
+    implementation ("com.airbnb.android:lottie:5.2.0")
 
     //retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
@@ -79,8 +88,16 @@ dependencies {
     //live data
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
 
+    //otpView
+    implementation ("com.github.aabhasr1:OtpView:v1.1.2-ktx")
+    implementation ("com.github.aabhasr1:OtpView:v1.1.2")
+
     //shimmer
 //    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    //exoPlayer
+    implementation ("com.google.android.exoplayer:exoplayer-core:2.19.1")
+    implementation ("com.google.android.exoplayer:exoplayer-ui:2.19.1")
 
 
     //viewModel
@@ -106,4 +123,11 @@ dependencies {
     implementation("com.google.android.gms:play-services-maps:18.1.0")
     implementation("com.google.maps.android:maps-ktx:3.4.0")
     implementation("com.google.android.gms:play-services-location:21.0.1")
+
+
+    //dao
+    implementation("androidx.room:room-runtime:2.5.0")
+    annotationProcessor("androidx.room:room-compiler:2.5.0")
+    kapt("androidx.room:room-compiler:2.5.0")
+    implementation("androidx.room:room-paging:2.5.0")
 }

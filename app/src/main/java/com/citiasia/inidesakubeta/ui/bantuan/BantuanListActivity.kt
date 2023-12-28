@@ -4,19 +4,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.citiasia.inidesakubeta.data.BantuanData
-import com.citiasia.inidesakubeta.databinding.ActivityInformasiBantuanBinding
+import com.citiasia.inidesakubeta.databinding.ActivityListBantuanBinding
 import com.citiasia.inidesakubeta.ui.adapter.BantuanAdapter
 
 class BantuanListActivity : AppCompatActivity() {
 
-    private var _binding: ActivityInformasiBantuanBinding? = null
+    private var _binding: ActivityListBantuanBinding? = null
     private lateinit var adapter: BantuanAdapter
     private var mList = ArrayList<BantuanData>()
     private val binding get() = _binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivityInformasiBantuanBinding.inflate(layoutInflater)
+        _binding = ActivityListBantuanBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
         var rvListBantuan = binding?.rvListBantuan
@@ -26,7 +26,6 @@ class BantuanListActivity : AppCompatActivity() {
         addDataToList()
         adapter = BantuanAdapter(mList)
         rvListBantuan?.adapter = adapter
-
     }
 
     private fun addDataToList() {

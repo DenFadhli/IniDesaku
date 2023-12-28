@@ -27,14 +27,14 @@ class EditButton : AppCompatButton {
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        val textColor = if (isEnabled) ContextCompat.getColor(context, R.color.white) else ContextCompat.getColor(context, R.color.disabled_text_button)
+        val textColor = if (isEnabled) ContextCompat.getColor(context, R.color.white) else ContextCompat.getColor(context, R.color.white)
         setTextColor(textColor)
         background = if (isEnabled) enabledBackground else disabledBackground
     }
 
     private fun init() {
-        enabledBackground = ContextCompat.getDrawable(context, R.drawable.bg_button) as Drawable
-        disabledBackground = ContextCompat.getDrawable(context, R.drawable.bg_button_disabled) as Drawable
+        enabledBackground = ContextCompat.getDrawable(context, R.color.font200) as Drawable
+        disabledBackground = ContextCompat.getDrawable(context, R.color.primary500) as Drawable
     }
 
 }

@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_splashScreenFragment_to_onBoardingFragment"
             app:destination="@id/onBoardingFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
     </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
@@ -27,7 +30,7 @@
             app:destination="@id/signUpFragment" />
         <action
             android:id="@+id/action_onBoardingFragment_to_pilihWilayahFragment"
-            app:destination="@id/pilihWilayahFragment" />
+            app:destination="@id/pilihWilayahActivity" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -37,6 +40,33 @@
         <action
             android:id="@+id/action_loginFragment_to_homeActivity"
             app:destination="@id/homeActivity" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_pilihWilayahFragment"
+            app:destination="@id/pilihWilayahActivity" />
+        <action
+            android:id="@+id/action_loginFragment_to_loginWithPhoneFragment"
+            app:destination="@id/loginWithPhoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginWithPhoneFragment"
+        android:name="com.citiasia.inidesakubeta.ui.sign.login.LoginWithPhoneFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login_with_phone" >
+        <action
+            android:id="@+id/action_loginWithPhoneFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+        <action
+            android:id="@+id/action_loginWithPhoneFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_loginWithPhoneFragment_to_pilihWilayahFragment"
+            app:destination="@id/pilihWilayahActivity" />
+        <action
+            android:id="@+id/action_loginWithPhoneFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -45,13 +75,32 @@
         tools:layout="@layout/fragment_sign_up" >
         <action
             android:id="@+id/action_signUpFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_signUpFragment_to_otpActivity"
+            app:destination="@id/otpActivity"
+            app:popUpTo="@id/otpActivity"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_signUpFragment_to_pilihWilayahActivity"
+            app:destination="@id/pilihWilayahActivity"
+            app:popUpTo="@id/pilihWilayahActivity"
+            app:popUpToInclusive="false" />
     </fragment>
-    <fragment
-        android:id="@+id/pilihWilayahFragment"
-        android:name="com.citiasia.inidesakubeta.ui.pilihWIlayah.PilihWilayahFragment"
-        android:label="fragment_pilih_wilayah"
-        tools:layout="@layout/fragment_pilih_wilayah" />
+    <activity
+        android:id="@+id/otpActivity"
+        android:name="com.citiasia.inidesakubeta.ui.sign.signUp.OtpActivity"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+
+    </activity>
+    <activity
+        android:id="@+id/pilihWilayahActivity"
+        android:name="com.citiasia.inidesakubeta.ui.pilihWilayah.PilihWilayahActivity"
+        android:label="pilih_wilayah"
+        tools:layout="@layout/activity_pilih_wilayah" />
     <activity
         android:id="@+id/homeActivity"
         android:name="com.citiasia.inidesakubeta.ui.HomeActivity"

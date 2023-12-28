@@ -37,32 +37,70 @@
         app:layout_constraintStart_toStartOf="@id/tvTitleSignUp"
         app:layout_constraintTop_toBottomOf="@id/tvTitleSignUp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutLogin"
-        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
-        android:layout_width="0dp"
+
+    <LinearLayout
+        android:id="@+id/layoutPhoneSection"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
-        android:hint="@string/email"
-        app:hintTextColor="@color/font400"
-        app:startIconDrawable="@drawable/email_icon"
         app:layout_constraintEnd_toEndOf="@id/tvCaptionSignUp"
         app:layout_constraintStart_toStartOf="@id/tvCaptionSignUp"
         app:layout_constraintTop_toBottomOf="@id/tvCaptionSignUp">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textLogin"
-            android:background="@drawable/input_layout"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutCodePhone"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:boxBackgroundMode="none"
+            app:hintAnimationEnabled="false"
+            app:layout_constraintEnd_toEndOf="@id/layoutPhoneSection"
+            app:layout_constraintStart_toStartOf="@id/layoutPhoneSection"
+            app:layout_constraintTop_toBottomOf="@id/layoutPhoneSection">
+
+            <com.citiasia.inidesakubeta.ui.customView.CustomInputEditText
+                android:id="@+id/textCodePhone"
+                android:background="@drawable/input_code_phone_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/plus_enam_dua"
+                app:hintTextColor="@color/font400"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutPhoneNumber"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="16dp"
+            app:boxBackgroundMode="none"
+            app:hintAnimationEnabled="false"
+            app:hintTextColor="@color/transparent"
+            app:layout_constraintEnd_toEndOf="@id/layoutPhoneSection"
+            app:layout_constraintStart_toStartOf="@id/layoutPhoneSection"
+            app:layout_constraintTop_toBottomOf="@id/layoutPhoneSection">
+
+            <com.citiasia.inidesakubeta.ui.customView.CustomInputEditText
+                android:id="@+id/textPhoneNumber"
+                android:background="@drawable/input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="@string/input_number_telphone"
+                app:hintTextColor="@color/font400"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/phoneNumberError"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
-        android:text="@string/email_wrong"
+        android:text="@string/format_phone_used"
         android:textColor="@color/danger500"
         android:textFontWeight="400"
         android:textSize="11sp"
@@ -71,7 +109,41 @@
         android:alpha="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutLogin"
+        app:layout_constraintTop_toBottomOf="@id/layoutPhoneSection"
+        app:layout_constraintBottom_toTopOf="@id/layoutUsername"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/phoneNumberEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/format_phone_emtpy"
+        android:textColor="@color/danger500"
+        android:textFontWeight="400"
+        android:textSize="11sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutPhoneSection"
+        app:layout_constraintBottom_toTopOf="@id/layoutUsername"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/phoneNumberWrong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/format_phone_wrong"
+        android:textColor="@color/danger500"
+        android:textFontWeight="400"
+        android:textSize="11sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutPhoneSection"
         app:layout_constraintBottom_toTopOf="@id/layoutUsername"/>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -80,26 +152,64 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="@string/username"
-        app:hintTextColor="@color/font400"
+        app:boxBackgroundMode="none"
+        app:hintAnimationEnabled="false"
+        app:hintTextColor="@color/transparent"
         app:startIconDrawable="@drawable/profile_icon"
-        app:layout_constraintEnd_toEndOf="@id/layoutLogin"
-        app:layout_constraintStart_toStartOf="@id/layoutLogin"
-        app:layout_constraintTop_toBottomOf="@id/layoutLogin">
+        app:layout_constraintEnd_toEndOf="@id/layoutPhoneSection"
+        app:layout_constraintStart_toStartOf="@id/layoutPhoneSection"
+        app:layout_constraintTop_toBottomOf="@id/layoutPhoneSection">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.citiasia.inidesakubeta.ui.customView.CustomInputEditText
             android:id="@+id/textUsername"
             android:background="@drawable/input_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName" />
+            android:inputType="text"
+            android:hint="@string/username"
+            app:hintTextColor="@color/font400"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/username_error"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
         android:text="@string/username_invalid"
+        android:textColor="@color/danger500"
+        android:textFontWeight="400"
+        android:textSize="11sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutUsername"
+        app:layout_constraintBottom_toTopOf="@id/layoutPassword"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/username_with_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/username_space"
+        android:textColor="@color/danger500"
+        android:textFontWeight="400"
+        android:textSize="11sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutUsername"
+        app:layout_constraintBottom_toTopOf="@id/layoutPassword"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/username_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/username_empty"
         android:textColor="@color/danger500"
         android:textFontWeight="400"
         android:textSize="11sp"
@@ -117,23 +227,27 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="@string/kata_sandi"
-        app:hintTextColor="@color/font400"
+        app:boxBackgroundMode="none"
+        app:hintAnimationEnabled="false"
+        app:hintTextColor="@color/transparent"
         app:endIconMode="password_toggle"
         app:startIconDrawable="@drawable/ic_password_icon"
         app:layout_constraintEnd_toEndOf="@id/layoutUsername"
         app:layout_constraintStart_toStartOf="@id/layoutUsername"
         app:layout_constraintTop_toBottomOf="@id/layoutUsername">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.citiasia.inidesakubeta.ui.customView.CustomInputEditText
             android:id="@+id/textPassword"
             android:background="@drawable/input_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:hint="@string/kata_sandi"
+            app:hintTextColor="@color/font400"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/password_error"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
@@ -155,41 +269,41 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="@string/confirm_password"
-        app:hintTextColor="@color/font400"
+        app:boxBackgroundMode="none"
+        app:hintAnimationEnabled="false"
+        app:hintTextColor="@color/transparent"
         app:endIconMode="password_toggle"
         app:startIconDrawable="@drawable/ic_password_icon"
         app:layout_constraintEnd_toEndOf="@id/layoutPassword"
         app:layout_constraintStart_toStartOf="@id/layoutPassword"
         app:layout_constraintTop_toBottomOf="@id/layoutPassword">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.citiasia.inidesakubeta.ui.customView.CustomInputEditText
             android:id="@+id/textConfirmPassword"
             android:background="@drawable/input_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:hint="@string/confirm_password"
+            app:hintTextColor="@color/font400"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnRegister"
-        style="@style/Widget.Material3.Button.Icon"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/btnSignUp"
+        style="@style/Theme.IniDesakuBeta.Button."
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:enabled="false"
+        android:text="@string/daftar"
         android:textAllCaps="false"
         app:cornerRadius="8dp"
-        android:text="@string/daftar"
-        android:layout_marginTop="35dp"
-        android:fontFamily="@font/nunito_medium"
-        android:textFontWeight="600"
-        android:textSize="14sp"
-        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/layoutConfirmPassword"
         app:layout_constraintBottom_toTopOf="@id/tvHaveAccount"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/confirm_password_error"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
@@ -203,7 +317,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layoutConfirmPassword"
-        app:layout_constraintBottom_toTopOf="@id/btnRegister"/>
+        app:layout_constraintBottom_toTopOf="@id/btnSignUp"/>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvHaveAccount"
@@ -217,7 +331,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnLoginPage"
         android:layout_marginEnd="24dp"
-        app:layout_constraintTop_toBottomOf="@id/btnRegister" />
+        app:layout_constraintTop_toBottomOf="@id/btnSignUp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLoginPage"
@@ -234,6 +348,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="40dp"
         app:layout_constraintTop_toTopOf="@id/tvHaveAccount" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnTamu"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/masuk_sebagai_tamu"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHaveAccount" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

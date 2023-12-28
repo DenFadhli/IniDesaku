@@ -48,19 +48,20 @@ android:padding="24dp"
     app:layout_constraintStart_toStartOf="@id/tvCompleteProfileTitleDesc"
     app:layout_constraintTop_toBottomOf="@id/tvCompleteProfileTitleDesc">
 
-    <com.google.android.material.textfield.TextInputEditText
+    <com.citiasia.inidesakubeta.ui.customView.CustomInputEditText
         android:id="@+id/textName"
         android:background="@drawable/input_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress" />
+        android:inputType="textPersonName" />
 </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/nameError"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
-        android:text="@string/username_invalid"
+        android:text="@string/name_invalid"
         android:textColor="@color/danger500"
         android:textFontWeight="400"
         android:textSize="11sp"
@@ -68,64 +69,73 @@ android:padding="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layoutName"
-        app:layout_constraintBottom_toTopOf="@id/layoutPhoneSection"/>
+        app:layout_constraintBottom_toTopOf="@id/layoutEmail"/>
 
-<LinearLayout
-    android:id="@+id/layoutPhoneSection"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/layoutName"
-    app:layout_constraintBottom_toTopOf="@id/layoutCodeReferal">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutCodePhone"
+        android:id="@+id/layoutEmail"
         style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
-        android:layout_width="70dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="+62"
-        app:hintTextColor="@color/font300">
+        android:layout_marginTop="24dp"
+        android:hint="@string/email"
+        app:hintTextColor="@color/font400"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutName">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textCodePhone"
-            android:background="@drawable/input_code_phone_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layoutPhoneNumber"
-        style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:hint="@string/input_number_telphone"
-        app:hintTextColor="@color/font400">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textPhoneNumber"
+        <com.citiasia.inidesakubeta.ui.customView.CustomInputEditText
+            android:id="@+id/textEmail"
             android:background="@drawable/input_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
-</LinearLayout>
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/emailError"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
-        android:text="@string/username_invalid"
+        android:text="@string/email_wrong"
         android:textColor="@color/danger500"
         android:textFontWeight="400"
         android:textSize="11sp"
         android:alpha="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutPhoneSection"
+        app:layout_constraintTop_toBottomOf="@id/layoutEmail"
+        app:layout_constraintBottom_toTopOf="@id/layoutCodeReferal"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/emailEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/email_empty"
+        android:textColor="@color/danger500"
+        android:textFontWeight="400"
+        android:textSize="11sp"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutEmail"
+        app:layout_constraintBottom_toTopOf="@id/layoutCodeReferal"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/emailUsed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/email_used"
+        android:textColor="@color/danger500"
+        android:textFontWeight="400"
+        android:textSize="11sp"
+        android:alpha="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutEmail"
         app:layout_constraintBottom_toTopOf="@id/layoutCodeReferal"/>
 
 <com.google.android.material.textfield.TextInputLayout
@@ -133,26 +143,25 @@ android:padding="24dp"
     style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
+    android:layout_marginTop="24dp"
     android:hint="@string/complete_profile_referal_code"
     app:hintTextColor="@color/font400"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/layoutPhoneSection">
+    app:layout_constraintTop_toBottomOf="@id/layoutEmail">
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textCodeReferal"
         android:background="@drawable/input_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName" />
+        android:layout_height="wrap_content" />
 </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnNext"
         style="@style/Widget.Material3.Button.Icon"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:textAllCaps="false"
         app:cornerRadius="8dp"
         android:text="@string/selanjutnya"
@@ -160,6 +169,7 @@ android:padding="24dp"
         android:fontFamily="@font/nunito_medium"
         android:textFontWeight="600"
         android:textSize="14sp"
+        android:enabled="false"
         android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/layoutCodeReferal"
         app:layout_constraintStart_toStartOf="parent"
