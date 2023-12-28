@@ -3,9 +3,6 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
     id("kotlin-kapt")
-    id("androidx.navigation.safeargs")
-    id("maven-publish")
-    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -20,6 +17,11 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        buildConfig = true
+        viewBinding = true
     }
 
     buildTypes {
@@ -40,14 +42,14 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    buildFeatures {
-        viewBinding = true
-        dataBinding = true
-        buildConfig = true
+    viewBinding{
+        enable = true
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
 }
 
 dependencies {
@@ -58,6 +60,7 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -88,21 +91,13 @@ dependencies {
     //live data
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
 
-    //otpView
-    implementation ("com.github.aabhasr1:OtpView:v1.1.2-ktx")
-    implementation ("com.github.aabhasr1:OtpView:v1.1.2")
-
     //shimmer
 //    implementation 'com.facebook.shimmer:shimmer:0.5.0'
-
-    //exoPlayer
-    implementation ("com.google.android.exoplayer:exoplayer-core:2.19.1")
-    implementation ("com.google.android.exoplayer:exoplayer-ui:2.19.1")
 
 
     //viewModel
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
-    implementation ("androidx.activity:activity-ktx:1.8.0")
+    implementation ("androidx.activity:activity-ktx:1.8.1")
 
     //dataStore
 //    implementation "androidx.datastore:datastore-preferences:1.0.0"
@@ -112,22 +107,8 @@ dependencies {
 //    kapt 'androidx.room:room-compiler:2.5.1'
 //    implementation 'androidx.room:room-ktx:2.5.1'
 
+    implementation ("com.github.denzcoskun:ImageSlideshow:0.1.2")
+
     //pref
     implementation ("androidx.datastore:datastore-preferences:1.0.0")
-    implementation("androidx.fragment:fragment-ktx:1.5.7")
-    implementation("androidx.navigation:navigation-runtime-ktx:2.5.3")
-
-
-    //maps
-    implementation("com.google.android.gms:play-services-maps:18.1.0")
-    implementation("com.google.android.gms:play-services-maps:18.1.0")
-    implementation("com.google.maps.android:maps-ktx:3.4.0")
-    implementation("com.google.android.gms:play-services-location:21.0.1")
-
-
-    //dao
-    implementation("androidx.room:room-runtime:2.5.0")
-    annotationProcessor("androidx.room:room-compiler:2.5.0")
-    kapt("androidx.room:room-compiler:2.5.0")
-    implementation("androidx.room:room-paging:2.5.0")
 }

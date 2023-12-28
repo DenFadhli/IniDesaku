@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.donasi.detail.DonasiSelesaiActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="?attr/colorPrimary">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_anchor="@+id/appBarLayout"
+            app:layout_anchorGravity="center"
+            app:navigationIcon="@drawable/baseline_arrow_back_24"
+            app:navigationIconTint="?attr/colorOnPrimary"
+            app:title="Donasi"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:titleTextColor="?attr/colorOnPrimary"
+            app:titleCentered="true">
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading_grey" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_terima_kasih"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_terima_kasih"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:gravity="center"
+            android:text="@string/terima_kasih"
+            android:textColor="@color/font500"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/donasi_success"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_terima_kasih"
+            android:contentDescription="@string/donasi_sukses" />
+
+        <TextView
+            android:id="@+id/tv_ucapan"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/desc_donasi_berhasil"
+            android:textColor="@color/font400"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/tv_rincian_donasi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/rincian_donasi"
+            app:layout_constraintEnd_toEndOf="@+id/tv_ucapan"
+            app:layout_constraintStart_toStartOf="@+id/tv_ucapan"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ucapan" />
+
+        <TextView
+            android:id="@+id/tv_pembayaran"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/tanggal_pembayaran"
+            app:layout_constraintEnd_toStartOf="@+id/tv_tgl_pembayaran"
+            app:layout_constraintStart_toStartOf="@+id/tv_rincian_donasi"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rincian_donasi" />
+
+        <TextView
+            android:id="@+id/tv_tgl_pembayaran"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            tools:text="23 November 2023"
+            app:layout_constraintEnd_toEndOf="@+id/tv_ucapan"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rincian_donasi" />
+
+        <TextView
+            android:id="@+id/tv_metode"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/metode_pembayaran"
+            app:layout_constraintEnd_toStartOf="@+id/tv_metode_pembayaran"
+            app:layout_constraintStart_toStartOf="@+id/tv_pembayaran"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pembayaran" />
+
+        <TextView
+            android:id="@+id/tv_metode_pembayaran"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            tools:text="Gudang Voucher"
+            app:layout_constraintEnd_toEndOf="@+id/tv_tgl_pembayaran"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tgl_pembayaran" />
+
+        <TextView
+            android:id="@+id/tv_id_donasi"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/id_donasi"
+            app:layout_constraintEnd_toStartOf="@+id/tv_tgl_pembayaran"
+            app:layout_constraintStart_toStartOf="@+id/tv_rincian_pembayaran"
+            app:layout_constraintTop_toBottomOf="@+id/tv_metode" />
+
+        <TextView
+            android:id="@+id/tv_id_donasinya"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            tools:text="3651789"
+            app:layout_constraintEnd_toEndOf="@+id/tv_ucapan"
+            app:layout_constraintTop_toBottomOf="@+id/tv_metode_pembayaran" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/status"
+            app:layout_constraintEnd_toStartOf="@+id/tv_metode_pembayaran"
+            app:layout_constraintStart_toStartOf="@+id/tv_pembayaran"
+            app:layout_constraintTop_toBottomOf="@+id/tv_id_donasi" />
+
+        <TextView
+            android:id="@+id/tv_statusnya"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:textColor="@color/primary500"
+            android:textStyle="bold"
+            android:layout_width="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            tools:text="Success"
+            app:layout_constraintEnd_toEndOf="@+id/tv_tgl_pembayaran"
+            app:layout_constraintTop_toBottomOf="@+id/tv_id_donasinya" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider_rincian"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_status"
+            app:layout_constraintEnd_toEndOf="@+id/tv_statusnya"
+            app:layout_constraintTop_toBottomOf="@+id/tv_status" />
+
+        <TextView
+            android:id="@+id/tv_rincian_pembayaran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/rincian_pembayaran"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@id/divider_rincian"
+            app:layout_constraintStart_toStartOf="@id/divider_rincian"
+            app:layout_constraintTop_toTopOf="@id/divider_rincian" />
+
+        <TextView
+            android:id="@+id/tv_rincian_nominal_donasi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/nominal_donasi"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            app:layout_constraintEnd_toStartOf="@+id/tv_rincian_nominal_donasi_uang"
+            app:layout_constraintStart_toStartOf="@+id/tv_rincian_pembayaran"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rincian_pembayaran" />
+
+        <TextView
+            android:id="@+id/tv_rincian_nominal_donasi_uang"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            tools:text="Rp. 20.000,00"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            app:layout_constraintEnd_toEndOf="@+id/tv_rincian_pembayaran"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rincian_pembayaran" />
+
+        <TextView
+            android:id="@+id/tv_rincian_biaya_admin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/biaya_admin"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            app:layout_constraintEnd_toStartOf="@+id/tv_rincian_nominal_donasi_uang"
+            app:layout_constraintStart_toStartOf="@+id/tv_rincian_pembayaran"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rincian_nominal_donasi" />
+
+        <TextView
+            android:id="@+id/tv_rincian_biaya_admin_uang"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            tools:text="Rp. 2.500,00"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            app:layout_constraintEnd_toEndOf="@+id/tv_rincian_pembayaran"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rincian_nominal_donasi_uang" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/totalDivider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_rincian_biaya_admin_uang"
+            app:layout_constraintStart_toStartOf="@+id/tv_rincian_biaya_admin"
+            app:layout_constraintTop_toBottomOf="@+id/tv_rincian_biaya_admin" />
+
+        <TextView
+            android:id="@+id/tv_total_biaya"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/total_biaya"
+            app:layout_constraintEnd_toStartOf="@+id/tv_rincian_nominal_donasi_uang"
+            app:layout_constraintStart_toStartOf="@+id/totalDivider"
+            app:layout_constraintTop_toBottomOf="@+id/totalDivider" />
+
+        <TextView
+            android:id="@+id/tv_rincian_total_biaya_uang"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            tools:text="Rp. 22.500,00"
+            app:layout_constraintEnd_toEndOf="@+id/totalDivider"
+            app:layout_constraintTop_toBottomOf="@+id/totalDivider" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_kembali"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/kembali"
+            android:textAllCaps="false"
+            app:cornerRadius="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_rincian_total_biaya_uang"
+            app:layout_constraintStart_toStartOf="@+id/tv_total_biaya"
+            app:layout_constraintTop_toBottomOf="@+id/tv_total_biaya" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

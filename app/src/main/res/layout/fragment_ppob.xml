@@ -4,31 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorSecondaryContainer"
     tools:context=".ui.ppob.PpobFragment">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imgIllustration"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
         android:layout_width="0dp"
-        android:layout_height="148dp"
-        android:layout_margin="24dp"
-        android:scaleType="centerCrop"
+        android:layout_height="236dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearanceOverlay="@style/customImageView8Percent"
-        android:background="@color/white" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/dots_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/viewPager"
+        app:layout_constraintEnd_toEndOf="@id/viewPager"
+        app:layout_constraintStart_toStartOf="@id/viewPager" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/cardTopUp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="220dp"
         app:cardCornerRadius="12dp"
-        app:layout_constraintEnd_toEndOf="@id/imgIllustration"
-        app:layout_constraintStart_toStartOf="@id/imgIllustration"
-        app:layout_constraintTop_toBottomOf="@id/imgIllustration">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -37,7 +44,7 @@
 
             <TextView
                 android:id="@+id/tvSaldoString"
-                style="@style/Theme.IniDesakuBeta.Text.Caption"
+                style="@style/Theme.IniDesakuBeta.TextView.SemiBold12.600"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:gravity="center_vertical"
@@ -49,7 +56,7 @@
 
             <TextView
                 android:id="@+id/tvSaldo"
-                style="@style/Theme.IniDesakuBeta.TextBold.Subtitle2"
+                style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginTop="4dp"
@@ -57,293 +64,505 @@
                 android:text="@string/saldo"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/btnHistory"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@id/tvSaldoString"
                 app:layout_constraintTop_toBottomOf="@id/tvSaldoString" />
 
-            <com.google.android.material.button.MaterialButton
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/btnHistory"
-                style="@style/Widget.Material3.Button.IconButton"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
                 android:layout_marginEnd="8dp"
-                android:padding="0dp"
-                android:text="@string/history"
-                android:textAllCaps="false"
-                android:textSize="10sp"
-                app:cornerRadius="4dp"
-                app:icon="@drawable/ppob_icon"
-                app:iconGravity="top"
-                app:iconPadding="4dp"
+                android:gravity="center"
+                android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="@id/tvSaldo"
                 app:layout_constraintEnd_toStartOf="@id/btnTopUp"
-                app:layout_constraintTop_toTopOf="@id/btnTopUp" />
+                app:layout_constraintTop_toTopOf="@id/tvSaldoString">
 
-            <com.google.android.material.button.MaterialButton
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/icon_riwayat" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Regular11.400"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/history" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/btnTopUp"
-                style="@style/Widget.Material3.Button.IconButton"
                 android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/btnHistory"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/icon_top_up" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Regular11.400"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/top_up" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPulsa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardTopUp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:id="@+id/tvPulsa"
+                style="@style/Theme.IniDesakuBeta.TextView.SemiBold16.600"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:padding="0dp"
-                android:text="@string/top_up"
-                android:textAllCaps="false"
-                android:textSize="10sp"
-                app:cornerRadius="4dp"
-                app:icon="@drawable/ppob_icon"
-                app:iconGravity="top"
-                app:iconPadding="4dp"
-                app:layout_constraintBottom_toBottomOf="@id/tvSaldo"
+                android:text="@string/pulsa"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnPrabayar"
+                android:layout_width="74dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center|center_vertical"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/tvPulsa"
+                app:layout_constraintTop_toBottomOf="@id/tvPulsa">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/prabayar_icon" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/pulsa_prabayar" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnPascabayar"
+                android:layout_width="74dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:gravity="top"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/btnPrabayar"
+                app:layout_constraintStart_toEndOf="@id/btnPrabayar"
+                app:layout_constraintTop_toTopOf="@id/btnPrabayar">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/pascabayar_icon" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center"
+                    android:text="@string/pulsa_pascabayar" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnPaketData"
+                android:layout_width="74dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/btnPascabayar"
+                app:layout_constraintStart_toEndOf="@id/btnPascabayar"
+                app:layout_constraintTop_toTopOf="@id/btnPascabayar">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+
+                    android:src="@drawable/paket_data_icon" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="@string/paket_data" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutMenu"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardListrik"
         android:layout_width="0dp"
-        android:layout_height="512dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/layout_rounded_top_white_bg"
-        android:paddingHorizontal="24dp"
-        android:paddingBottom="24dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="@id/cardPulsa"
+        app:layout_constraintStart_toStartOf="@id/cardPulsa"
+        app:layout_constraintTop_toBottomOf="@id/cardPulsa">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:id="@+id/tvListrik"
+                style="@style/Theme.IniDesakuBeta.TextView.SemiBold16.600"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/listrik_air"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnTagihanPln"
+                android:layout_width="74dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center|center_vertical"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/tvListrik"
+                app:layout_constraintTop_toBottomOf="@id/tvListrik">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/tagihan_pln" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/tagihan_pln" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnTokenPln"
+                android:layout_width="74dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:gravity="top"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/btnTagihanPln"
+                app:layout_constraintStart_toEndOf="@id/btnTagihanPln"
+                app:layout_constraintTop_toTopOf="@id/btnTagihanPln">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/token_pln" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="top|center_horizontal"
+                    android:paddingTop="7dp"
+                    android:text="@string/token_pln" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnPdam"
+                android:layout_width="74dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/btnTokenPln"
+                app:layout_constraintStart_toEndOf="@id/btnTokenPln"
+                app:layout_constraintTop_toTopOf="@id/btnTokenPln">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+
+                    android:src="@drawable/pdam_icon" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:paddingTop="7dp"
+                    android:text="@string/pdam" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBpjs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgIllustration">
+        app:layout_constraintTop_toBottomOf="@id/cardListrik">
 
-        <TextView
-            android:id="@+id/tvPulsa"
-            style="@style/Theme.IniDesakuBeta.TextBold.Subtitle1"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="54dp"
-            android:text="@string/pulsa"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPulsaPra"
-            style="@style/Widget.Material3.Button.IconButton"
-            android:layout_width="0dp"
+            <TextView
+                android:id="@+id/tvBpjs"
+                style="@style/Theme.IniDesakuBeta.TextView.SemiBold16.600"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/bpjs"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnKesehatan"
+                android:layout_width="74dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center|center_vertical"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/tvBpjs"
+                app:layout_constraintTop_toBottomOf="@id/tvBpjs">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/kesehatan_icon" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/kesehatan" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnKetenagakerjaan"
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:gravity="top"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/btnKesehatan"
+                app:layout_constraintTop_toTopOf="@id/btnKesehatan">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ketenaga_icon" />
+
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="top|center_horizontal"
+                    android:paddingTop="7dp"
+                    android:text="@string/ketenagakerjaan" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLainnya"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardBpjs">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:paddingVertical="0dp"
-            android:text="@string/pulsa_prabayar"
-            android:textAllCaps="false"
-            android:textSize="12sp"
-            app:cornerRadius="4dp"
-            app:icon="@drawable/ppob_icon"
-            app:iconGravity="top"
-            app:iconPadding="4dp"
-            app:layout_constraintEnd_toStartOf="@id/btnPulsaPasca"
-            app:layout_constraintStart_toStartOf="@id/tvPulsa"
-            app:layout_constraintTop_toBottomOf="@id/tvPulsa" />
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPulsaPasca"
-            style="@style/Widget.Material3.Button.IconButton"
-            android:layout_width="94dp"
-            android:layout_height="wrap_content"
-            android:paddingVertical="0dp"
-            android:text="@string/pulsa_pascabayar"
-            android:textAllCaps="false"
-            android:textSize="12sp"
-            app:cornerRadius="4dp"
-            app:icon="@drawable/ppob_icon"
-            app:iconGravity="top"
-            app:iconPadding="4dp"
-            app:layout_constraintEnd_toStartOf="@id/btnPaket"
-            app:layout_constraintStart_toEndOf="@id/btnPulsaPra"
-            app:layout_constraintTop_toTopOf="@id/btnPulsaPra" />
+            <TextView
+                android:id="@+id/tvLainnya"
+                style="@style/Theme.IniDesakuBeta.TextView.SemiBold16.600"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lainnya"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPaket"
-            style="@style/Widget.Material3.Button.IconButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:paddingVertical="0dp"
-            android:text="Paket Data"
-            android:textAllCaps="false"
-            android:textSize="12sp"
-            app:cornerRadius="4dp"
-            app:icon="@drawable/ppob_icon"
-            app:iconGravity="top"
-            app:iconPadding="4dp"
-            app:layout_constraintEnd_toStartOf="@id/btnTelkom"
-            app:layout_constraintStart_toEndOf="@id/btnPulsaPasca"
-            app:layout_constraintTop_toTopOf="@id/btnPulsaPasca" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnIndihome"
+                android:layout_width="74dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center|center_vertical"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@id/tvLainnya"
+                app:layout_constraintTop_toBottomOf="@id/tvLainnya">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnTelkom"
-            style="@style/Widget.Material3.Button.IconButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:paddingVertical="0dp"
-            android:text="Telkom"
-            android:textAllCaps="false"
-            android:textSize="12sp"
-            app:cornerRadius="4dp"
-            app:icon="@drawable/ppob_icon"
-            app:iconGravity="top"
-            app:iconPadding="4dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btnPaket"
-            app:layout_constraintTop_toTopOf="@id/btnPaket" />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/indihome_icon" />
 
-        <TextView
-            android:id="@+id/tvListrikAir"
-            style="@style/Theme.IniDesakuBeta.TextBold.Subtitle1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/listrik_air"
-            app:layout_constraintStart_toStartOf="@id/btnPulsaPra"
-            app:layout_constraintTop_toBottomOf="@id/btnPulsaPra" />
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/indihome" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPln"
-            style="@style/Widget.Material3.Button.IconButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:paddingVertical="0dp"
-            android:text="@string/tagihan_pln"
-            android:textAllCaps="false"
-            android:textSize="12sp"
-            app:cornerRadius="4dp"
-            app:icon="@drawable/ppob_icon"
-            app:iconGravity="top"
-            app:iconPadding="4dp"
-            app:layout_constraintEnd_toStartOf="@id/btnTokenPln"
-            app:layout_constraintStart_toStartOf="@id/tvListrikAir"
-            app:layout_constraintTop_toBottomOf="@id/tvListrikAir" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnTokenPln"
-            style="@style/Widget.Material3.Button.IconButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:paddingVertical="0dp"
-            android:text="@string/token_pln"
-            android:textAllCaps="false"
-            android:textSize="12sp"
-            app:cornerRadius="4dp"
-            app:icon="@drawable/ppob_icon"
-            app:iconGravity="top"
-            app:iconPadding="4dp"
-            app:layout_constraintEnd_toStartOf="@id/btnPdam"
-            app:layout_constraintStart_toEndOf="@id/btnPln"
-            app:layout_constraintTop_toTopOf="@id/btnPln" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnTelkom"
+                android:layout_width="74dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:gravity="top"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/btnIndihome"
+                app:layout_constraintStart_toEndOf="@id/btnIndihome"
+                app:layout_constraintTop_toTopOf="@id/btnIndihome">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPdam"
-            style="@style/Widget.Material3.Button.IconButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:paddingVertical="0dp"
-            android:text="@string/pdam"
-            android:textAllCaps="false"
-            android:textSize="12sp"
-            app:cornerRadius="4dp"
-            app:icon="@drawable/ppob_icon"
-            app:iconGravity="top"
-            app:iconPadding="4dp"
-            app:layout_constraintEnd_toEndOf="@id/btnPaket"
-            app:layout_constraintStart_toEndOf="@id/btnTokenPln"
-            app:layout_constraintTop_toTopOf="@id/btnTokenPln" />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/telkom_icon" />
 
-        <TextView
-            android:id="@+id/tvBpjs"
-            style="@style/Theme.IniDesakuBeta.TextBold.Subtitle1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/bpjs"
-            app:layout_constraintStart_toStartOf="@id/btnPln"
-            app:layout_constraintTop_toBottomOf="@id/btnPln" />
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:gravity="top|center_horizontal"
+                    android:paddingTop="7dp"
+                    android:text="@string/telkom" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnPbjsKesehatan"
-            style="@style/Widget.Material3.Button.IconButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:paddingVertical="0dp"
-            android:text="@string/kesehatan"
-            android:textAllCaps="false"
-            android:textSize="12sp"
-            app:cornerRadius="4dp"
-            app:icon="@drawable/ppob_icon"
-            app:iconGravity="top"
-            app:iconPadding="4dp"
-            app:layout_constraintEnd_toStartOf="@id/btnBpjsKerja"
-            app:layout_constraintStart_toStartOf="@id/tvBpjs"
-            app:layout_constraintTop_toBottomOf="@id/tvBpjs" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnBpjsKerja"
-            style="@style/Widget.Material3.Button.IconButton"
-            android:layout_width="94dp"
-            android:layout_height="wrap_content"
-            android:paddingVertical="0dp"
-            android:text="@string/ketenagakerjaan"
-            android:textAllCaps="false"
-            android:textSize="12sp"
-            app:cornerRadius="4dp"
-            app:icon="@drawable/ppob_icon"
-            app:iconGravity="top"
-            app:iconPadding="4dp"
-            app:layout_constraintEnd_toEndOf="@id/btnTokenPln"
-            app:layout_constraintStart_toEndOf="@id/btnPbjsKesehatan"
-            app:layout_constraintTop_toTopOf="@id/btnPbjsKesehatan" />
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/btnMultifinance"
+                android:layout_width="74dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="12dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/btnTelkom"
+                app:layout_constraintTop_toTopOf="@id/btnTelkom">
 
-        <TextView
-            android:id="@+id/tvLainnya"
-            style="@style/Theme.IniDesakuBeta.TextBold.Subtitle1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/lainnya"
-            app:layout_constraintStart_toStartOf="@id/btnPbjsKesehatan"
-            app:layout_constraintTop_toBottomOf="@id/btnPbjsKesehatan" />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:src="@drawable/multi_icon" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnIndihome"
-            style="@style/Widget.Material3.Button.IconButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:paddingVertical="0dp"
-            android:text="@string/pulsa_prabayar"
-            android:textAllCaps="false"
-            android:textSize="12sp"
-            app:cornerRadius="4dp"
-            app:icon="@drawable/ppob_icon"
-            app:iconGravity="top"
-            app:iconPadding="4dp"
-            app:layout_constraintEnd_toStartOf="@id/btnMultiFinance"
-            app:layout_constraintStart_toStartOf="@id/tvLainnya"
-            app:layout_constraintTop_toBottomOf="@id/tvLainnya" />
+                <TextView
+                    style="@style/Theme.IniDesakuBeta.TextView.Medium14.500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="top|center_horizontal"
+                    android:paddingTop="7dp"
+                    android:text="@string/multifinance" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnMultiFinance"
-            style="@style/Widget.Material3.Button.IconButton"
-            android:layout_width="94dp"
-            android:layout_height="wrap_content"
-            android:paddingVertical="0dp"
-            android:text="@string/pulsa_pascabayar"
-            android:textAllCaps="false"
-            android:textSize="12sp"
-            app:cornerRadius="4dp"
-            app:icon="@drawable/ppob_icon"
-            app:iconGravity="top"
-            app:iconPadding="4dp"
-            app:layout_constraintEnd_toEndOf="@id/btnTokenPln"
-            app:layout_constraintStart_toEndOf="@id/btnIndihome"
-            app:layout_constraintTop_toTopOf="@id/btnIndihome" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,6 +14,7 @@
             android:id="@+id/action_konfirmasiPinFragment_to_konfrimasiBerhasilFragment"
             app:destination="@id/konfrimasiBerhasilFragment" />
         <action
+<<<<<<< HEAD
             android:id="@+id/action_konfirmasiPinFragment_to_konfirmasiBarangBerhasilFragment"
             app:destination="@id/konfirmasiBarangBerhasilFragment" />
     </fragment>
@@ -27,4 +28,19 @@
         android:name="com.citiasia.inidesakubeta.ui.konfirmasi.barang.KonfirmasiBarangBerhasilFragment"
         android:label="fragment_konfirmasi_barang_berhasil"
         tools:layout="@layout/fragment_konfirmasi_barang_berhasil" />
+=======
+            android:id="@+id/action_konfirmasiPinFragment_to_konfirmasiBerhasilTokenFragment"
+            app:destination="@id/konfirmasiBerhasilTokenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/konfrimasiBerhasilFragment"
+        android:name="com.citiasia.inidesakubeta.ui.konfirmasi.pulsaBerhasil.KonfrimasiBerhasilFragment"
+        android:label="fragment_konfrimasi_berhasil"
+        tools:layout="@layout/fragment_konfrimasi_berhasil" />
+    <fragment
+        android:id="@+id/konfirmasiBerhasilTokenFragment"
+        android:name="com.citiasia.inidesakubeta.ui.konfirmasi.pulsaBerhasil.KonfirmasiBerhasilTokenFragment"
+        android:label="fragment_konfirmasi_berhasil_token"
+        tools:layout="@layout/fragment_konfirmasi_berhasil_token" />
+>>>>>>> origin/ppob_pages
 </navigation>

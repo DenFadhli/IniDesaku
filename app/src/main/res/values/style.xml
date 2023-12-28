@@ -61,30 +61,6 @@
         <item name="android:fontFamily">@font/nunito_medium</item>
     </style>
 
-    <style name="Theme.IniDesakuBeta.TextView.Regular10.400" parent="Widget.MaterialComponents.TextView">
-        <item name="android:textSize">10sp</item>
-        <item name="android:fontFamily">@font/nunito_regular</item>
-        <item name="android:fontWeight">400</item>
-    </style>
-
-    <style name="Theme.IniDesakuBeta.TextView.Regular10.600" parent="Widget.MaterialComponents.TextView">
-        <item name="android:textSize">10sp</item>
-        <item name="android:fontFamily">@font/nunito_regular</item>
-        <item name="android:fontWeight">600</item>
-    </style>
-
-    <style name="Theme.IniDesakuBeta.TextView.Regular11.400" parent="Widget.MaterialComponents.TextView">
-        <item name="android:textSize">11sp</item>
-        <item name="android:fontFamily">@font/nunito_regular</item>
-        <item name="android:fontWeight">400</item>
-    </style>
-
-    <style name="Theme.IniDesakuBeta.TextView.SemiBold11.600" parent="Widget.MaterialComponents.TextView">
-        <item name="android:textSize">11sp</item>
-        <item name="android:fontFamily">@font/nunito_semibold</item>
-        <item name="android:fontWeight">600</item>
-    </style>
-
     <style name="Theme.IniDesakuBeta.TextView.Regular12.400" parent="Widget.MaterialComponents.TextView">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">?attr/colorOnBackground</item>
@@ -106,29 +82,8 @@
         <item name="android:fontWeight">400</item>
     </style>
 
-    <style name="Theme.IniDesakuBeta.TextView.Medium14.500" parent="Widget.MaterialComponents.TextView">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColor">?attr/colorOnBackground</item>
-        <item name="android:fontFamily">@font/nunito_medium</item>
-        <item name="android:fontWeight">500</item>
-    </style>
-
     <style name="Theme.IniDesakuBeta.TextView.Medium22.500" parent="Widget.MaterialComponents.TextView">
         <item name="android:textSize">22sp</item>
-        <item name="android:textColor">?attr/colorOnBackground</item>
-        <item name="android:fontFamily">@font/nunito_medium</item>
-        <item name="android:fontWeight">500</item>
-    </style>
-
-    <style name="Theme.IniDesakuBeta.TextView.Bold22.700" parent="Widget.MaterialComponents.TextView">
-        <item name="android:textSize">22sp</item>
-        <item name="android:textColor">?attr/colorOnBackground</item>
-        <item name="android:fontFamily">@font/nunito_bold</item>
-        <item name="android:fontWeight">700</item>
-    </style>
-
-    <style name="Theme.IniDesakuBeta.TextView.Medium12.500" parent="Widget.MaterialComponents.TextView">
-        <item name="android:textSize">12sp</item>
         <item name="android:textColor">?attr/colorOnBackground</item>
         <item name="android:fontFamily">@font/nunito_medium</item>
         <item name="android:fontWeight">500</item>
@@ -140,6 +95,11 @@
         <item name="android:fontFamily">@font/nunito_medium</item>
         <item name="android:fontWeight">400</item>
     </style>
+
+
+
+
+
 
     <style name="Theme.IniDesakuBeta.IconButtonText.Bold16.700" parent="Widget.Material3.Button.IconButton">
         <item name="android:textSize">16sp</item>
@@ -166,12 +126,6 @@
         <item name="android:fontWeight">600</item>
     </style>
 
-    <style name="Theme.IniDesakuBeta.TextView.SemiBold16.600" parent="Widget.MaterialComponents.TextView">
-        <item name="android:textSize">16sp</item>
-        <item name="android:fontFamily">@font/nunito_semibold</item>
-        <item name="android:fontWeight">600</item>
-    </style>
-
     <style name="Theme.IniDesakuBeta.TextButton.Regular14.600" parent="Widget.Material3.Button.TextButton">
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily">@font/nunito_regular</item>
@@ -188,14 +142,4 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">8%</item>
     </style>
-
-    <style name="ShapeAppearanceOverlay.App.RoundButton" parent="">
-        <item name="cornerSize">50%</item>
-    </style>
-
-    <style name="customImageView50Percent" parent="">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">50%</item>
-    </style>
-
 </resources>

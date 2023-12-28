@@ -21,9 +21,9 @@
     <string name="selanjutnya">Selanjutnya</string>
     <string name="pilih_wilayah_anda">Pilih Wilayah Anda</string>
     <string name="province">Provinsi</string>
-    <string name="kota_kabupaten">Kota / Kabupaten</string>
+    <string name="kota_kecamatan">Kota/Kecamatan</string>
     <string name="kecamatan">Kecamatan</string>
-    <string name="desa_kelurahan">Desa / Kelurahan</string>
+    <string name="desa">Desa</string>
     <string name="done">Selesai</string>
     <string name="back">Kembali</string>
     <string name="input_number_telphone">Nomor telepon</string>
@@ -87,6 +87,7 @@
     <string name="total_peserta">Total peserta</string>
     <string name="nomor_seri_dummy">32345123345312</string>
     <string name="cari_tvcc_yang_kamu_mau">Cari TVCC yang kamu mau</string>
+    <string name="kategori">Kategori</string>
     <string name="rekomendasi_tvcc">Rekomendasi TVCC</string>
     <string name="title_of_content">Title of content</string>
     <string name="popular_now">Popular now</string>
@@ -95,142 +96,6 @@
     <string name="selamat_datang_login">Selamat datang, silahkan isi data di bawah untuk dapat login ke akun anda</string>
     <string name="google">Google</string>
     <string name="belum_mempunyai_akun">Belum mempunyai akun?</string>
-    <string name="password_wrong">*Kata sandi kurang dari 6 karakter</string>
-    <string name="password_confirm_wrong">*Kata sandi berbeda dengan sebelumnya</string>
-    <string name="email_wrong">*Email yang anda masukan tidak valid</string>
-    <string name="email_used">*Email yang anda sudah digunakan orang lain</string>
-    <string name="email_empty">*Email tidak boleh kosong</string>
-    <string name="username_invalid">*Username yang anda masukkan sudah dipakai</string>
-    <string name="username_empty">*Username yang anda masukkan tidak boleh kosong</string>
-    <string name="name_invalid">*Nama yang anda masukkan tidak boleh kosong</string>
-    <string name="description_signup_page">Selamat datang! Silahkan mengisi formulir berikut untuk membuat akun.</string>
-    <string name="otp_wrong">*Kode OTP yang anda masukkan tidak valid</string>
-    <string name="complete_profile_title">Lengkapi Data Diri</string>
-    <string name="complete_profile_desc">Selamat datang! Isi detail informasi dirimu sekarang</string>
-    <string name="complete_profile_referal_code">Kode Referral</string>
-    <string name="pilih_wilayah_desc">Selamat datang! Silakan isi wilayah tempat Anda berada!</string>
-    <string name="pusat_bantuan_title">Pusat Bantuan</string>
-    <string name="pusat_bantuan_desc">Pertanyaan umum tentang INI DESAKU</string>
-    <string name="form_bantuan_desc">Silahkan isi formulir dibawah ini!</string>
-    <string name="choose_item">Pilih</string>
-    <string name="form_bantuan_name">Nama Lengkap Anda</string>
-    <string name="form_bantuan_email">Email Anda</string>
-    <string name="form_bantuan_detail_pertanyaan">Detail Pertanyaan</string>
-    <string name="kirim">Kirim</string>
-    <string name="question_empty">*Masukkan pertanyaan.</string>
-    <string name="kategori_lokasi">Kategori Lokasi</string>
-    <string name="title_geotagging">Kontribusi Lokasi Penting dari Anda!</string>
-    <string name="nama_lokasi_penting">Nama Lokasi Penting</string>
-    <string name="deskripsi">Deskripsi</string>
-    <string name="camera">Kamera</string>
-    <string name="gallery">Galeri</string>
-    <string name="save">Simpan</string>
-    <string name="image_preview">Pratinjau Gambar</string>
-    <string name="reupload_camera">Foto Ulang</string>
-    <string name="apply_upload">Gunakan Foto</string>
-    <string name="search_hint_pasar_desa">Cari produk yang Anda cari</string>
-    <string name="shop_cart">Keranjang</string>
-    <string name="kategori">Kategori</string>
-    <string name="buah_segar">Buah Segar</string>
-    <string name="sayuran">Sayuran</string>
-    <string name="organik">Organik</string>
-    <string name="daging">Daging</string>
-    <string name="rekomendasi_produk">Rekomendasi Produk</string>
-    <string name="nama_produk">Nama Produk</string>
-    <string name="rincian_produk">Rincian Produk</string>
-    <string name="penilaian_produk">Penilaian Produk</string>
-    <string name="beli">Beli</string>
-    <string name="pemesanan">Pemesanan</string>
-    <string name="nominal_pembelian">Nominal Pembelian</string>
-    <string name="total_biaya">Total Biaya</string>
-    <string name="rp_2_000">Rp. 2.000</string>
-    <string name="nominal_pulsa">Nominal pulsa</string>
-    <string name="saldo_rp_500_000_00">Saldo Rp.500.000,00 </string>
-    <string name="masukan_pin_anda">Masukan Pin Anda</string>
-    <string name="pembayaran_pin_caption">Masukkan Pin keamanan Anda untuk melanjutkan proses pembayaran</string>
-    <string name="terima_kasih">Terima Kasih</string>
-    <string name="caption_pembayaran_berhasil">Pembelian pulsa berhasil diterima dan akan segera dikirimkan nomor Anda</string>
-    <string name="tanggal_pembayaran">Tanggal pembayaran</string>
-    <string name="gudang_voucher">Gudang Voucher</string>
-    <string name="plus_enam_dua">+62</string>
-    <string name="format_phone_wrong">*Nomor telepon yang Anda masukkan tidak valid</string>
-    <string name="format_phone_used">*Nomor telepon yang Anda masukkan telah digunakan</string>
-    <string name="masukan_otp_anda">Masukkan Kode OTP</string>
-    <string name="otp_caption">Lakukan verifikasi sesuai dengan kode yang telah dikirim ke nomor telepon yang didaftarkan.</string>
-    <string name="format_phone_emtpy">*Nomor telepon tidak boleh kosong</string>
-    <string name="username_space">*Username tidak boleh mengandung spasi</string>
-    <string name="status">Status</string>
-    <string name="berhasil">Berhasil</string>
-    <string name="kembali">Kembali</string>
-    <string name="pin_error_caption">*Pin yang anda masukan tidak valid</string>
-    <string name="caption_pembayaran_barang_berhasil">Pemesanan berhasil diterima dan akan segera dikirimkan ke alamat rumah Anda</string>
-
-    <string-array name="data_rekomendasi_nama_produk">
-        <item>Soto Betawi</item>
-        <item>Pecel Lele</item>
-        <item>Ayam Geprek</item>
-        <item>Sate Ayam</item>
-    </string-array>
-
-    <string-array name="data_rekomendasi_harga_produk">
-        <item>20.000,00</item>
-        <item>25.000,00</item>
-        <item>15.000,00</item>
-        <item>30.000,00</item>
-    </string-array>
-
-    <string-array name="data_rekomendasi_deskripsi_produk">
-        <item>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the</item>
-        <item>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the</item>
-        <item>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the</item>
-        <item>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. Lorem ipsum is placeholder text commonly used in the</item>
-    </string-array>
-
-    <string-array name="data_rekomendasi_icon_nilai_produk">
-        <item>@drawable/ic_bintang_empat</item>
-        <item>@drawable/ic_bintang_lima</item>
-        <item>@drawable/ic_bintang_tiga</item>
-        <item>@drawable/ic_bintang_lima</item>
-    </string-array>
-
-    <string-array name="data_rekomendasi_nilai_produk">
-        <item>4.2</item>
-        <item>4.8</item>
-        <item>3.5</item>
-        <item>4.6</item>
-    </string-array>
-
-    <string-array name="data_rekomendasi_produk_terjual">
-        <item>726 kali terjual</item>
-        <item>521 kali terjual</item>
-        <item>585 kali terjual</item>
-        <item>893 kali terjual</item>
-    </string-array>
-
-    <string-array name="data_rekomendasi_foto_produk">
-        <item>@drawable/soto_betawi</item>
-        <item>@drawable/soto_betawi</item>
-        <item>@drawable/soto_betawi</item>
-        <item>@drawable/soto_betawi</item>
-    </string-array>
-
-    <string-array name="list_pertanyaan_bantuan">
-        <item>Anda dapat membuat akun dengan mengikuti langkah-langkah pendaftaran yang sederhana di aplikasi.</item>
-        <item>Anda dapat mengatur profil Anda dengan masuk ke menu pengaturan dan memilih opsi "Profil."</item>
-        <item> </item>
-        <item> </item>
-        <item> </item>
-        <item> </item>
-        <item> </item>
-    </string-array>
-
-    <string-array name="list_jawaban_bantuan">
-        <item>Bagaimana cara membuat akun di aplikasi ini?</item>
-        <item>Bagaimana cara mengatur profil saya?</item>
-        <item>Apakah data pribadi saya aman di dalam aplikasi ini?</item>
-        <item>Apa yang harus dilakukan jika saya mengalami masalah teknis?</item>
-        <item>Apakah aplikasi ini memerlukan koneksi internet?</item>
-        <item>Apakah aplikasi ini gratis digunakan?</item>
-        <item>Apa yang harus saya lakukan jika lupa kata sandi akun saya?</item>
-    </string-array>
+    <string name="password_wrong">Kata sandi yang anda masukan kurang dari 6 karakter</string>
+    <string name="email_wrong">Email yang anda masukan tidak valid</string>
 </resources>

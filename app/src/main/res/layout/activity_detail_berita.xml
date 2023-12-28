@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintTop_toBottomOf="@id/appBarLayout"
+    android:background="#F6F7F9"
+    tools:context=".ui.pesona.DetailBeritaActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:liftOnScroll="true">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_anchor="@+id/appBarLayout"
+                app:layout_anchorGravity="center"
+                app:title="Berita Desa"
+                app:titleCentered="true"
+                app:titleTextColor="?attr/colorOnPrimary"
+                app:titleTextAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:navigationIcon="@drawable/baseline_arrow_back_24"
+                app:navigationIconTint="@color/white"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ImageView
+            android:id="@+id/gambar_detail_berita"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@drawable/rounded_shape"
+            app:layout_constraintBottom_toTopOf="@id/judul_card_berita_detail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/judul_card_berita_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/nunito_bold"
+            android:lineHeight="28sp"
+            android:text="@string/nama_berita"
+            android:textColor="#40A752"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gambar_detail_berita" />
+
+        <ImageView
+            android:id="@+id/icon_admin"
+            android:layout_width="14dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/judul_card_berita_detail"
+            app:srcCompat="@drawable/admin" />
+
+        <ImageView
+            android:id="@+id/icon_waktu"
+            android:layout_width="14dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icon_admin"
+            app:srcCompat="@drawable/date" />
+
+        <ImageView
+            android:id="@+id/icon_pelihat"
+            android:layout_width="14dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/icon_waktu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/viewers" />
+
+        <TextView
+            android:id="@+id/admin_desa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/admin_desa"
+            android:textColor="#8A94A6"
+            android:textSize="12sp"
+            android:fontFamily="@font/nunito_regular"
+            android:lineHeight="16sp"
+            app:layout_constraintStart_toEndOf="@+id/icon_admin"
+            app:layout_constraintTop_toBottomOf="@+id/judul_card_berita_detail" />
+
+        <TextView
+            android:id="@+id/tgl_berita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/tgl_berita"
+            android:textColor="#8A94A6"
+            android:textSize="12sp"
+            android:fontFamily="@font/nunito_regular"
+            android:lineHeight="16sp"
+            app:layout_constraintStart_toEndOf="@+id/icon_waktu"
+            app:layout_constraintTop_toBottomOf="@+id/admin_desa" />
+
+        <TextView
+            android:id="@+id/pelihat_berita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/pelihat_berita"
+            android:textColor="#8A94A6"
+            android:textSize="12sp"
+            android:fontFamily="@font/nunito_regular"
+            android:lineHeight="16sp"
+            app:layout_constraintStart_toEndOf="@+id/icon_pelihat"
+            app:layout_constraintTop_toBottomOf="@+id/tgl_berita" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/materialDivider2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pelihat_berita">
+
+        </com.google.android.material.divider.MaterialDivider>
+
+        <TextView
+            android:id="@+id/desc_berita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/nunito_regular"
+            android:gravity="top"
+            android:lineHeight="16sp"
+            android:text="@string/lorem_ipsum"
+            android:textAlignment="gravity"
+            android:textColor="#667085"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialDivider2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

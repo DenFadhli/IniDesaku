@@ -32,12 +32,12 @@ object Tvcc {
     )
 
     val thumnailGambar = arrayListOf(
-        "https://picsum.photos/300",
-        "https://picsum.photos/200",
-        "https://picsum.photos/400",
-        "https://picsum.photos/600",
-        "https://picsum.photos/700",
-        "https://picsum.photos/210",
+        "https://picsum.photos/360/240",
+        "https://picsum.photos/360/250",
+        "https://picsum.photos/360/260",
+        "https://picsum.photos/360/270",
+        "https://picsum.photos/360/255",
+        "https://picsum.photos/360/245",
     )
 
     val urlVideo = arrayListOf(

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Widget.Material3.BottomSheet"
+    android:background="@drawable/layout_rounded_top_white_bg"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+        android:id="@+id/drag_handle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="20dp">
+
+        <TextView
+            android:id="@+id/tv_nama_donatur"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/nama_donatur"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ic_close"
+            android:layout_width="10dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_nama_donatur"
+            app:layout_constraintTop_toTopOf="@id/tv_nama_donatur"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/cross_icon"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_nama_donasi"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/masukkan_nama_anda"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/font200"
+            app:boxStrokeWidth="1dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_nama_donatur"
+            app:layout_constraintStart_toStartOf="@+id/tv_nama_donatur"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nama_donatur">
+
+            <com.citiasia.inidesakubeta.ui.customView.CustomInputEditText
+                android:id="@+id/tv_nama_donasi"
+                style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textColor="@color/font400" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkBox"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/donasi_sebagai_anonim"
+            app:buttonTint="@color/font200"
+            android:backgroundTint="@color/primary500"
+            app:layout_constraintEnd_toEndOf="@+id/layout_nama_donasi"
+            app:layout_constraintStart_toStartOf="@+id/layout_nama_donasi"
+            app:layout_constraintTop_toBottomOf="@+id/layout_nama_donasi" />
+
+        <TextView
+            android:id="@+id/tv_nominal_donasi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/masukkan_nominal_donasi"
+            app:layout_constraintEnd_toEndOf="@+id/checkBox"
+            app:layout_constraintStart_toStartOf="@+id/checkBox"
+            app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_nominal_donasi"
+            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/rp"
+            android:layout_marginTop="16dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:boxStrokeColor="@color/font200"
+            app:boxStrokeWidth="1dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_nominal_donasi"
+            app:layout_constraintStart_toStartOf="@+id/tv_nominal_donasi"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nominal_donasi">
+
+            <com.citiasia.inidesakubeta.ui.customView.CustomInputEditText
+                android:id="@+id/text_nominal_donasi"
+                style="@style/Theme.IniDesakuBeta.TextView.Regular14.400"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textColor="@color/font400" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_minimal_donasi"
+            style="@style/Theme.IniDesakuBeta.Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/minimal_donasi_rp_5000_00"
+            app:layout_constraintEnd_toEndOf="@+id/layout_nominal_donasi"
+            app:layout_constraintStart_toStartOf="@+id/layout_nominal_donasi"
+            app:layout_constraintTop_toBottomOf="@+id/layout_nominal_donasi" />
+
+        <TextView
+            android:id="@+id/tv_pilih_donasi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/atau_pilih_jumlah_donasi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_minimal_donasi" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDonation5000"
+            style="?attr/materialIconButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Rp 5.000"
+            app:cornerRadius="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/btnDonation10000"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/tv_pilih_donasi"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pilih_donasi"
+            app:layout_constraintWidth_percent="0.5"
+            app:strokeColor="@color/primary500" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDonation10000"
+            style="?attr/materialIconButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Rp 10.000"
+            app:cornerRadius="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_pilih_donasi"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pilih_donasi"
+            app:layout_constraintWidth_percent="0.5"
+            app:strokeColor="@color/primary500" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDonation15000"
+            style="?attr/materialIconButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="6dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Rp 15.000"
+            app:cornerRadius="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/btnDonation20000"
+            app:layout_constraintStart_toStartOf="@+id/btnDonation5000"
+            app:layout_constraintTop_toBottomOf="@+id/btnDonation5000"
+            app:strokeColor="@color/primary500"
+            app:layout_constraintWidth_percent="0.5"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDonation20000"
+            style="?attr/materialIconButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="6dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Rp 20.000"
+            app:cornerRadius="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnDonation10000"
+            app:layout_constraintTop_toBottomOf="@+id/btnDonation10000"
+            app:strokeColor="@color/primary500"
+            app:layout_constraintWidth_percent="0.5"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDonation25000"
+            style="?attr/materialIconButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="6dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Rp 25.000"
+            app:cornerRadius="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/btnDonation50000"
+            app:layout_constraintStart_toStartOf="@+id/btnDonation15000"
+            app:layout_constraintTop_toBottomOf="@+id/btnDonation15000"
+            app:strokeColor="@color/primary500"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDonation50000"
+            style="?attr/materialIconButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="6dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="Rp 50.000"
+            app:cornerRadius="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnDonation20000"
+            app:layout_constraintTop_toBottomOf="@+id/btnDonation20000"
+            app:strokeColor="@color/primary500"
+            app:layout_constraintWidth_percent="0.5"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_donasi_sheet"
+            style="@style/Theme.IniDesakuBeta.Button."
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Donasi"
+            android:textAllCaps="false"
+            android:enabled="false"
+            app:cornerRadius="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/btnDonation50000"
+            app:layout_constraintStart_toStartOf="@+id/btnDonation25000"
+            app:layout_constraintTop_toBottomOf="@+id/btnDonation25000"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

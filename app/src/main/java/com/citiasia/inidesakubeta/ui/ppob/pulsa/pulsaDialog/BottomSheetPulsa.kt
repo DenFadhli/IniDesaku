@@ -53,7 +53,6 @@ class BottomSheetPulsa : BottomSheetDialogFragment() {
 
         mBtnBayar.setOnClickListener {
             val intent = Intent(requireActivity(), KonfirmasiActivity::class.java)
-            intent.putExtra("PIN_PAGE", "PULSA")
             startActivity(intent)
             this@BottomSheetPulsa.dismiss()
         }
