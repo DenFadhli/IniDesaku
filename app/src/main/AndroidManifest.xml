@@ -16,6 +16,32 @@
         android:theme="@style/Theme.IniDesakuBeta"
         tools:targetApi="31">
         <activity
+            android:name=".DetailPotensiFisikActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailBudayaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailWisataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.UbahFotoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailBeritaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CariDesaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PesonaDesaActivity"
+            android:exported="false"
+            android:label="@string/title_activity_pesona_desa"
+            android:theme="@style/Theme.IniDesakuBeta.NoActionBar" />
+        <activity
             android:name=".ui.pengaturanPin.PengaturanPinActivity"
             android:exported="false"
             android:label="@string/title_activity_pengaturan_pin"
@@ -45,10 +71,10 @@
             android:name=".ui.ppob.pulsa.PulsaActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.HomeActivity"
+            android:name=".ui.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

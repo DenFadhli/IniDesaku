@@ -3,6 +3,8 @@ package com.citiasia.inidesakubeta.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.citiasia.inidesakubeta.BerandaFragment
+import com.citiasia.inidesakubeta.ProfilDesaFragment
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.ActivityHomeBinding
 import com.citiasia.inidesakubeta.ui.ppob.PpobFragment
@@ -27,12 +29,14 @@ class HomeActivity : AppCompatActivity() {
         binding.bottomNavigation.setOnItemSelectedListener {
             when(it.itemId) {
                 R.id.beranda -> {
+                    replaceFragment(BerandaFragment())
                     binding.topAppBar.setTitle("IniDesaku")
                 }
                 R.id.geo -> {
                     binding.topAppBar.setTitle("Geospacial")
                 }
                 R.id.profileDesa -> {
+                    replaceFragment(ProfilDesaFragment())
                     binding.topAppBar.setTitle("Profile Desa")
                 }
                 R.id.ppob -> {

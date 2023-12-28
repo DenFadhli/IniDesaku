@@ -118,7 +118,6 @@ class PpobFragment : Fragment() {
             btnTopUp.setOnClickListener {
                 startActivity(Intent(requireActivity(), TvccActivity::class.java))
             }
-
             btnTelkom.setOnClickListener {
                 toTelkomActivity()
             }
