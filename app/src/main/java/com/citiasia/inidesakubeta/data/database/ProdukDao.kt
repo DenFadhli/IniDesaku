@@ -28,7 +28,7 @@ interface ProdukDao {
     @Query("SELECT * FROM produk WHERE namaProduk = :namaProduk")
     fun getProdukByName(namaProduk: String): Produk?
 
-    @Query("SELECT * FROM produk")
+    @Query("SELECT * FROM produk ORDER BY id DESC")
     fun getAllProducts(): LiveData<List<Produk>>
 
     @Query("DELETE FROM produk WHERE namaProduk = :namaProduk")

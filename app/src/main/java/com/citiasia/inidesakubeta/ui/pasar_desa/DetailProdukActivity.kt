@@ -3,21 +3,26 @@ package com.citiasia.inidesakubeta.ui.pasar_desa
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.data.database.Produk
+import com.citiasia.inidesakubeta.data.remote.model.PenilaianUserModel
 import com.citiasia.inidesakubeta.databinding.ActivityDetailProdukBinding
 import com.citiasia.inidesakubeta.model.RekomendasiProdukDummy
 import com.citiasia.inidesakubeta.ui.ViewModelFactorySign
+import com.citiasia.inidesakubeta.ui.adapter.ListRekomendasiProdukAdapter
+import com.citiasia.inidesakubeta.ui.adapter.PenilaianUserAdapter
 import com.citiasia.inidesakubeta.ui.konfirmasi.KonfirmasiActivity
 import com.citiasia.inidesakubeta.utils.DataJenisPembayaranPreference
 import com.google.android.material.button.MaterialButton
@@ -31,6 +36,8 @@ class DetailProdukActivity : AppCompatActivity() {
     private var produk: Produk? = null
     private var encounter = 1
     private lateinit var pref: DataJenisPembayaranPreference
+    private lateinit var rvPenilaianUser: RecyclerView
+    private val userPenilaianList = ArrayList<PenilaianUserModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,10 +47,15 @@ class DetailProdukActivity : AppCompatActivity() {
         val vmFactory = ViewModelFactorySign.getInstance(application)
         pasarDesaViewModel = ViewModelProvider(this, vmFactory)[PasarDesaViewModel::class.java]
         pref = DataJenisPembayaranPreference((this))
+        rvPenilaianUser = binding.rvPenilaianUser
+        userPenilaianList.addAll(getPenilaianUser())
+        showRecyclerList()
+
+        binding.topAppBar.setNavigationOnClickListener {
+            onBackPressed()
+        }
 
         var dataRekomendasiProduk = intent.getParcelableExtra<RekomendasiProdukDummy>("key_item")!!
-        val productName = intent.getStringExtra("product_name")
-        Log.d("Punya Detail", productName.toString())
 
         binding.ivDetailProduk.setImageResource(dataRekomendasiProduk.fotoProduk)
         binding.ivIconRating.setImageResource(dataRekomendasiProduk.iconNilaiProduk)
@@ -53,16 +65,7 @@ class DetailProdukActivity : AppCompatActivity() {
         binding.tvProdukTerjual.text = dataRekomendasiProduk.produkTerjual
         binding.tvDetailRincianProduk.text = dataRekomendasiProduk.deskripsiProduk
 
-//        binding.ivDetailProduk.setImageResource(dataRekomendasiProduk.fotoProduk)
-//        binding.ivIconRating.setImageResource(dataRekomendasiProduk.iconNilaiProduk)
-//        binding.tvNamaProduk.text = dataRekomendasiProduk.namaProduk
-//        binding.tvHargaProduk.text = "Rp. " + dataRekomendasiProduk.hargaProduk
-//        binding.textRating.text = dataRekomendasiProduk.nilaiProduk
-//        binding.tvProdukTerjual.text = dataRekomendasiProduk.produkTerjual
-//        binding.tvDetailRincianProduk.text = dataRekomendasiProduk.deskripsiProduk
-
         binding.btnBeli.setOnClickListener {
-
             binding.scrollPage.background = ColorDrawable(Color.parseColor("#77000000"))
             binding.containerImageProduct.foreground = ColorDrawable(Color.parseColor("#77000000"))
 
@@ -127,6 +130,25 @@ class DetailProdukActivity : AppCompatActivity() {
             intent.putExtra("key_item", dataRekomendasiProduk)
             startActivity(intent)
         }
+    }
+
+    private fun getPenilaianUser(): ArrayList<PenilaianUserModel> {
+        val dataFotoUser = resources.obtainTypedArray(R.array.user_foto_rating_ulasan_produk)
+        val dataNilaiUser = resources.obtainTypedArray(R.array.user_icon_rating_ulasan_produk)
+        val dataNamaUser = resources.getStringArray(R.array.user_name_rating_ulasan_produk)
+        val dataUlasanUser = resources.getStringArray(R.array.user_ulasan_produk)
+        val listData = ArrayList<PenilaianUserModel>()
+        for (i in dataNamaUser.indices) {
+            val data = PenilaianUserModel(dataFotoUser.getResourceId(i, -1), dataNilaiUser.getResourceId(i, -1), dataNamaUser[i], dataUlasanUser[i])
+            listData.add(data)
+        }
+        return listData
+    }
+
+    private fun showRecyclerList() {
+        rvPenilaianUser.layoutManager = LinearLayoutManager(this)
+        val listPenilaianUserAdapter = PenilaianUserAdapter(userPenilaianList)
+        rvPenilaianUser.adapter = listPenilaianUserAdapter
     }
 
 }

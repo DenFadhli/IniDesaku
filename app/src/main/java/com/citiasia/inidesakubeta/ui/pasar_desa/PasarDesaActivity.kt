@@ -8,6 +8,7 @@ import android.view.MenuItem
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.citiasia.inidesakubeta.R
+import com.citiasia.inidesakubeta.data.remote.model.PenilaianUserModel
 import com.citiasia.inidesakubeta.databinding.ActivityPasarDesaBinding
 import com.citiasia.inidesakubeta.model.RekomendasiProdukDummy
 import com.citiasia.inidesakubeta.ui.adapter.ListRekomendasiProdukAdapter
@@ -26,6 +27,21 @@ class PasarDesaActivity : AppCompatActivity() {
 
         rvItemPasarDesa = binding.rvListContent
         rvItemPasarDesa.setHasFixedSize(true)
+
+        binding.topAppBar.setNavigationOnClickListener {
+            onBackPressed()
+        }
+
+        binding.topAppBar.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.menu_keranjang -> {
+                    val intent = Intent(this, KeranjangActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+            }
+        }
 
         list.addAll(getListProduk())
         showRecyclerList()
@@ -51,27 +67,6 @@ class PasarDesaActivity : AppCompatActivity() {
         rvItemPasarDesa.layoutManager = GridLayoutManager(this, 2)
         val listProdukAdapter = ListRekomendasiProdukAdapter(list)
         rvItemPasarDesa.adapter = listProdukAdapter
-
-//        listHeroAdapter.setOnItemClickCallback(object : ListRekomendasiProdukAdapter.OnItemClickCallback {
-//            override fun onItemClicked(data: RekomendasiProdukDummy) {
-//                showSelectedHero(data)
-//            }
-//        })
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.nav_bar_shoping_cart, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.menu_keranjang -> {
-                    val intent = Intent(this, KeranjangActivity::class.java)
-                    startActivity(intent)
-                true
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
 }

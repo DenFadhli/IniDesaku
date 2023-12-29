@@ -14,11 +14,6 @@ import com.citiasia.inidesakubeta.ui.pasar_desa.DetailProdukActivity
 
 
 class ListRekomendasiProdukAdapter(private val listRekomendasiProduk: ArrayList<RekomendasiProdukDummy>) : RecyclerView.Adapter<ListRekomendasiProdukAdapter.ListViewHolder>() {
-//    private lateinit var onItemClickCallback: OnItemClickCallback
-//
-//    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
-//        this.onItemClickCallback = onItemClickCallback
-//    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_pasar_desa, parent, false)
@@ -57,8 +52,4 @@ class ListRekomendasiProdukAdapter(private val listRekomendasiProduk: ArrayList<
         val iconNilaiProduk: ImageView = itemView.findViewById(R.id.iconNilaiProduk)
         val tvProdukTerjual: TextView = itemView.findViewById(R.id.textTerjual)
     }
-
-//    interface OnItemClickCallback {
-//        fun onItemClicked(data: RekomendasiProdukDummy)
-//    }
 }

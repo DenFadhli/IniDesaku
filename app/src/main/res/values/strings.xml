@@ -356,10 +356,10 @@
     </string-array>
 
     <string-array name="data_rekomendasi_deskripsi_produk">
-        <item>Soto Betawi adalah soto khas Betawi yang terdiri dari campuran daging dan jerohan sapi dan kuah santan kental sehingga terasa gurih dan nikmat. 1) Sebagai appetizer artinya sebagai hidangan pembuka untuk membangkitkan selera makan. 2) Sebagai side dish yaitu sebagai hidangan penyerta.</item>
-        <item>Nasi campur (Nasi Rames) adalah salah satu hidangan khas Suku Jawa. yang terdiri atas nasi putih yang dihidangkan dengan bermacam-macam lauk. Lauk yang digunakan diantaranya sambal goreng, abon, serundeng, tahu goreng, ikan goreng, telur, ayam goreng, dan lain-lain.</item>
-        <item>Baik Anda menikmati matahari musim panas sendirian atau menghibur teman di luar ruangan, perabot luar ruang adalah suatu keharusan. Ambil Kursi Taman Kayu Jati Minimalis Terbaru ini sebagai contoh: dirancang untuk hidup di luar ruangan, dibuat dari kayu jati tahan cuaca yang tidak keberatan sinar UV berseri-seri atau hujan badai menggelinding, sehingga sangat cocok untuk ditempatkan di teras Anda. Selain itu, ia memberikan pesona tradisional pada ansambel Anda dengan lengan melengkung dan kursi berlubang yang semuanya belum selesai untuk penampilan alami.</item>
-        <item>Kaca Cermin Aesthetic Mirror adalah sebuah produk kaca hasil turunan dari glass industry yang menarik untuk dibahas. Selain daripada fungsi untuk bercermin, Kaca Cermin Aesthetic Mirror juga merupakan jenis kaca cermin yang dekorasi yang dapat membuat interior kalian lebih mewah dan memiliki nilai desain yang baik.</item>
+        <item>Soto Betawi adalah soto khas Betawi yang terdiri dari campuran daging dan jerohan sapi dan kuah santan kental sehingga terasa gurih dan nikmat.</item>
+        <item>Nasi campur terdiri atas nasi putih yang dihidangkan dengan sambal goreng, abon, serundeng, tahu goreng, ikan goreng, telur, ayam goreng, dan lain-lain.</item>
+        <item>Kursi Taman Kayu Jati Minimalis Terbaru ini memberikan pesona tradisional pada ansambel Anda dengan lengan melengkung dan kursi berlubang yang semuanya belum selesai untuk penampilan alami.</item>
+        <item>Kaca Cermin Aesthetic Mirror, dekorasi yang dapat membuat interior kalian lebih mewah dan memiliki nilai desain yang baik.</item>
         <item>Terbuat dari material premium dan antislit yang lembut dan ringan. Dilengkapi dengan pilihan warna-warna cantik dan motif yang terinspirasi dari stilasi pattern Jepang seperti bambu dan bunga membuat sajadah travel size ini memiliki tampilan yang ekslusif.</item>
         <item>THERMOMETER DIGITAL merupakan alat pengukur suhu tubuh. Termometer ini menyatakan suhu tubuh dengan angka pada layarnya sehingga penggunaannya praktis dan mudah.</item>
     </string-array>
@@ -398,5 +398,41 @@
         <item>74 kali terjual</item>
         <item>68 kali terjual</item>
         <item>51 kali terjual</item>
+    </string-array>
+
+    <string-array name="user_name_rating_ulasan_produk">
+        <item>Jennie Ruby Jane</item>
+        <item>David Beckham</item>
+        <item>Ana De armas</item>
+        <item>Martin Odeegard</item>
+        <item>Bukayo Saka</item>
+        <item>Arsene Wenger</item>
+    </string-array>
+
+    <string-array name="user_foto_rating_ulasan_produk">
+        <item>@drawable/user_avatar_ulasan</item>
+        <item>@drawable/user_avatar_ulasan_dua</item>
+        <item>@drawable/user_avatar_ulasan</item>
+        <item>@drawable/user_avatar_ulasan_dua</item>
+        <item>@drawable/user_avatar_ulasan_dua</item>
+        <item>@drawable/user_avatar_ulasan_dua</item>
+    </string-array>
+
+    <string-array name="user_icon_rating_ulasan_produk">
+        <item>@drawable/ic_bintang_empat</item>
+        <item>@drawable/ic_bintang_empat</item>
+        <item>@drawable/ic_bintang_lima</item>
+        <item>@drawable/ic_bintang_empat</item>
+        <item>@drawable/ic_bintang_lima</item>
+        <item>@drawable/ic_bintang_lima</item>
+    </string-array>
+
+    <string-array name="user_ulasan_produk">
+        <item>Pesanan sesuai dengan yang di foto, harga bersahabat, tapi kualitas nya biasa aja menurut aku, jadi maaf belum aku kasih bintang 5 ya</item>
+        <item>Lumayanlah untuk pesanannya, sesuai dengan harganya, pengiriman juga lumayan cepet, bintang 4 sih dari aku</item>
+        <item>Harga sesuai dengan pesanan, sangat worth it to buy, recommended buat yang lagi kebingungan mau pesan apa</item>
+        <item>Pengiriman lumayan lama, tapi kualitas nya sesuai dengan harganya, pesanan tidak terlalu mirip dengan yang di foto</item>
+        <item>Keren sih ini, dapet pesanan dengan kualitas yang sesuai dengan ekspetasi</item>
+        <item>Sesuai sama ekspetasi, akhirnya dapet pesanan yang dicari cari, sangat merekomendasikan buat yang mau beli pesanan ini juga</item>
     </string-array>
 </resources>

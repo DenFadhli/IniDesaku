@@ -1,18 +1,14 @@
 package com.citiasia.inidesakubeta.ui.pasar_desa
 
 import android.app.Application
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.citiasia.inidesakubeta.data.database.Produk
 import com.citiasia.inidesakubeta.data.repo.ProdukRepository
-import com.citiasia.inidesakubeta.model.RekomendasiProdukDummy
 
 class PasarDesaViewModel(application: Application) : ViewModel() {
 
     private val mProdukRepository: ProdukRepository = ProdukRepository(application)
-    private val mKeranjangProduk: MutableLiveData<Produk> = MutableLiveData()
 
     fun insertUser(produk: Produk) {
         mProdukRepository.insertProduk(produk)

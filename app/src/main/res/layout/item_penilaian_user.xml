@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/container_avatar"
@@ -15,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/iv_user_avatar"
+            android:id="@+id/iv_user_avatar_penilaian"
             android:layout_width="26dp"
             android:layout_height="26dp"
             android:layout_gravity="center"
@@ -44,17 +45,18 @@
             android:textFontWeight="600" />
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/iv_rating_user_penilaian"
+            android:layout_width="50dp"
+            android:layout_height="10dp"
             android:src="@drawable/ic_bintang_lima"
             android:layout_gravity="start"
             android:layout_marginTop="4dp" />
 
         <TextView
-            android:id="@+id/tv_user_penilaian_produk"
+            android:id="@+id/tv_ulasan_user_penilaian"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+            android:text="Pesanan sesuai dengan yang di foto, harga bersahabat, tapi kualitas nya biasa aja menurut aku, jadi maaf belum aku kasih bintang 5 ya"
             android:textColor="@color/font500"
             android:textSize="12sp"
             android:fontFamily="@font/nunito_regular"

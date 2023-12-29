@@ -6,6 +6,7 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.PopupWindow
@@ -40,23 +41,33 @@ class KeranjangActivity : AppCompatActivity(), OnItemCheckedListener {
     private lateinit var hargaPembayaran: String
     private lateinit var pasarDesaViewModel: PasarDesaViewModel
     private lateinit var pref: DataJenisPembayaranPreference
-    private lateinit var listRekomendasiProduk: ArrayList<RekomendasiProdukDummy>
-//    private lateinit var dataFromDetail: Produk
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityKeranjangBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.topAppBar.setNavigationOnClickListener {
+            onBackPressed()
+        }
+
         val vmFactory = ViewModelFactorySign.getInstance(application)
         pasarDesaViewModel = ViewModelProvider(this, vmFactory)[PasarDesaViewModel::class.java]
         pref = DataJenisPembayaranPreference((this))
 
-        rvKeranjangPasarDesa = binding.rvKeranjang
-        rvKeranjangPasarDesa.setHasFixedSize(true)
+        pasarDesaViewModel.allProducts.observe(this) { products ->
+           if (products != null && products.isNotEmpty()) {
+               binding.productEmpty.visibility = View.GONE
+               rvKeranjangPasarDesa = binding.rvKeranjang
+               rvKeranjangPasarDesa.setHasFixedSize(true)
 
-        getListRiwayat()
-        showRecyclerList()
+               getListRiwayat()
+               showRecyclerList()
+           } else {
+               binding.productEmpty.visibility = View.VISIBLE
+           }
+        }
+
         setInitialButtonListeners()
     }
 
@@ -183,7 +194,7 @@ class KeranjangActivity : AppCompatActivity(), OnItemCheckedListener {
 
     private fun showRecyclerList() {
         rvKeranjangPasarDesa.layoutManager = LinearLayoutManager(this)
-        val adapter = KeranjangProdukAdapter(list, pasarDesaViewModel, this,)
+        val adapter = KeranjangProdukAdapter(list, pasarDesaViewModel, this)
         rvKeranjangPasarDesa.adapter = adapter
         adapter.setOnItemClickCallback(object : KeranjangProdukAdapter.OnItemClickCallback{
             override fun onItemClicked(data: KeranjangProdukDummy) {
