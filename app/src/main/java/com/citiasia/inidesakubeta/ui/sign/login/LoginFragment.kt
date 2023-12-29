@@ -14,8 +14,7 @@ import androidx.navigation.fragment.findNavController
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.data.remote.model.LoginData
 import com.citiasia.inidesakubeta.databinding.FragmentLoginBinding
-import com.citiasia.inidesakubeta.ui.ViewModelFactory
-import com.citiasia.inidesakubeta.ui.tvcc.tvccHome.TvccFrontFragment
+import com.citiasia.inidesakubeta.ui.ViewModelFactorySign
 import com.citiasia.inidesakubeta.utils.LoginPreference
 import kotlin.properties.Delegates
 
@@ -46,7 +45,7 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val vmFactory = ViewModelFactory.getInstance(requireActivity().application)
+        val vmFactory = ViewModelFactorySign.getInstance(requireActivity().application)
         loginViewModel = ViewModelProvider(
             requireActivity(),
             vmFactory
@@ -173,10 +172,7 @@ class LoginFragment : Fragment() {
                     }
 
                 } else {
-                    binding.btnLogin.post {
-                        binding.btnLogin.isEnabled = false
-                    }
-                    Toast.makeText(requireContext(), "Login gagal, cek kembali username dan password Anda", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Login gagal. Akun tidak ditemukan, silahkan Buat Akun terlebih dahulu", Toast.LENGTH_SHORT).show()
                 }
             }
         }

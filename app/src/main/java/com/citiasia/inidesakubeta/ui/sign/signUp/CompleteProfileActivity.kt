@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.citiasia.inidesakubeta.data.database.User
 import com.citiasia.inidesakubeta.data.remote.model.LoginData
 import com.citiasia.inidesakubeta.databinding.ActivityCompleteProfileBinding
-import com.citiasia.inidesakubeta.ui.ViewModelFactory
+import com.citiasia.inidesakubeta.ui.ViewModelFactorySign
 import com.citiasia.inidesakubeta.ui.pilihWilayah.PilihWilayahActivity
 import com.citiasia.inidesakubeta.utils.LoginPreference
 import kotlin.properties.Delegates
@@ -41,7 +41,7 @@ class CompleteProfileActivity : AppCompatActivity() {
         _binding = ActivityCompleteProfileBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        val vmFactory = ViewModelFactory.getInstance(application)
+        val vmFactory = ViewModelFactorySign.getInstance(application)
         completeProfileViewModel = ViewModelProvider(this, vmFactory)[CompleteProfileViewModel::class.java]
 
         phoneNumber = intent.getStringExtra("PHONE_NUMBER").toString()

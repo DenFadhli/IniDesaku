@@ -12,6 +12,7 @@ import com.citiasia.inidesakubeta.databinding.FragmentBerandaBinding
 import com.citiasia.inidesakubeta.ui.desa.kegiatan_desa.KegiatanActivity
 import com.citiasia.inidesakubeta.ui.desa.pelayanan_desa.list.PelayananDesaActivity
 import com.citiasia.inidesakubeta.ui.donasi.list.DonasiActivity
+import com.citiasia.inidesakubeta.ui.pasar_desa.PasarDesaActivity
 import com.citiasia.inidesakubeta.ui.produk_unggulan.list.ProdukUnggulanActivity
 import com.citiasia.inidesakubeta.ui.tvcc.TvccActivity
 import com.denzcoskun.imageslider.ImageSlider
@@ -72,7 +73,10 @@ class BerandaFragment : Fragment() {
             btnProdukUnggulan.setOnClickListener {
                 startActivity(Intent(requireActivity(), ProdukUnggulanActivity::class.java))
             }
-            btnPasarDesa.setOnClickListener {}
+            btnPasarDesa.setOnClickListener {
+                val intent = Intent(requireActivity(), PasarDesaActivity::class.java)
+                startActivity(intent)
+            }
             btnKoperasi.setOnClickListener {}
         }
     }

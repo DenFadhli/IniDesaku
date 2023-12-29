@@ -1,16 +1,12 @@
 package com.citiasia.inidesakubeta.ui.pasar_desa
 
-import PasarDesaViewModel
 import android.content.Intent
-import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.TextView
@@ -21,11 +17,9 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.citiasia.inidesakubeta.R
-import com.citiasia.inidesakubeta.data.database.Produk
 import com.citiasia.inidesakubeta.databinding.ActivityKeranjangBinding
 import com.citiasia.inidesakubeta.model.KeranjangProdukDummy
-import com.citiasia.inidesakubeta.model.RekomendasiProdukDummy
-import com.citiasia.inidesakubeta.ui.ViewModelFactory
+import com.citiasia.inidesakubeta.ui.ViewModelFactorySign
 import com.citiasia.inidesakubeta.ui.adapter.KeranjangProdukAdapter
 import com.citiasia.inidesakubeta.ui.adapter.OnItemCheckedListener
 import com.citiasia.inidesakubeta.ui.konfirmasi.KonfirmasiActivity
@@ -50,7 +44,7 @@ class KeranjangActivity : AppCompatActivity(), OnItemCheckedListener {
         _binding = ActivityKeranjangBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val vmFactory = ViewModelFactory.getInstance(application)
+        val vmFactory = ViewModelFactorySign.getInstance(application)
         pasarDesaViewModel = ViewModelProvider(this, vmFactory)[PasarDesaViewModel::class.java]
 
         rvKeranjangPasarDesa = binding.rvKeranjang

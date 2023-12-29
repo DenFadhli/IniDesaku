@@ -1,10 +1,8 @@
 package com.citiasia.inidesakubeta.ui.pasar_desa
 
-import PasarDesaViewModel
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.graphics.drawable.GradientDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -19,7 +17,7 @@ import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.data.database.Produk
 import com.citiasia.inidesakubeta.databinding.ActivityDetailProdukBinding
 import com.citiasia.inidesakubeta.model.RekomendasiProdukDummy
-import com.citiasia.inidesakubeta.ui.ViewModelFactory
+import com.citiasia.inidesakubeta.ui.ViewModelFactorySign
 import com.citiasia.inidesakubeta.ui.konfirmasi.KonfirmasiActivity
 import com.google.android.material.button.MaterialButton
 
@@ -37,7 +35,7 @@ class DetailProdukActivity : AppCompatActivity() {
         _binding = ActivityDetailProdukBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val vmFactory = ViewModelFactory.getInstance(application)
+        val vmFactory = ViewModelFactorySign.getInstance(application)
         pasarDesaViewModel = ViewModelProvider(this, vmFactory)[PasarDesaViewModel::class.java]
 
         var dataRekomendasiProduk = intent.getParcelableExtra<RekomendasiProdukDummy>("key_item")!!

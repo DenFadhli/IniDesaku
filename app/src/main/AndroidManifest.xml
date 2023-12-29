@@ -63,12 +63,6 @@
             android:name=".ui.konfirmasi.KonfirmasiActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.profile.UbahFotoActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.profile.ProfileActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.desa.pelayanan_desa.detail.DetailPelayananDesaActivity"
             android:exported="false" />
         <activity
@@ -90,16 +84,13 @@
             android:name=".ui.donasi.detail.DetailDonasiActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.konfirmasi.KonfirmasiActivity"
+            android:name=".ui.pasar_desa.DetailProdukActivity"
             android:exported="false" />
         <activity
             android:name=".ui.pasar_desa.KeranjangActivity"
             android:exported="false" />
         <activity
             android:name=".ui.history.RiwayatTransaksiActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.pasar_desa.DetailProdukActivity"
             android:exported="false" />
         <activity
             android:name=".ui.pasar_desa.PasarDesaActivity"
@@ -141,10 +132,10 @@
             android:name=".ui.ppob.pulsa.PulsaActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.HomeActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

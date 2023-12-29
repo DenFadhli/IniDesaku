@@ -1,6 +1,5 @@
     package com.citiasia.inidesakubeta.ui.adapter
 
-    import PasarDesaViewModel
     import android.content.Intent
     import android.util.Log
     import android.view.LayoutInflater

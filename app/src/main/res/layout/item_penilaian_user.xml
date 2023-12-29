@@ -5,17 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/iv_user_avatar"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:scaleType="centerCrop"
-        android:layout_marginEnd="8dp"
-        app:shapeAppearanceOverlay="@style/customImageView50Percent"
-        tools:src="@tools:sample/backgrounds/scenic"
-        android:contentDescription="@string/image_preview"
-        app:layout_constraintEnd_toStartOf="@+id/user_penilaian_layout"
-        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container_avatar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:cardCornerRadius="80dp"
+        android:backgroundTint="@color/font100"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_user_avatar"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:src="@drawable/user_avatar_ulasan" />
+
+    </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:id="@+id/user_penilaian_layout"
@@ -23,7 +29,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginStart="34dp"
-        app:layout_constraintStart_toEndOf="@+id/iv_user_avatar"
+        app:layout_constraintStart_toEndOf="@+id/container_avatar"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -33,6 +39,7 @@
             android:text="Jennie Ruby Jane"
             android:textColor="@color/font500"
             android:textSize="12sp"
+            android:paddingTop="4dp"
             android:fontFamily="@font/nunito_semibold"
             android:textFontWeight="600" />
 

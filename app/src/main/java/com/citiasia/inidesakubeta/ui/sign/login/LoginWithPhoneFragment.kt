@@ -16,6 +16,7 @@ import com.citiasia.inidesakubeta.data.remote.model.LoginData
 import com.citiasia.inidesakubeta.databinding.FragmentLoginBinding
 import com.citiasia.inidesakubeta.databinding.FragmentLoginWithPhoneBinding
 import com.citiasia.inidesakubeta.ui.ViewModelFactory
+import com.citiasia.inidesakubeta.ui.ViewModelFactorySign
 import com.citiasia.inidesakubeta.ui.tvcc.tvccHome.TvccFrontFragment
 import com.citiasia.inidesakubeta.utils.LoginPreference
 import kotlin.properties.Delegates
@@ -46,7 +47,7 @@ class LoginWithPhoneFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val vmFactory = ViewModelFactory.getInstance(requireActivity().application)
+        val vmFactory = ViewModelFactorySign.getInstance(requireActivity().application)
         loginViewModel = ViewModelProvider(
             requireActivity(),
             vmFactory

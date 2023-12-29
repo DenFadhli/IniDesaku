@@ -14,7 +14,7 @@ import androidx.navigation.fragment.findNavController
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.data.remote.model.SignUpResponse
 import com.citiasia.inidesakubeta.databinding.FragmentSignUpBinding
-import com.citiasia.inidesakubeta.ui.ViewModelFactory
+import com.citiasia.inidesakubeta.ui.ViewModelFactorySign
 import kotlin.properties.Delegates
 
 
@@ -52,7 +52,7 @@ class SignUpFragment : Fragment() {
         binding.textCodePhone.isEnabled = false
         binding.layoutCodePhone.isEnabled = false
 
-        val vmFactory = ViewModelFactory.getInstance(requireActivity().application)
+        val vmFactory = ViewModelFactorySign.getInstance(requireActivity().application)
         signUpViewModel = ViewModelProvider(
             requireActivity(),
             vmFactory
