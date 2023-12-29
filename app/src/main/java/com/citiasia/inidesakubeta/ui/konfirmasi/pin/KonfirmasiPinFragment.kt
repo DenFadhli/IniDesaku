@@ -64,6 +64,8 @@ class KonfirmasiPinFragment : Fragment() {
             pinView.showSuccess()
             if (pref.getData()[0].equals("token")) {
                 findNavController().navigate(R.id.action_konfirmasiPinFragment_to_konfirmasiBerhasilTokenFragment)
+            } else if (pref.getData()[0].equals("Produk")) {
+                findNavController().navigate(R.id.action_konfirmasiPinFragment_to_konfirmasiBarangBerhasilFragment)
             } else {
                 findNavController().navigate(R.id.action_konfirmasiPinFragment_to_konfrimasiBerhasilFragment)
             }

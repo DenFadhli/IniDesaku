@@ -24,6 +24,7 @@ import com.citiasia.inidesakubeta.ui.ViewModelFactorySign
 import com.citiasia.inidesakubeta.ui.adapter.KeranjangProdukAdapter
 import com.citiasia.inidesakubeta.ui.adapter.OnItemCheckedListener
 import com.citiasia.inidesakubeta.ui.konfirmasi.KonfirmasiActivity
+import com.citiasia.inidesakubeta.utils.DataJenisPembayaranPreference
 import com.google.android.material.button.MaterialButton
 
 
@@ -38,6 +39,7 @@ class KeranjangActivity : AppCompatActivity(), OnItemCheckedListener {
     private lateinit var tvTotalPembayaran: String
     private lateinit var hargaPembayaran: String
     private lateinit var pasarDesaViewModel: PasarDesaViewModel
+    private lateinit var pref: DataJenisPembayaranPreference
     private lateinit var listRekomendasiProduk: ArrayList<RekomendasiProdukDummy>
 //    private lateinit var dataFromDetail: Produk
 
@@ -48,11 +50,10 @@ class KeranjangActivity : AppCompatActivity(), OnItemCheckedListener {
 
         val vmFactory = ViewModelFactorySign.getInstance(application)
         pasarDesaViewModel = ViewModelProvider(this, vmFactory)[PasarDesaViewModel::class.java]
+        pref = DataJenisPembayaranPreference((this))
 
         rvKeranjangPasarDesa = binding.rvKeranjang
         rvKeranjangPasarDesa.setHasFixedSize(true)
-
-//        dataFromDetail = intent.getParcelableExtra<Produk>("key_item")!!
 
         getListRiwayat()
         showRecyclerList()
@@ -154,12 +155,10 @@ class KeranjangActivity : AppCompatActivity(), OnItemCheckedListener {
                     val btnBayar: MaterialButton =  popupView.findViewById(R.id.btnBayar)
                     btnBayar.setOnClickListener {
                         val intent = Intent(this, KonfirmasiActivity::class.java)
-                        intent.putExtra("PIN_PAGE", "PASAR_DESA")
-                        intent.putExtra("HARGA_PRODUK", hargaPembayaran)
-                        intent.putExtra("TOTAL_HARGA_PRODUK", tvTotalPembayaran)
+                        pref.saveData("Produk", hargaProduk.zip(jumlahProdukIntList)
+                            .joinToString(separator = "\n") { (harga, jumlah) -> "Rp. $harga x $jumlah" }, formattedTotalPembayaran)
                         startActivity(intent)
                     }
-
                     popupWindow.showAtLocation(popupView, Gravity.BOTTOM, 0, 0)
                 } else {
                     Toast.makeText(this, "Pilih item terlebih dahulu", Toast.LENGTH_SHORT).show()

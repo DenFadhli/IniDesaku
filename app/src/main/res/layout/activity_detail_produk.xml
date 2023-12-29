@@ -167,7 +167,7 @@
                 android:letterSpacing="0.035"
                 android:justificationMode="inter_word"
                 android:textFontWeight="400"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="14dp"
                 app:layout_constraintTop_toBottomOf="@+id/tv_rincian_produk"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
@@ -182,7 +182,7 @@
                 android:fontFamily="@font/nunito_medium"
                 android:letterSpacing="0.008"
                 android:textFontWeight="500"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
                 app:layout_constraintTop_toBottomOf="@+id/tv_detail_rincian_produk"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
@@ -191,7 +191,7 @@
                 android:id="@+id/rv_penilaian_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="14dp"
                 android:layout_marginBottom="8dp"
                 tools:listitem="@layout/item_penilaian_user"
                 app:layout_constraintTop_toBottomOf="@+id/tv_penilaian_produk"

@@ -23,7 +23,7 @@ class KonfirmasiBarangBerhasilFragment : Fragment() {
     private var _binding: FragmentKonfirmasiBarangBerhasilBinding? = null
     private val binding get() = _binding!!
 
-//    private lateinit var pref: DataJenisPembayaranPreference
+    private lateinit var pref: DataJenisPembayaranPreference
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,18 +36,17 @@ class KonfirmasiBarangBerhasilFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        pref = DataJenisPembayaranPreference(requireContext())
+        pref = DataJenisPembayaranPreference(requireContext())
 
         showLoading()
 
         onBackPressed()
-//        setUpData(pref)
         binding.tvTanggalValue.text = getTodayDate()
         binding.tvIdValue.text = getRandomIdGenerate()
 
-        val builder = StringBuilder()
-        binding.tvNominalValue.text = arguments?.getString("HARGA_PRODUK")
-        binding.tvTotalBiayaValue.text = arguments?.getString("TOTAL_HARGA_PRODUK")
+        binding.tvNominal.text = pref.getData()[0]
+        binding.tvNominalValue.text = pref.getData()[1]
+        binding.tvTotalBiayaValue.text = pref.getData()[2]
 
         binding.btnKembali.setOnClickListener {
             finishActivity()
