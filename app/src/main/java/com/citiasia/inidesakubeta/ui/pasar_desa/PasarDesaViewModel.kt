@@ -42,7 +42,7 @@ class PasarDesaViewModel(application: Application) : ViewModel() {
         }
     }
 
-    private fun getExistingProduct(namaProduk: String): Produk? {
+    fun getExistingProduct(namaProduk: String): Produk? {
         return mProdukRepository.getProdukByName(namaProduk)
     }
 

@@ -7,6 +7,7 @@ import com.citiasia.inidesakubeta.ui.beranda.BerandaFragment
 import com.citiasia.inidesakubeta.ui.profilDesa.ProfilDesaFragment
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.ActivityHomeBinding
+import com.citiasia.inidesakubeta.ui.geografi.geospasial.GeospasialActivity
 import com.citiasia.inidesakubeta.ui.ppob.PpobFragment
 import com.citiasia.inidesakubeta.ui.profile.profileFragment.ProfileFragment
 
@@ -33,6 +34,7 @@ class HomeActivity : AppCompatActivity() {
                     binding.topAppBar.setTitle("IniDesaku")
                 }
                 R.id.geo -> {
+//                    replaceFragment(GeospasialActivity())
                     binding.topAppBar.setTitle("Geospacial")
                 }
                 R.id.profileDesa -> {

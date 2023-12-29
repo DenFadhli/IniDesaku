@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.ActivityKeranjangBinding
 import com.citiasia.inidesakubeta.model.KeranjangProdukDummy
+import com.citiasia.inidesakubeta.model.RekomendasiProdukDummy
 import com.citiasia.inidesakubeta.ui.ViewModelFactorySign
 import com.citiasia.inidesakubeta.ui.adapter.KeranjangProdukAdapter
 import com.citiasia.inidesakubeta.ui.adapter.OnItemCheckedListener
@@ -37,6 +38,7 @@ class KeranjangActivity : AppCompatActivity(), OnItemCheckedListener {
     private lateinit var tvTotalPembayaran: String
     private lateinit var hargaPembayaran: String
     private lateinit var pasarDesaViewModel: PasarDesaViewModel
+    private lateinit var listRekomendasiProduk: ArrayList<RekomendasiProdukDummy>
 //    private lateinit var dataFromDetail: Produk
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,14 +54,6 @@ class KeranjangActivity : AppCompatActivity(), OnItemCheckedListener {
 
 //        dataFromDetail = intent.getParcelableExtra<Produk>("key_item")!!
 
-        val adapter = KeranjangProdukAdapter(list, this)
-        adapter.setOnItemClickCallback(object : KeranjangProdukAdapter.OnItemClickCallback{
-            override fun onItemClicked(data: KeranjangProdukDummy) {
-                val intent = Intent(this@KeranjangActivity, DetailProdukActivity::class.java)
-                intent.putExtra("key_item", data)
-                startActivity(intent)
-            }
-        })
         getListRiwayat()
         showRecyclerList()
         setInitialButtonListeners()
@@ -190,8 +184,25 @@ class KeranjangActivity : AppCompatActivity(), OnItemCheckedListener {
 
     private fun showRecyclerList() {
         rvKeranjangPasarDesa.layoutManager = LinearLayoutManager(this)
-        val listProdukAdapter = KeranjangProdukAdapter(list, this)
-        rvKeranjangPasarDesa.adapter = listProdukAdapter
+        val adapter = KeranjangProdukAdapter(list, pasarDesaViewModel, this,)
+        rvKeranjangPasarDesa.adapter = adapter
+        adapter.setOnItemClickCallback(object : KeranjangProdukAdapter.OnItemClickCallback{
+            override fun onItemClicked(data: KeranjangProdukDummy) {
+                val intent = Intent(this@KeranjangActivity, DetailProdukActivity::class.java)
+                val selectedProduct = data.produk
+                val rekomendasiProduk = RekomendasiProdukDummy(
+                    selectedProduct.fotoProduk,
+                    selectedProduct.namaProduk,
+                    selectedProduct.hargaProduk,
+                    selectedProduct.deskripsiProduk,
+                    selectedProduct.iconNilaiProduk,
+                    selectedProduct.nilaiProduk,
+                    selectedProduct.produkTerjual
+                )
+                intent.putExtra("key_item", rekomendasiProduk)
+                startActivity(intent)
+            }
+        })
     }
 
 }

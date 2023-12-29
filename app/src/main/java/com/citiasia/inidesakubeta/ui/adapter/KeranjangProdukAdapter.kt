@@ -12,14 +12,20 @@
     import androidx.core.content.ContextCompat
     import androidx.core.os.bundleOf
     import androidx.lifecycle.LifecycleOwner
+    import androidx.lifecycle.ViewModelProvider
     import androidx.recyclerview.widget.RecyclerView
     import com.bumptech.glide.Glide
     import com.citiasia.inidesakubeta.R
     import com.citiasia.inidesakubeta.data.database.Produk
     import com.citiasia.inidesakubeta.model.KeranjangProdukDummy
     import com.citiasia.inidesakubeta.model.RekomendasiProdukDummy
+    import com.citiasia.inidesakubeta.ui.ViewModelFactorySign
     import com.citiasia.inidesakubeta.ui.pasar_desa.DetailProdukActivity
+    import com.citiasia.inidesakubeta.ui.pasar_desa.PasarDesaViewModel
     import com.google.android.material.button.MaterialButton
+    import kotlinx.coroutines.CoroutineScope
+    import kotlinx.coroutines.Dispatchers
+    import kotlinx.coroutines.launch
 
 
     interface OnItemCheckedListener {
@@ -27,6 +33,7 @@
     }
     class KeranjangProdukAdapter(
         private val listKeranjangProduk: ArrayList<KeranjangProdukDummy>,
+        private val pasarDesaViewModel: PasarDesaViewModel,
         private val onItemCheckedListener: OnItemCheckedListener) : RecyclerView.Adapter<KeranjangProdukAdapter.ListViewHolder>() {
         private lateinit var onItemClickCallback: OnItemClickCallback
 
@@ -49,6 +56,13 @@
             holder.kurangProdukBtn.setOnClickListener {
                 if (jumlahProduk > 1) {
                     jumlahProduk--
+                    CoroutineScope(Dispatchers.IO).launch {
+                        val existingProduct = pasarDesaViewModel.getExistingProduct(produk.namaProduk)
+                        existingProduct?.let {
+                            val newJumlah = jumlahProduk
+                            pasarDesaViewModel.updateProductQuantity(it.id, newJumlah)
+                        }
+                    }
                     holder.tvJumlahProduk.text = jumlahProduk.toString()
                 } else if (jumlahProduk < 1) {
                     holder.kurangProdukBtn.isEnabled = false
@@ -57,6 +71,13 @@
 
             holder.tambahProdukBtn.setOnClickListener {
                 jumlahProduk++
+                CoroutineScope(Dispatchers.IO).launch {
+                    val existingProduct = pasarDesaViewModel.getExistingProduct(produk.namaProduk)
+                    existingProduct?.let {
+                        val newJumlah = jumlahProduk
+                        pasarDesaViewModel.updateProductQuantity(it.id, newJumlah)
+                    }
+                }
                 holder.tvJumlahProduk.text = jumlahProduk.toString()
             }
 

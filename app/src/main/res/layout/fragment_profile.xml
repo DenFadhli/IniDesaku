@@ -262,7 +262,7 @@
 
             <TextView
                 android:fontFamily="@font/nunito_medium"
-                android:id="@+id/textView"
+                android:id="@+id/bantuanBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
