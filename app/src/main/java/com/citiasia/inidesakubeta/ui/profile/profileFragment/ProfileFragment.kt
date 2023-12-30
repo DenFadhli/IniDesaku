@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.ActivityDetailProdukBinding
 import com.citiasia.inidesakubeta.databinding.FragmentProfileBinding
@@ -26,8 +27,11 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.bantuanBtn.setOnClickListener {
-
+            findNavController().navigate(R.id.action_profilFragment_to_bantuanListActivity)
+            requireActivity().finish()
         }
+
     }
+
 
 }

@@ -16,11 +16,251 @@
         <item>Kabupaten Administrasi Kepulauan Seribu</item>
     </string-array>
 
+    <string-array name="kecamatan_kepulauan_seribu_items">
+        <item>Kepulauan Seribu Utara</item>
+        <item>Kepulauan Seribu Selatan</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_kepulauan_seribu_utara_items">
+        <item>Pulau Harapan</item>
+        <item>Pulau Kelapa</item>
+        <item>Pulau Panggang</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_kepulauan_seribu_selatan_items">
+        <item>Pulau Pari</item>
+        <item>Pulau Tidung</item>
+        <item>Pulau Untung Jawa</item>
+    </string-array>
+
+    <string-array name="kecamatan_jakarta_utara_items">
+        <item>Kelapa Gading</item>
+        <item>Penjaringan</item>
+        <item>Tanjung Priok</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jakarta_utara_kelapagading_items">
+        <item>Kelapa Gading Barat</item>
+        <item>Kelapa Gading Timur</item>
+        <item>Pegangsaan Dua</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jakarta_utara_penjaringan_items">
+        <item>Kamal Muara</item>
+        <item>Kapuk Muara</item>
+        <item>Pluit</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jakarta_utara_tanjungpriok_items">
+        <item>Sunter Agung</item>
+        <item>Sunter Jaya</item>
+        <item>Warakas</item>
+    </string-array>
+
+    <string-array name="kecamatan_jakarta_timur_items">
+        <item>Cakung</item>
+        <item>Cipayung</item>
+        <item>Ciracas</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jakarta_timur_cakung_items">
+        <item>Cakung Barat</item>
+        <item>Cakung Timur</item>
+        <item>Jatinegara</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jakarta_timur_ciracas_items">
+        <item>Cibubur</item>
+        <item>Ciracas</item>
+        <item>Kelapa Dua Wetan</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jakarta_timur_cipayung_items">
+        <item>Bambu Apus</item>
+        <item>Ceger</item>
+        <item>Lubang Buaya</item>
+    </string-array>
+
+    <string-array name="kecamatan_jakarta_selatan_items">
+        <item>Cilandak</item>
+        <item>Kebayoran Baru</item>
+        <item>Kebayoran Lama</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jakarta_selatan_cilandak_items">
+        <item>Cilandak Barat</item>
+        <item>Lebak Bulus</item>
+        <item>Pondok Labu</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jakarta_selatan_kebayoranbaru_items">
+        <item>Cipete Utara</item>
+        <item>Pulo</item>
+        <item>Senayan</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jakarta_selatan_kebayoranlama_items">
+        <item>Cipulir</item>
+        <item>Grogol Selatan</item>
+        <item>Grogol Utara</item>
+    </string-array>
+
+    <string-array name="kecamatan_jakarta_pusat_items">
+        <item>Kemayoran</item>
+        <item>Senen</item>
+        <item>Tanah Abang</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jakarta_pusat_kemayoran_items">
+        <item>Cempaka Baru</item>
+        <item>Gunung Sahari Selatan</item>
+        <item>Harapan Mulya</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jakarta_pusat_senen_items">
+        <item>Bungur</item>
+        <item>Kenari</item>
+        <item>Kramat</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jakarta_pusat_tanahabang_items">
+        <item>Bendungan Hilir</item>
+        <item>Kampung Bali</item>
+        <item>Petamburan</item>
+    </string-array>
+
+    <string-array name="kecamatan_jakarta_barat_items">
+        <item>Cengkareng</item>
+        <item>Kebon Jeruk</item>
+        <item>Palmerah</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jakarta_barat_cengkareng_items">
+        <item>Cengkareng Barat</item>
+        <item>Cengkareng Timur</item>
+        <item>Rawa Buaya</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jakarta_barat_kebonjeruk_items">
+        <item>Kedoya Selatan</item>
+        <item>Kedoya Utara</item>
+        <item>Kelapa Dua</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jakarta_barat_palmerah_items">
+        <item>Jatipulo</item>
+        <item>Kemanggisan</item>
+        <item>Slipi</item>
+    </string-array>
+
     <string-array name="kota_kabupaten_jawabarat_items">
         <item>Kota Bandung</item>
         <item>Kota Bekasi</item>
         <item>Kabupaten Bogor</item>
         <item>Kabupaten Ciamis</item>
+    </string-array>
+
+    <string-array name="kecamatan_jawabarat_kab_ciamis_items">
+        <item>Banjaranyar</item>
+        <item>Ciamis</item>
+        <item>Panawangan</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jawabarat_ciamis_banjaranyar_items">
+        <item>Banjaranyar</item>
+        <item>Cigayam</item>
+        <item>Cikaso</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jawabarat_ciamis_ciamis_items">
+        <item>Cisadap</item>
+        <item>Kertasari</item>
+        <item>Linggasari</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jawabarat_ciamis_panawangan_items">
+        <item>Jagabaya</item>
+        <item>Kertajaya</item>
+        <item>Kertayasa</item>
+    </string-array>
+
+    <string-array name="kecamatan_jawabarat_kab_bogor_items">
+        <item>Babakan Madang</item>
+        <item>Bojonggede</item>
+        <item>Caringin</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jawabarat_bogor_babakan_items">
+        <item>Babakan Madang</item>
+        <item>Bojong Koneng</item>
+        <item>Cijayanti</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jawabarat_bogor_bojonggede_items">
+        <item>Bojong Baru</item>
+        <item>Bojonggede</item>
+        <item>Cimanggis</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jawabarat_bogor_caringin_items">
+        <item>Pasir Buncir</item>
+        <item>Caringin</item>
+        <item>Ciderum</item>
+    </string-array>
+
+    <string-array name="kecamatan_jawabarat_kota_bekasi_items">
+        <item>Bekasi Barat</item>
+        <item>Bekasi Selatan</item>
+        <item>Bekasi Timur</item>
+        <item>Bekasi Utara</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jawabarat_bekasi_barat_items">
+        <item>Bintara</item>
+        <item>Bintara Jaya</item>
+        <item>Kranji</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jawabarat_bekasi_selatan_items">
+        <item>Jakamulya</item>
+        <item>Jakasetia</item>
+        <item>Pekayon Jaya</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jawabarat_bekasi_timur_items">
+        <item>Aren Jaya</item>
+        <item>Bekasi Jaya</item>
+        <item>Duren Jaya</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jawabarat_bekasi_utara_items">
+        <item>Kaliabang Tengah</item>
+        <item>Perwira</item>
+        <item>Teluk Pucung</item>
+    </string-array>
+
+    <string-array name="kecamatan_jawabarat_kota_bandung_items">
+        <item>Andir</item>
+        <item>Astana Anyar</item>
+        <item>Antapani</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jawabarat_bandung_andir_items">
+        <item>Campaka</item>
+        <item>Ciroyom</item>
+        <item>Dunguscariang</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jawabarat_bandung_astana_anyar_items">
+        <item>Cibadak</item>
+        <item>Karanganyar</item>
+        <item>Karasak</item>
+    </string-array>
+
+    <string-array name="desa_kelurahan_jawabarat_bandung_antapani_items">
+        <item>Antapani Kidul</item>
+        <item>Antapani Kulon</item>
+        <item>Antapani Tengah</item>
     </string-array>
 
     <string-array name="kota_kabupaten_jawatengah_items">
@@ -194,66 +434,6 @@
         <item>Desa Jajar</item>
     </string-array>
 
-    <string-array name="kecamatan_jawatengah_items">
-        <item>Banjarnegara</item>
-        <item>Madukara</item>
-        <item>Sigaluh</item>
-    </string-array>
-
-    <string-array name="desa_kelurahan_jawatengah_items">
-        <item>Kelurahan Argasoka</item>
-        <item>Kelurahan Karangtengah</item>
-        <item>Kelurahan Krandegan</item>
-        <item>Kelurahan Kutabanjarnegara</item>
-        <item>Kelurahan Parakancanggah</item>
-        <item>Kelurahan Semampir</item>
-        <item>Kelurahan Semarang</item>
-        <item>Kelurahan Sokanandi</item>
-        <item>Kelurahan Wangon</item>
-        <item>Kelurahan Kenteng</item>
-        <item>Kelurahan Rejasa</item>
-        <item>Kelurahan Kalibenda</item>
-        <item>Desa Ampelsari</item>
-        <item>Desa Cendana</item>
-        <item>Desa Sokayasa</item>
-        <item>Desa Tlagawera</item>
-        <item>Desa Bantarwaru</item>
-        <item>Desa Blitar</item>
-        <item>Desa Clapar</item>
-        <item>Desa Dawuhan</item>
-    </string-array>
-
-    <string-array name="kecamatan_jawabarat_items">
-        <item>Baleendah</item>
-        <item>Cimenyan</item>
-        <item>Dayeuhkolot</item>
-        <item>Dayeuhkolot</item>
-        <item>Margahayu</item>
-        <item>Rancaekek</item>
-    </string-array>
-
-    <string-array name="desa_kelurahan_jawabarat_items">
-        <item>Kelurahan Argasoka</item>
-        <item>Kelurahan Karangtengah</item>
-        <item>Kelurahan Krandegan</item>
-        <item>Kelurahan Kutabanjarnegara</item>
-        <item>Kelurahan Parakancanggah</item>
-        <item>Kelurahan Semampir</item>
-        <item>Kelurahan Semarang</item>
-        <item>Kelurahan Sokanandi</item>
-        <item>Kelurahan Wangon</item>
-        <item>Kelurahan Kenteng</item>
-        <item>Kelurahan Rejasa</item>
-        <item>Kelurahan Kalibenda</item>
-        <item>Desa Ampelsari</item>
-        <item>Desa Cendana</item>
-        <item>Desa Sokayasa</item>
-        <item>Desa Tlagawera</item>
-        <item>Desa Bantarwaru</item>
-        <item>Desa Blitar</item>
-        <item>Desa Clapar</item>
-        <item>Desa Dawuhan</item>
-    </string-array>
 
     <string-array name="bank_items">
         <item>Mandiri</item>

@@ -29,10 +29,23 @@
         android:id="@+id/konfirmasiBarangBerhasilFragment"
         android:name="com.citiasia.inidesakubeta.ui.konfirmasi.barang.KonfirmasiBarangBerhasilFragment"
         android:label="fragment_konfirmasi_barang_berhasil"
-        tools:layout="@layout/fragment_konfirmasi_barang_berhasil" />
+        tools:layout="@layout/fragment_konfirmasi_barang_berhasil">
+
+        <action
+            android:id="@+id/action_konfirmasiBarangBerhasilFragment_to_pasaDesaActivity"
+            app:destination="@id/pasarDesaActivity" />
+    </fragment>
     <fragment
         android:id="@+id/konfirmasiBerhasilTokenFragment"
         android:name="com.citiasia.inidesakubeta.ui.konfirmasi.pulsaBerhasil.KonfirmasiBerhasilTokenFragment"
         android:label="fragment_konfirmasi_berhasil_token"
         tools:layout="@layout/fragment_konfirmasi_berhasil_token" />
+
+    <activity
+        android:id="@+id/pasarDesaActivity"
+        android:name="com.citiasia.inidesakubeta.ui.pasar_desa.PasarDesaActivity"
+        android:label="activity_pasar_desa"
+        tools:layout="@layout/activity_pasar_desa" >
+
+    </activity>
 </navigation>

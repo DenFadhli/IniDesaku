@@ -1,5 +1,6 @@
 package com.citiasia.inidesakubeta.ui.konfirmasi.barang
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.fragment.app.Fragment
@@ -7,9 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.databinding.FragmentKonfirmasiBarangBerhasilBinding
 import com.citiasia.inidesakubeta.databinding.FragmentKonfirmasiBerhasilBinding
+import com.citiasia.inidesakubeta.ui.pasar_desa.PasarDesaActivity
 import com.citiasia.inidesakubeta.ui.splashScreenFragment.SplashScreenFragment
 import com.citiasia.inidesakubeta.utils.DataJenisPembayaranPreference
 import java.time.LocalDate
@@ -49,7 +52,8 @@ class KonfirmasiBarangBerhasilFragment : Fragment() {
         binding.tvTotalBiayaValue.text = pref.getData()[2]
 
         binding.btnKembali.setOnClickListener {
-            finishActivity()
+            findNavController().navigate(R.id.action_konfirmasiBarangBerhasilFragment_to_pasaDesaActivity)
+            requireActivity().finish()
         }
     }
 
@@ -97,19 +101,11 @@ class KonfirmasiBarangBerhasilFragment : Fragment() {
         return formattedDate
     }
 
-//    private fun onBackPressed() = with(binding) {
-//        topAppBar.setNavigationOnClickListener { view ->
-//            view.findNavController().navigateUp()
-//        }
-//    }
-
     private fun onBackPressed() = with(binding) {
         topAppBar.setNavigationOnClickListener {
-            finishActivity()
+            findNavController().navigate(R.id.action_konfirmasiBarangBerhasilFragment_to_pasaDesaActivity)
+            requireActivity().finish()
         }
-    }
-    private fun finishActivity() {
-        requireActivity().finish()
     }
 
     companion object{
