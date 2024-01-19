@@ -15,6 +15,8 @@ import com.citiasia.inidesakubeta.ui.donasi.list.DonasiActivity
 import com.citiasia.inidesakubeta.ui.pasar_desa.PasarDesaActivity
 import com.citiasia.inidesakubeta.ui.produk_unggulan.list.ProdukUnggulanActivity
 import com.citiasia.inidesakubeta.ui.tvcc.TvccActivity
+import com.citiasia.inidesakubeta.utils.LoginPreference
+import com.citiasia.inidesakubeta.utils.PilihWilayahPreference
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.models.SlideModel
 
@@ -22,6 +24,8 @@ class BerandaFragment : Fragment() {
 
     private var _binding: FragmentBerandaBinding? = null
     private val binding get() = _binding !!
+
+    private lateinit var pref: PilihWilayahPreference
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,7 +49,12 @@ class BerandaFragment : Fragment() {
         val imageSlider = view.findViewById<ImageSlider>(R.id.imageSlider)
         imageSlider.setImageList(imageList)
 
+        pref = PilihWilayahPreference(requireContext())
+
         iconClick()
+
+
+        binding.alamatDesa.text = "${pref.getData().provinsi}, ${pref.getData().kotaKabupaten}, ${pref.getData().kecamatan}, ${pref.getData().desaKelurahan}"
     }
 
     private fun iconClick() {

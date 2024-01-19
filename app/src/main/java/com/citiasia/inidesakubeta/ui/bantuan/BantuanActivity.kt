@@ -1,29 +1,37 @@
-package com.citiasia.inidesakubeta.ui
+package com.citiasia.inidesakubeta.ui.bantuan
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.google.android.material.snackbar.Snackbar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.citiasia.inidesakubeta.ui.beranda.BerandaFragment
-import com.citiasia.inidesakubeta.ui.profilDesa.ProfilDesaFragment
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.citiasia.inidesakubeta.R
-import com.citiasia.inidesakubeta.databinding.ActivityHomeBinding
-import com.citiasia.inidesakubeta.ui.geografi.geospasial.GeospasialFragment
+import com.citiasia.inidesakubeta.databinding.ActivityBantuanBinding
+import com.citiasia.inidesakubeta.databinding.ActivityDetailProdukBinding
+import com.citiasia.inidesakubeta.ui.beranda.BerandaFragment
 import com.citiasia.inidesakubeta.ui.ppob.PpobFragment
+import com.citiasia.inidesakubeta.ui.profilDesa.ProfilDesaFragment
 import com.citiasia.inidesakubeta.ui.profile.profileFragment.ProfileFragment
 
-class HomeActivity : AppCompatActivity() {
+class BantuanActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityHomeBinding
 
+    private var _binding: ActivityBantuanBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityHomeBinding.inflate(layoutInflater)
+        _binding = ActivityBantuanBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        replaceFragment(BerandaFragment())
+        replaceFragment(BantuanListFragment())
+        binding.topAppBar.setNavigationOnClickListener {
+            onBackPressed()
+        }
         iconBarClick()
-
     }
 
     private fun iconBarClick() {
@@ -34,7 +42,6 @@ class HomeActivity : AppCompatActivity() {
                     binding.topAppBar.setTitle("INIDESAKU")
                 }
                 R.id.geo -> {
-                    replaceFragment(GeospasialFragment())
                     binding.topAppBar.setTitle("Geografi")
                 }
                 R.id.profileDesa -> {
@@ -59,9 +66,6 @@ class HomeActivity : AppCompatActivity() {
             true
         }
     }
-
-
-
 
     private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager

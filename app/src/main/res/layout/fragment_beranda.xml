@@ -14,7 +14,7 @@
 
         <TextView
             android:id="@+id/alamat_desa"
-            android:layout_width="202dp"
+            android:layout_width="wrap_content"
             android:layout_height="32dp"
             android:maxLines="2"
             android:layout_marginStart="10dp"

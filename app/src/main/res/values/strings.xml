@@ -139,7 +139,7 @@
     <string name="complete_profile_referal_code">Kode Referral</string>
     <string name="pilih_wilayah_desc">Selamat datang! Silakan isi wilayah tempat Anda berada!</string>
     <string name="pusat_bantuan_title">Pusat Bantuan</string>
-    <string name="pusat_bantuan_desc">Pertanyaan umum tentang INI DESAKU</string>
+    <string name="pusat_bantuan_desc">Pertanyaan umum tentang INIDESAKU</string>
     <string name="form_bantuan_desc">Silahkan isi formulir dibawah ini!</string>
     <string name="choose_item">Pilih</string>
     <string name="form_bantuan_name">Nama Lengkap Anda</string>
@@ -435,4 +435,5 @@
         <item>Keren sih ini, dapet pesanan dengan kualitas yang sesuai dengan ekspetasi</item>
         <item>Sesuai sama ekspetasi, akhirnya dapet pesanan yang dicari cari, sangat merekomendasikan buat yang mau beli pesanan ini juga</item>
     </string-array>
+    <string name="title_activity_bantuan">BantuanActivity</string>
 </resources>

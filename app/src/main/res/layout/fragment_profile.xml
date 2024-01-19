@@ -117,7 +117,7 @@
                     android:id="@+id/tvJenisKelaminValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/perempuan"
+                    android:text=""
                     android:textStyle="bold"
                     android:textSize="14sp"
                     android:layout_marginVertical="5dp"
@@ -261,13 +261,15 @@
                 app:cornerRadius="8dp" />
 
             <TextView
-                android:fontFamily="@font/nunito_medium"
+                android:fontFamily="@font/nunito_bold"
                 android:id="@+id/bantuanBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:text="anda perlu bantuan?"
+                android:layout_marginBottom="45dp"
+                android:text="Anda perlu bantuan?"
                 android:textAlignment="center"
+                android:textSize="18sp"
                 android:textColor="@color/font300" />
 
         </LinearLayout>

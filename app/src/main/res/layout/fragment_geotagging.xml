@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="24dp"
+    tools:context=".ui.geografi.geotagging.GeotaggingFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/titleGeotagging"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_geotagging"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/primary600"
+        android:textSize="16sp"
+        android:textFontWeight="700"
+        android:letterSpacing="0.024"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/column_geotagging_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:stretchColumns="1"
+        app:layout_constraintTop_toBottomOf="@+id/titleGeotagging"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TableRow>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/provinsiLayout"
+                style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:boxStrokeWidth="0dp"
+                android:hint="@string/province"
+                android:background="@drawable/input_layout"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/baseline_keyboard_arrow_down_24"
+                android:layout_weight="1"
+                android:layout_marginEnd="12dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinProvinsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:background="@drawable/input_layout"
+                    app:simpleItems="@array/provinsi_items" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutKota"
+                style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:boxStrokeWidth="0dp"
+                android:hint="@string/kota_kabupaten"
+                android:background="@drawable/input_layout"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/baseline_keyboard_arrow_down_24"
+                android:layout_weight="1">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinKota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:background="@drawable/input_layout"
+                    app:simpleItems="@array/provinsi_items" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/column_geotagging_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:stretchColumns="1"
+        app:layout_constraintTop_toBottomOf="@+id/column_geotagging_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TableRow>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutKecamatan"
+                style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/kecamatan"
+                app:boxStrokeWidth="0dp"
+                android:background="@drawable/input_layout"
+                app:endIconMode="custom"
+                app:endIconDrawable="@drawable/baseline_keyboard_arrow_down_24"
+                android:layout_weight="1"
+                android:layout_marginEnd="12dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinKecamatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:background="@drawable/input_layout"
+                    app:simpleItems="@array/provinsi_items" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutDesa"
+                style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_layout"
+                android:hint="@string/desa_kelurahan"
+                app:endIconMode="custom"
+                app:boxStrokeWidth="0dp"
+                app:endIconDrawable="@drawable/baseline_keyboard_arrow_down_24"
+                android:layout_weight="1">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinDesa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:background="@drawable/input_layout"
+                    app:simpleItems="@array/provinsi_items" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+
+    </TableLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutKategoriLokasi"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:boxStrokeWidth="0dp"
+        android:hint="@string/nama_lokasi_penting"
+        android:background="@drawable/input_layout"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/baseline_keyboard_arrow_down_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/column_geotagging_2">
+
+        <AutoCompleteTextView
+            android:id="@+id/spinKategoriLokasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:background="@drawable/input_layout"
+            app:simpleItems="@array/provinsi_items" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TableLayout
+        android:id="@+id/column_geotagging_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/layoutKategoriLokasi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TableRow>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutLatitude"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Latitude"
+                app:hintTextColor="@color/font400"
+                android:layout_marginEnd="12dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textLatitude"
+                    android:background="@drawable/input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutLongitude"
+                style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Longitude"
+                app:hintTextColor="@color/font400">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textLongitude"
+                    android:background="@drawable/input_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </TableRow>
+
+    </TableLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutNamaLokasiPenting"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:boxStrokeWidth="0dp"
+        android:hint="@string/nama_lokasi_penting"
+        android:background="@drawable/input_layout"
+        app:endIconMode="custom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/column_geotagging_3">
+
+        <AutoCompleteTextView
+            android:id="@+id/spinNamaLokasiPenting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:background="@drawable/input_layout"
+            app:simpleItems="@array/provinsi_items" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutDeskripsi"
+        style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        app:boxStrokeWidth="0dp"
+        android:hint="@string/deskripsi"
+        android:background="@drawable/input_layout"
+        app:endIconMode="custom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutNamaLokasiPenting">
+
+        <AutoCompleteTextView
+            android:id="@+id/spinDeskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:inputType="none"
+            android:background="@drawable/input_layout"
+            app:simpleItems="@array/provinsi_items" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TableLayout
+        android:id="@+id/column_geotagging_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="48dp"
+        app:layout_constraintTop_toBottomOf="@+id/layoutDeskripsi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TableRow>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUploadCamera"
+                android:background="@drawable/button_border_geotagging"
+                android:layout_width="wrap_content"
+                android:text="@string/camera"
+                android:textColor="@color/primary500"
+                android:textSize="14sp"
+                android:textFontWeight="600"
+                android:fontFamily="@font/nunito_regular"
+                android:drawableLeft="@drawable/icon_camera"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUploadGallery"
+                android:background="@drawable/button_border_geotagging"
+                android:layout_width="wrap_content"
+                android:layout_gravity="end"
+                android:text="@string/gallery"
+                android:textColor="@color/primary500"
+                android:textSize="14sp"
+                android:textFontWeight="600"
+                android:fontFamily="@font/nunito_regular"
+                android:drawableLeft="@drawable/icon_gallery" />
+
+        </TableRow>
+    </TableLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegister"
+        style="@style/Widget.Material3.Button.Icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        app:cornerRadius="8dp"
+        android:text="@string/save"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nunito_medium"
+        android:textFontWeight="600"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/column_geotagging_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

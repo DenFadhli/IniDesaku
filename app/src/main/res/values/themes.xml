@@ -10,11 +10,13 @@
     </style>
 
     <style name="Theme.IniDesakuBeta" parent="Base.Theme.IniDesakuBeta" />
+
     <style name="Theme.IniDesakuBeta.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <style name="Theme.IniDesakuBeta.AppBarOverlay"
-        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.IniDesakuBeta.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="Theme.IniDesakuBeta.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

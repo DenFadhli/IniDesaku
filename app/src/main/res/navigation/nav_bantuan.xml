@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_bantuan"
+    app:startDestination="@id/BantuanListFragment">
+
+    <fragment
+        android:id="@+id/BantuanListFragment"
+        android:name="com.citiasia.inidesakubeta.ui.bantuan.BantuanListFragment"
+        android:label="List Bantuan"
+        tools:layout="@layout/fragment_list_bantuan">
+
+        <action
+            android:id="@+id/action_ListBantuanFragment_to_BantuanFormFragment"
+            app:destination="@id/BantuanFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BantuanFormFragment"
+        android:name="com.citiasia.inidesakubeta.ui.bantuan.BantuanFormFragment"
+        android:label="Form Bantuan"
+        tools:layout="@layout/fragment_bantuan_form">
+
+        <action
+            android:id="@+id/action_BantuanFormFragment_to_ListBantuanFragment"
+            app:destination="@id/BantuanFormFragment" />
+    </fragment>
+</navigation>

@@ -1,31 +1,54 @@
 package com.citiasia.inidesakubeta.ui.bantuan
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.citiasia.inidesakubeta.R
 import com.citiasia.inidesakubeta.data.BantuanData
-import com.citiasia.inidesakubeta.databinding.ActivityListBantuanBinding
+import com.citiasia.inidesakubeta.databinding.FragmentListBantuanBinding
 import com.citiasia.inidesakubeta.ui.adapter.BantuanAdapter
 
-class BantuanListActivity : AppCompatActivity() {
+class BantuanListFragment : Fragment() {
 
-    private var _binding: ActivityListBantuanBinding? = null
+    private var _binding: FragmentListBantuanBinding? = null
+    private val binding get() = _binding!!
     private lateinit var adapter: BantuanAdapter
     private var mList = ArrayList<BantuanData>()
-    private val binding get() = _binding
+    private lateinit var rvListBantuan: RecyclerView
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        _binding = ActivityListBantuanBinding.inflate(layoutInflater)
-        setContentView(binding?.root)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ): View? {
 
-        var rvListBantuan = binding?.rvListBantuan
+        _binding = FragmentListBantuanBinding.inflate(inflater, container, false)
+        return binding.root
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        rvListBantuan = binding.rvListBantuan
 
         rvListBantuan?.setHasFixedSize(true)
-        rvListBantuan?.layoutManager = LinearLayoutManager(this)
+        rvListBantuan?.layoutManager = LinearLayoutManager(requireContext())
         addDataToList()
         adapter = BantuanAdapter(mList)
         rvListBantuan?.adapter = adapter
+
+        binding.bantuanButton.setOnClickListener {
+            val fragment = BantuanFormFragment()
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            transaction.replace(R.id.frame_layout, fragment)
+            transaction.addToBackStack(null)
+            transaction.commit()
+        }
     }
 
     private fun addDataToList() {
@@ -66,5 +89,10 @@ class BantuanListActivity : AppCompatActivity() {
                 "..."
             )
         )
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

@@ -21,6 +21,7 @@
             android:fontFamily="@font/nunito_semibold"
             android:textSize="14sp"
             android:layout_weight="1"
+            android:paddingRight="9dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" />
@@ -48,6 +49,7 @@
         android:fontFamily="@font/nunito_medium"
         android:textSize="12sp"
         android:layout_marginTop="40dp"
+        android:paddingRight="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutItem" />
 
@@ -57,7 +59,7 @@
         android:layout_height="1dp"
         android:layout_marginTop="14dp"
         android:layout_marginBottom="16dp"
-        android:background="@color/primary600"
+        android:background="@color/rule_bantuan"
         android:layout_below="@id/layoutItem" />
 
 </RelativeLayout>

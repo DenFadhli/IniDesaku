@@ -12,6 +12,8 @@ import com.citiasia.inidesakubeta.data.remote.model.PenilaianUserModel
 import com.citiasia.inidesakubeta.databinding.ActivityPasarDesaBinding
 import com.citiasia.inidesakubeta.model.RekomendasiProdukDummy
 import com.citiasia.inidesakubeta.ui.adapter.ListRekomendasiProdukAdapter
+import com.denzcoskun.imageslider.ImageSlider
+import com.denzcoskun.imageslider.models.SlideModel
 
 class PasarDesaActivity : AppCompatActivity() {
 
@@ -20,6 +22,7 @@ class PasarDesaActivity : AppCompatActivity() {
 
     private lateinit var rvItemPasarDesa: RecyclerView
     private val list = ArrayList<RekomendasiProdukDummy>()
+    val imageList = ArrayList<SlideModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityPasarDesaBinding.inflate(layoutInflater)
@@ -45,6 +48,14 @@ class PasarDesaActivity : AppCompatActivity() {
 
         list.addAll(getListProduk())
         showRecyclerList()
+
+        imageList.add(SlideModel(R.drawable.carousel_1))
+        imageList.add(SlideModel(R.drawable.carousel_2))
+        imageList.add(SlideModel(R.drawable.carousel_3))
+        imageList.add(SlideModel(R.drawable.carousel_4))
+        imageList.add(SlideModel(R.drawable.carousel_5))
+
+        binding.imageSlider.setImageList(imageList)
     }
 
     private fun getListProduk(): ArrayList<RekomendasiProdukDummy> {

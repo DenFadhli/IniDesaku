@@ -127,6 +127,7 @@ class PilihWilayahActivity : AppCompatActivity() {
                     binding.spinKecamatan.setText("")
                     selectedKelurahan = ""
                     binding.spinDesa.setText("")
+                    binding.btnNext.isEnabled = false
                 }
                 binding.spinKecamatan.setAdapter(null)
                 binding.spinDesa.setAdapter(null)
@@ -153,6 +154,7 @@ class PilihWilayahActivity : AppCompatActivity() {
                     binding.spinKecamatan.setText("")
                     selectedKelurahan= ""
                     binding.spinDesa.setText("")
+                    binding.btnNext.isEnabled = false
                 }
                 binding.spinDesa.setAdapter(null)
             } else {
@@ -174,6 +176,7 @@ class PilihWilayahActivity : AppCompatActivity() {
                 if (!kelurahanItems.contains(selectedKelurahan)) {
                     selectedKelurahan = ""
                     binding.spinDesa.setText("")
+                    binding.btnNext.isEnabled = false
                 }
             } else {
                 selectedKelurahan = ""
@@ -182,18 +185,29 @@ class PilihWilayahActivity : AppCompatActivity() {
             }
         }
 
-        val data = PilihWilayahModel(
-            selectedProvinsi,
-            selectedKota,
-            selectedKecamatan,
-            selectedKelurahan
-        )
 
-        pref.saveData(data)
+        binding.btnNext.isEnabled = false
+
+        binding.spinDesa.setOnItemClickListener { _, _, position, _ ->
+            selectedKelurahan = binding.spinDesa.adapter.getItem(position) as String
+
+            binding.btnNext.isEnabled = selectedKelurahan.isNotEmpty()
+        }
 
         binding.btnNext.setOnClickListener {
-            val intent = Intent(this@PilihWilayahActivity, HomeActivity::class.java)
-            startActivity(intent)
+            if (binding.btnNext.isEnabled) {
+                val data = PilihWilayahModel(
+                    selectedProvinsi,
+                    selectedKota,
+                    selectedKecamatan,
+                    selectedKelurahan
+                )
+
+                pref.saveData(data)
+
+                val intent = Intent(this@PilihWilayahActivity, HomeActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 }

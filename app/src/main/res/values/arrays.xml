@@ -483,5 +483,15 @@
         <item>PDAM Kab Bekasi</item>
         <item>PDAM Kab Bogor</item>
     </string-array>
+    
+    <string-array name="geospasial">
+        <item>Agen Gas</item>
+        <item>Apotek</item>
+        <item>Asuransi</item>
+        <item>ATM</item>
+        <item>Bandara</item>
+        <item>Bank</item>
+        <item>Bidan</item>
+    </string-array>
 
 </resources>
